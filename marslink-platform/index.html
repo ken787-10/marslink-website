@@ -490,10 +490,10 @@
                 </div>
             </div>
         </div>
-                </section>
+    </section>
     
-                <!-- Products Section - Tailwind UI Premium Grid -->
-                <section id="products" class="py-24 sm:py-32 bg-gray-900">
+    <!-- Products Section - Tailwind UI Premium Grid -->
+    <section id="products" class="py-24 sm:py-32 bg-gray-900">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
             <div class="mx-auto max-w-2xl text-center">
                 <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl font-orbitron">
@@ -504,148 +504,211 @@
                 </p>
             </div>
             
-            <div class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-12 lg:mx-0 lg:max-w-none lg:grid-cols-4 sm:grid-cols-2">
-                <!-- Product 1: CabinTime -->
-                <article class="group relative flex flex-col justify-between overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-80 hover:bg-gray-800 transition-all duration-300">
-                    <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&auto=format&fit=crop&w=1074&q=80" alt="" class="absolute inset-0 -z-10 h-full w-full object-cover group-hover:scale-105 transition-transform duration-300">
-                    <div class="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/60"></div>
-                    <div class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
-                    
-                    <div class="flex items-center gap-y-1 overflow-hidden text-sm leading-6 text-gray-300">
-                        <div class="flex items-center gap-x-2">
-                            <div class="flex h-10 w-10 items-center justify-center rounded-full bg-cyan-600/20 ring-1 ring-cyan-600/30">
-                                <svg class="h-5 w-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                                </svg>
-                            </div>
-                            <span class="font-semibold text-white">Active</span>
-                        </div>
-                    </div>
-                    <h3 class="mt-3 text-lg font-semibold leading-6 text-white">
-                        <a href="/cabintime/">
-                            <span class="absolute inset-0"></span>
-                            CabinTime（Active）
-                        </a>
-                    </h3>
-                    <p class="mt-2 text-sm font-medium text-white mb-1">旅は、移動中から始まる。</p>
-                    <p class="mt-1 text-sm text-gray-300">
-                        機内や船内など通信が届かない移動時間を、観光の入口に変える完全オフライン観光メディア。<br>
-                        地域の魅力を、最初に届けるチャネルです。
-                    </p>
-                    <div class="mt-3 flex flex-wrap gap-2">
-                        <span class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-blue-900 dark:text-blue-300">移動中UX</span>
-                        <span class="bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-green-900 dark:text-green-300">マルチモーダル</span>
-                        <span class="bg-yellow-100 text-yellow-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-yellow-900 dark:text-yellow-300">オフラインDX</span>
-                        <span class="bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-gray-300">観光起点</span>
-                    </div>
-                </article>
-                
-                <!-- Product 2: Map × 動画 -->
-                <article class="group relative flex flex-col justify-between overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-80 hover:bg-gray-800 transition-all duration-300">
-                    <img src="https://images.unsplash.com/photo-1476973422084-e0fa66ff9456?ixlib=rb-4.0.3&auto=format&fit=crop&w=1074&q=80" alt="" class="absolute inset-0 -z-10 h-full w-full object-cover group-hover:scale-105 transition-transform duration-300">
-                    <div class="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/60"></div>
-                    <div class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
-                    
-                    <div class="flex items-center gap-y-1 overflow-hidden text-sm leading-6 text-gray-300">
-                        <div class="flex items-center gap-x-2">
-                            <div class="flex h-10 w-10 items-center justify-center rounded-full bg-blue-600/20 ring-1 ring-blue-600/30">
-                                <svg class="h-5 w-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
-                                </svg>
-                            </div>
-                            <span class="font-semibold text-gray-400">Coming Soon</span>
-                        </div>
-                    </div>
-                    <h3 class="mt-3 text-lg font-semibold leading-6 text-white">
-                        <span>
-                            <span class="absolute inset-0"></span>
-                            Map × 動画（Coming Soon）
+            <!-- Timeline layout for product journey -->
+            <div class="mx-auto mt-16 max-w-4xl">
+                <ol class="relative border-s border-gray-600">                  
+                    <!-- Step 1: CabinTime -->
+                    <li class="mb-16 ms-8">            
+                        <span class="absolute flex items-center justify-center w-8 h-8 bg-gradient-to-r from-gray-700 to-gray-600 rounded-full -start-4 ring-4 ring-gray-900">
+                            <svg class="w-4 h-4 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M3.5 13.5A1.5 1.5 0 0 1 5 12V7a1 1 0 0 1 .293-.707l3-3A1 1 0 0 1 9 3h6a1 1 0 0 1 .707.293l3 3A1 1 0 0 1 19 7v5a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5v.5a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-.5H8v.5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-.5A1.5 1.5 0 0 1 3.5 15v-1.5Z" stroke-width="0"/>
+                                <path d="M9.5 5a.5.5 0 1 0 0 1h5a.5.5 0 1 0 0-1h-5Z" stroke-width="0"/>
+                                <path d="M6.5 9.5a1 1 0 1 0 0 2 1 1 0 0 0 0-2Zm11 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2Z" stroke-width="0"/>
+                            </svg>
                         </span>
-                    </h3>
-                    <p class="mt-2 text-sm font-medium text-white mb-1">旅を、地図と動画で"再構築"する。</p>
-                    <p class="mt-1 text-sm text-gray-300">
-                        観光体験を「場所×映像」でつなげるビジュアル旅UI。<br>
-                        人の行動と地域資源を直感的に可視化します。
-                    </p>
-                    <div class="mt-3 flex flex-wrap gap-2">
-                        <span class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-blue-900 dark:text-blue-300">体験構造化</span>
-                        <span class="bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-green-900 dark:text-green-300">回遊設計支援</span>
-                        <span class="bg-yellow-100 text-yellow-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-yellow-900 dark:text-yellow-300">観光行動の可視化</span>
-                    </div>
-                </article>
-                
-                <!-- Product 3: SNS統合 -->
-                <article class="group relative flex flex-col justify-between overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-80 hover:bg-gray-800 transition-all duration-300">
-                    <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-4.0.3&auto=format&fit=crop&w=1074&q=80" alt="" class="absolute inset-0 -z-10 h-full w-full object-cover group-hover:scale-105 transition-transform duration-300">
-                    <div class="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/60"></div>
-                    <div class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
-                    
-                    <div class="flex items-center gap-y-1 overflow-hidden text-sm leading-6 text-gray-300">
-                        <div class="flex items-center gap-x-2">
-                            <div class="flex h-10 w-10 items-center justify-center rounded-full bg-purple-600/20 ring-1 ring-purple-600/30">
-                                <svg class="h-5 w-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m9.632 4.316C18.114 15.938 18 15.482 18 15c0-.482.114-.938.316-1.342m0 2.684a3 3 0 110-2.684M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
+                        <div class="flex flex-col lg:flex-row lg:items-start gap-8">
+                            <!-- Image - Product as the hero -->
+                            <div class="lg:w-1/2">
+                                <a href="/cabintime/" class="block relative overflow-hidden rounded-xl group transition-all duration-300">
+                                    <img src="/assets/images/product2.png" alt="CabinTime モバイルインターフェース" class="w-full h-[500px] object-contain group-hover:scale-105 transition-transform duration-300">
+                                </a>
                             </div>
-                            <span class="font-semibold text-gray-400">Coming Soon</span>
-                        </div>
-                    </div>
-                    <h3 class="mt-3 text-lg font-semibold leading-6 text-white">
-                        <span>
-                            <span class="absolute inset-0"></span>
-                            SNS統合（Coming Soon）
-                        </span>
-                    </h3>
-                    <p class="mt-2 text-sm font-medium text-white mb-1">旅の発信を、もっとかんたんに、戦略的に。</p>
-                    <p class="mt-1 text-sm text-gray-300">
-                        AIが投稿文を生成し、SNSやブログに自動配信。<br>
-                        観光体験を届けるUXを最適化します。
-                    </p>
-                    <div class="mt-3 flex flex-wrap gap-2">
-                        <span class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-blue-900 dark:text-blue-300">発信最適化</span>
-                        <span class="bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-green-900 dark:text-green-300">AI × 多チャネル</span>
-                        <span class="bg-red-100 text-red-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-red-900 dark:text-red-300">観光UGC支援</span>
-                    </div>
-                </article>
-                
-                <!-- Product 4: 旅ログ -->
-                <article class="group relative flex flex-col justify-between overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-80 hover:bg-gray-800 transition-all duration-300">
-                    <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&auto=format&fit=crop&w=1035&q=80" alt="" class="absolute inset-0 -z-10 h-full w-full object-cover group-hover:scale-105 transition-transform duration-300">
-                    <div class="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/60"></div>
-                    <div class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
-                    
-                    <div class="flex items-center gap-y-1 overflow-hidden text-sm leading-6 text-gray-300">
-                        <div class="flex items-center gap-x-2">
-                            <div class="flex h-10 w-10 items-center justify-center rounded-full bg-green-600/20 ring-1 ring-green-600/30">
-                                <svg class="h-5 w-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                                </svg>
+                            <!-- Content -->
+                            <div class="lg:w-1/2">
+                                <div class="flex items-center mb-2">
+                                    <h3 class="text-xl font-semibold text-white mr-3">Step 1：移動中【CabinTime】</h3>
+                                    <span class="bg-cyan-100 text-cyan-800 text-sm font-medium px-3 py-1 rounded-full">Active</span>
+                                </div>
+                                <p class="text-lg font-medium text-cyan-300 mb-3">旅は、動き出した瞬間から始まる。</p>
+                                <p class="text-gray-300 mb-4">
+                                    飛行機、フェリー、列車、高速バスなど、通信が届かない移動時間を活用し、地域の観光情報や動画を届けます。<br>
+                                    CabinTimeが旅の"入口"を創り出します。
+                                </p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-sm dark:bg-blue-900 dark:text-blue-300">移動中UX</span>
+                                    <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-sm dark:bg-green-900 dark:text-green-300">マルチモーダル</span>
+                                    <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded-sm dark:bg-yellow-900 dark:text-yellow-300">オフラインDX</span>
+                                    <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-gray-300">観光起点</span>
+                                </div>
+                                <a href="/cabintime/" class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-cyan-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 focus:text-cyan-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700">
+                                    <svg class="w-3.5 h-3.5 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M14.707 7.793a1 1 0 0 0-1.414 0L11 10.086V1.5a1 1 0 0 0-2 0v8.586L6.707 7.793a1 1 0 1 0-1.414 1.414l4 4a1 1 0 0 0 1.416 0l4-4a1 1 0 0 0-.002-1.414Z"/>
+                                        <path d="M18 12h-2.55l-2.975 2.975a3.5 3.5 0 0 1-4.95 0L4.55 12H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2Zm-3 5a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"/>
+                                    </svg>
+                                    プロダクトページ
+                                </a>
                             </div>
-                            <span class="font-semibold text-gray-400">Coming Soon</span>
                         </div>
-                    </div>
-                    <h3 class="mt-3 text-lg font-semibold leading-6 text-white">
-                        <span>
-                            <span class="absolute inset-0"></span>
-                            旅ログ（MyTrails）（Coming Soon）
+                    </li>
+
+                    <!-- Step 2: Map × 動画 -->
+                    <li class="mb-16 ms-8">
+                        <span class="absolute flex items-center justify-center w-8 h-8 bg-gradient-to-r from-slate-700 to-slate-600 rounded-full -start-4 ring-4 ring-gray-900">
+                            <svg class="w-4 h-4 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd" d="M11.906 1.994a8.002 8.002 0 0 1 8.09 8.421 7.996 7.996 0 0 1-1.297 3.957.996.996 0 0 1-.133.204l-.108.129c-.178.243-.37.477-.573.699l-5.112 6.224a1 1 0 0 1-1.545 0L5.982 15.26l-.002-.002a18.146 18.146 0 0 1-.309-.38l-.133-.163a.999.999 0 0 1-.13-.202 7.995 7.995 0 0 1 6.498-12.518ZM15 9.997a3 3 0 1 1-5.999 0 3 3 0 0 1 5.999 0Z" clip-rule="evenodd"/>
+                            </svg>
                         </span>
-                    </h3>
-                    <p class="mt-2 text-sm font-medium text-white mb-1">旅を記録し、再訪をデザインする。</p>
-                    <p class="mt-1 text-sm text-gray-300">
-                        保存した場所・投稿・移動履歴を"旅の資産"として蓄積。<br>
-                        再訪・推薦・共有に活かす、観光エンゲージメントの起点。
-                    </p>
-                    <div class="mt-3 flex flex-wrap gap-2">
-                        <span class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-blue-900 dark:text-blue-300">体験蓄積UX</span>
-                        <span class="bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-green-900 dark:text-green-300">再訪促進</span>
-                        <span class="bg-yellow-100 text-yellow-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-yellow-900 dark:text-yellow-300">観光履歴資産</span>
-                    </div>
-                </article>
+                        <div class="flex flex-col lg:flex-row lg:items-start gap-8">
+                            <!-- Image -->
+                            <div class="lg:w-1/2">
+                                <a href="#" class="block relative overflow-hidden rounded-xl group transition-all duration-300 cursor-not-allowed opacity-75">
+                                    <img src="https://images.unsplash.com/photo-1553729459-efe14ef6055d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="地図とナビゲーション" class="w-full h-[500px] object-cover group-hover:scale-105 transition-transform duration-300">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent group-hover:from-gray-900/70"></div>
+                                    <div class="absolute inset-0 flex items-center justify-center">
+                                        <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">Coming Soon</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Content -->
+                            <div class="lg:w-1/2">
+                                <div class="flex items-center mb-2">
+                                    <h3 class="text-xl font-semibold text-white mr-3">Step 2：現地体験【Map × 動画】</h3>
+                                    <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Coming Soon</span>
+                                </div>
+                                <p class="text-lg font-medium text-blue-300 mb-3">旅先の体験を、地図と映像で可視化する。</p>
+                                <p class="text-gray-300 mb-4">
+                                    保存したスポットや他人の旅の軌跡を、動画付きマップUIで表示。<br>
+                                    観光地をどう巡るかが、直感的にわかります。
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-sm dark:bg-blue-900 dark:text-blue-300">体験構造化</span>
+                                    <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-sm dark:bg-green-900 dark:text-green-300">回遊設計支援</span>
+                                    <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded-sm dark:bg-yellow-900 dark:text-yellow-300">観光行動の可視化</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Step 3: SNS統合 -->
+                    <li class="mb-16 ms-8">
+                        <span class="absolute flex items-center justify-center w-8 h-8 bg-gradient-to-r from-gray-600 to-gray-500 rounded-full -start-4 ring-4 ring-gray-900">
+                            <svg class="w-4 h-4 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd" d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z" clip-rule="evenodd"/>
+                            </svg>
+                        </span>
+                        <div class="flex flex-col lg:flex-row lg:items-start gap-8">
+                            <!-- Image -->
+                            <div class="lg:w-1/2">
+                                <a href="#" class="block relative overflow-hidden rounded-xl group transition-all duration-300 cursor-not-allowed opacity-75">
+                                    <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="ソーシャルメディア共有" class="w-full h-[500px] object-cover group-hover:scale-105 transition-transform duration-300">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent group-hover:from-gray-900/70"></div>
+                                    <div class="absolute inset-0 flex items-center justify-center">
+                                        <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">Coming Soon</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Content -->
+                            <div class="lg:w-1/2">
+                                <div class="flex items-center mb-2">
+                                    <h3 class="text-xl font-semibold text-white mr-3">Step 3：発信【SNS統合】</h3>
+                                    <span class="bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded-full">Coming Soon</span>
+                                </div>
+                                <p class="text-lg font-medium text-purple-300 mb-3">感動した旅は、発信したくなる。</p>
+                                <p class="text-gray-300 mb-4">
+                                    AIが投稿文をメディアごとに最適化して生成。X（旧Twitter）には自動投稿、InstagramやYouTubeはタイムライン取得による一元管理に対応。複数SNSへの発信を効率化し、自分の「旅の資産」として蓄積されていきます。
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-sm dark:bg-blue-900 dark:text-blue-300">発信最適化</span>
+                                    <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-sm dark:bg-green-900 dark:text-green-300">AI × 多チャネル</span>
+                                    <span class="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded-sm dark:bg-red-900 dark:text-red-300">観光UGC支援</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Step 4: 旅ログ -->
+                    <li class="mb-16 ms-8">
+                        <span class="absolute flex items-center justify-center w-8 h-8 bg-gradient-to-r from-slate-600 to-slate-500 rounded-full -start-4 ring-4 ring-gray-900">
+                            <svg class="w-4 h-4 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd" d="M9 2.221V7H4.221a2 2 0 0 1 .365-.5L8.5 2.586A2 2 0 0 1 9 2.22ZM11 2v5a2 2 0 0 1-2 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2 2 2 0 0 0 2 2h12a2 2 0 0 0 2-2 2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2V4a2 2 0 0 0-2-2h-5Zm1.5 5.5a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2h-2ZM12.5 12a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2h-2ZM12.5 15a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2h-2Z" clip-rule="evenodd"/>
+                            </svg>
+                        </span>
+                        <div class="flex flex-col lg:flex-row lg:items-start gap-8">
+                            <!-- Image -->
+                            <div class="lg:w-1/2">
+                                <a href="#" class="block relative overflow-hidden rounded-xl group transition-all duration-300 cursor-not-allowed opacity-75">
+                                    <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="旅の記録と思い出" class="w-full h-[500px] object-cover group-hover:scale-105 transition-transform duration-300">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent group-hover:from-gray-900/70"></div>
+                                    <div class="absolute inset-0 flex items-center justify-center">
+                                        <span class="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">Coming Soon</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Content -->
+                            <div class="lg:w-1/2">
+                                <div class="flex items-center mb-2">
+                                    <h3 class="text-xl font-semibold text-white mr-3">Step 4：記録【旅ログ（MyTrails）】</h3>
+                                    <span class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">Coming Soon</span>
+                                </div>
+                                <p class="text-lg font-medium text-green-300 mb-3">旅の思い出を、次の旅へとつなげる。</p>
+                                <p class="text-gray-300 mb-4">
+                                    訪れた場所、保存したスポット、発信内容を自動的に記録。<br>
+                                    "観光履歴資産"として蓄積され、いつでも見返せます。
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-sm dark:bg-blue-900 dark:text-blue-300">体験蓄積UX</span>
+                                    <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-sm dark:bg-green-900 dark:text-green-300">再訪促進</span>
+                                    <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded-sm dark:bg-yellow-900 dark:text-yellow-300">観光履歴資産</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Step 5: 再訪・推薦 -->
+                    <li class="ms-8">
+                        <span class="absolute flex items-center justify-center w-8 h-8 bg-gradient-to-r from-gray-500 to-gray-400 rounded-full -start-4 ring-4 ring-gray-900">
+                            <svg class="w-4 h-4 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd" d="M8.64 4.737A7.97 7.97 0 0 1 12 4a8 8 0 1 1-8 8 1 1 0 0 1 2 0 6 6 0 1 0 1.676-4.162 1 1 0 0 1-1.525-1.295l1.79-2.014a1 1 0 0 1 .699-.592Z" clip-rule="evenodd"/>
+                                <path fill-rule="evenodd" d="M7.467 4.742a1 1 0 0 1-.19 1.4l-1.626 1.14a1 1 0 0 1-1.149-1.64l1.626-1.14a1 1 0 0 1 1.339.24Z" clip-rule="evenodd"/>
+                                <path fill-rule="evenodd" d="M7.707 5.293a1 1 0 0 1 0 1.414L6.414 8a1 1 0 0 1-1.414-1.414l1.293-1.293a1 1 0 0 1 1.414 0Z" clip-rule="evenodd"/>
+                            </svg>
+                        </span>
+                        <div class="flex flex-col lg:flex-row lg:items-start gap-8">
+                            <!-- Image -->
+                            <div class="lg:w-1/2">
+                                <a href="#" class="block relative overflow-hidden rounded-xl group transition-all duration-300 cursor-not-allowed opacity-75">
+                                    <img src="https://images.unsplash.com/photo-1529651737248-dad5e287768e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="再訪とエコシステム" class="w-full h-[500px] object-cover group-hover:scale-105 transition-transform duration-300">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent group-hover:from-gray-900/70"></div>
+                                    <div class="absolute inset-0 flex items-center justify-center">
+                                        <span class="bg-orange-600 text-white px-3 py-1 rounded-full text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">Coming Soon</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Content -->
+                            <div class="lg:w-1/2">
+                                <div class="flex items-center mb-2">
+                                    <h3 class="text-xl font-semibold text-white mr-3">Step 5：再訪・推薦</h3>
+                                    <span class="bg-orange-100 text-orange-800 text-sm font-medium px-3 py-1 rounded-full">Ecosystem</span>
+                                </div>
+                                <p class="text-lg font-medium text-orange-300 mb-3">「また行きたい」が、仕組みになる。</p>
+                                <p class="text-gray-300 mb-4">
+                                    旅ログの履歴から、再訪候補や地域からのクーポンが届く。<br>
+                                    一人の旅が、地域との持続的な関係を生み出します。
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-0.5 rounded-sm dark:bg-orange-900 dark:text-orange-300">リピート促進</span>
+                                    <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-sm dark:bg-green-900 dark:text-green-300">地域連携</span>
+                                    <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded-sm dark:bg-purple-900 dark:text-purple-300">持続的関係</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ol>
             </div>
         </div>
-                </section>
+    </section>
     
-                <!-- Ecosystem Section - Enhanced Visual Design -->
+    <!-- Ecosystem Section - Enhanced Visual Design -->
                 <section id="ecosystem" class="relative py-24 sm:py-32 overflow-hidden">
         <!-- Background with gradient mesh -->
         <div class="absolute inset-0">
@@ -776,9 +839,9 @@
                 </div>
             </div>
         </div>
-                </section>
+    </section>
     
-                <!-- Trust Section - Tailwind UI Stats -->
+    <!-- Trust Section - Tailwind UI Stats -->
                 <section class="bg-gray-900 py-24 sm:py-32">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
             <div class="mx-auto max-w-2xl text-center">
@@ -840,9 +903,9 @@
                 </div>
             </div>
         </div>
-                </section>
+    </section>
     
-                <!-- CTA Section - Premium Design with Background -->
+    <!-- CTA Section - Premium Design with Background -->
                 <section class="relative isolate overflow-hidden py-24 sm:py-32">
         <!-- Background image from Unsplash -->
         <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2084&q=80" alt="" class="absolute inset-0 -z-10 h-full w-full object-cover">
@@ -879,7 +942,7 @@
                 </a>
             </div>
         </div>
-                </section>
+    </section>
     
             </main>
             

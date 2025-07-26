@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>MarsLink</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header">
+            <div class="logo">CABIN<span class="logo-accent">TIME</span></div>
+            <div class="time-remaining">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM12.5 7H11V13L16.25 16.15L17 14.92L12.5 12.25V7Z" fill="white"/>
+                </svg>
+                <span id="time-left-header">62分</span>
+            </div>
+            <button class="menu-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 18H21V16H3V18ZM3 13H21V11H3V13ZM3 6V8H21V6H3Z" fill="white"/>
+                </svg>
+            </button>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <div class="hero">
+            <div class="hero-bg">
+                <div class="hero-bg">
+                    <video class="hero-video" autoplay muted loop>
+                        <source src="assets/videos/flight.mp4" type="video/mp4">
+                        <img src="assets/img/hero-fallback.jpg" alt="Flight view">
+                    </video>
+                </div>
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="hero-content">
+                <h1 class="hero-title">今日のフライト</h1>
+                <div class="time-display">到着まで： <span id="time-left-hero"><span id="time-left">62分</span></span></div>
+             <a href="flightmap/" class="primary-btn" style="text-decoration: none;">
+  フライトマップを見る
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M16.01 11H4V13H16.01V16L20 12L16.01 8V11Z" fill="white"/>
+  </svg>
+</a>
+            </div>
+        </div>
+    
+        <!-- Flight Map Section -->
+        <div class="section">
+            <div class="section-header">
+                <h2 class="section-title">Flight Information</h2>
+            </div>
+            
+            <!-- 新しい洗練されたフライトマップ -->
+            <div class="enhanced-flight-map-container">
+                <div class="flight-header-enhanced">
+                    <div class="route-info-enhanced">
+                        <div class="airport-code-enhanced">OKA</div>
+                        <div class="arrow-enhanced">✈</div>
+                        <div class="airport-code-enhanced">KIX</div>
+                        <div class="flight-number-enhanced">ML478</div>
+                    </div>
+                    <div class="flight-stats-enhanced">
+                        <div>距離: <span id="distance-total-enhanced">1,154 km</span></div>
+                        <div>飛行時間: 2h 15m</div>
+                    </div>
+                </div>
+
+                <div class="progress-section-enhanced">
+                    <div class="progress-labels-enhanced">
+                        <span>那覇空港</span>
+                        <span>関西国際空港</span>
+                    </div>
+                    
+                    <div class="progress-container-enhanced">
+                        <div class="progress-track-enhanced">
+                            <div class="progress-fill-enhanced" id="progress-fill-enhanced"></div>
+                        </div>
+                        <div class="aircraft-position-enhanced" id="aircraft-position-enhanced">
+                            <div class="aircraft-icon-enhanced">✈</div>
+                        </div>
+                        <div class="progress-percentage" id="progress-percentage-enhanced">54%</div>
+                    </div>
+                    
+                    <div class="airport-markers-enhanced">
+                        <div class="airport-marker-enhanced">
+                            <div class="marker-dot-enhanced departure"></div>
+                            <div class="marker-label-enhanced">OKA</div>
+                        </div>
+                        <div class="airport-marker-enhanced">
+                            <div class="marker-dot-enhanced arrival"></div>
+                            <div class="marker-label-enhanced">KIX</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- フライト詳細セクション -->
+            <div style="padding: 20px; background-color: rgba(10, 17, 40, 0.8); border-radius: 10px; margin-top: 20px;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 15px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px;">
+                    <div>到着予定時刻:</div>
+                    <div><span id="arrival-time">18:30</span></div>
+                </div>
+                
+                <div style="display: flex; justify-content: space-between; margin-bottom: 15px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px;">
+                    <div>残りフライト時間:</div>
+                    <div><span id="time-left-footer">62分</span></div>
+                </div>
+                
+                <div style="display: flex; justify-content: space-between; margin-bottom: 15px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px;">
+                    <div>高度:</div>
+                    <div><span id="altitude">10,668 m</span></div>
+                </div>
+                
+                <div style="display: flex; justify-content: space-between; margin-bottom: 15px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px;">
+                    <div>対地速度:</div>
+                    <div><span id="speed">892 km/h</span></div>
+                </div>
+                
+                <div style="display: flex; justify-content: space-between; margin-bottom: 15px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px;">
+                    <div>残り距離:</div>
+                    <div><span id="distance-left">約 462 km</span></div>
+                </div>
+                
+                <div style="display: flex; justify-content: space-between; margin-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px;">
+                    <div>外気温度:</div>
+                    <div><span id="temperature">-54°C</span></div>
+                </div>
+                
+                <!-- コックピットからの映像ボタン -->
+				<a href="cockpit/" style="text-decoration: none;">
+                <button style="width: 100%; background-color: #00a8ff; color: #fff; border: none; padding: 15px 20px; border-radius: 10px; font-size: 16px; font-weight: bold; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='#0088cc'; this.style.transform='translateY(-2px)'" onmouseout="this.style.backgroundColor='#00a8ff'; this.style.transform='translateY(0)'">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 10px;">
+                        <path d="M17 10.5V7C17 6.45 16.55 6 16 6H4C3.45 6 3 6.45 3 7V17C3 17.55 3.45 18 4 18H16C16.55 18 17 17.55 17 17V13.5L21 17.5V6.5L17 10.5Z" fill="white"/>
+                    </svg>
+                    コックピットからの映像
+                </button>
+				</a>
+            </div>
+        </div>
+        
+        <!-- Cabin Time Contents Section -->
+        <div class="section section-dark">
+            <div class="section-header">
+                <h2 class="section-title">機内エンターテイメント</h2>
+                <a href="#" class="view-all">
+                    すべてを見る
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.01 11H4V13H16.01V16L20 12L16.01 8V11Z" fill="white"/>
+                    </svg>
+                </a>
+            </div>
+            
+            <div class="content-grid-container">
+                <button class="scroll-arrow scroll-left">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" fill="currentColor"/>
+                    </svg>
+                </button>
+                <div class="content-grid">
+                    <div class="content-card">
+                        <div class="card-image" style="background-image: url('assets/img/current-location.jpg');"></div>
+                        <div class="card-content">
+                            <div class="card-title">現在地表示</div>
+                        </div>
+                    </div>
+                    <div class="content-card">
+                        <div class="card-image" style="background-image: url('assets/img/flight-info.jpg');"></div>
+                        <div class="card-content">
+                            <div class="card-title">便情報</div>
+                        </div>
+                    </div>
+                    <div class="content-card">
+                        <div class="card-image" style="background-image: url('assets/img/airline-meal.jpg');"></div>
+                        <div class="card-content">
+                            <div class="card-title">機内食メニュー</div>
+                        </div>
+                    </div>
+                    <div class="content-card">
+                        <div class="card-image" style="background-image: url('assets/img/b787.jpg');"></div>
+                        <div class="card-content">
+                            <div class="card-title">飛行機の機材紹介</div>
+                        </div>
+                    </div>
+                    <div class="content-card">
+                        <div class="card-image" style="background-image: url('assets/img/cockpit.jpg');"></div>
+                        <div class="card-content">
+                            <div class="card-title">コックピット</div>
+                        </div>
+                    </div>
+                </div>
+                <button class="scroll-arrow scroll-right">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z" fill="currentColor"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Local Information Section -->
+        <div class="section">
+            <div class="section-header">
+                <h2 class="section-title">ご当地情報</h2>
+                <a href="#" class="view-all">
+                    すべてを見る
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.01 11H4V13H16.01V16L20 12L16.01 8V11Z" fill="white"/>
+                    </svg>
+                </a>
+            </div>
+            
+            <div class="content-grid-container">
+                <button class="scroll-arrow scroll-left">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" fill="currentColor"/>
+                    </svg>
+                </button>
+                <div class="content-grid">
+                    <div class="content-card">
+                        <div class="card-image" style="background-image: url('assets/img/restaurant.jpg');"></div>
+                        <div class="card-content">
+                            <div class="card-title">飲食店のご案内</div>
+                        </div>
+                    </div>
+					
+					
+					
+                    <div class="content-card">
+                        <div class="card-image" style="background-image: url('assets/img/tourism.jpg');"></div>
+                        <div class="card-content">
+                            <div class="card-title">観光地のご案内</div>
+                        </div>
+                    </div>
+					
+					<div class="content-card">
+                        <div class="card-image" style="background-image: url('assets/img/grumet.jpg');"></div>
+                        <div class="card-content">
+                            <div class="card-title">市長のグルメ</div>
+                        </div>
+                    </div>
+					
+					
+                    <div class="content-card">
+                        <div class="card-image" style="background-image: url('assets/img/activities.jpg');"></div>
+                        <div class="card-content">
+                            <div class="card-title">アクティビティ</div>
+                        </div>
+                    </div>
+                    <div class="content-card">
+                        <div class="card-image" style="background-image: url('assets/img/bar.jpg');"></div>
+                        <div class="card-content">
+                            <div class="card-title">ナイトBar</div>
+                        </div>
+                    </div>
+                    <div class="content-card">
+                        <div class="card-image" style="background-image: url('assets/img/events.jpg');"></div>
+                        <div class="card-content">
+                            <div class="card-title">イベント情報</div>
+                        </div>
+                    </div>
+                    <div class="content-card">
+                        <div class="card-image" style="background-image: url('assets/img/souvenirs.jpg');"></div>
+                        <div class="card-content">
+                            <div class="card-title">お土産情報</div>
+                        </div>
+                    </div>
+                    <div class="content-card">
+                        <div class="card-image" style="background-image: url('assets/img/transportation.jpg');"></div>
+                        <div class="card-content">
+                            <div class="card-title">交通情報</div>
+                        </div>
+                    </div>
+                    <div class="content-card">
+                        <div class="card-image" style="background-image: url('assets/img/seasonal.jpg');"></div>
+                        <div class="card-content">
+                            <div class="card-title">季節のみどころ</div>
+                        </div>
+                    </div>
+                </div>
+                <button class="scroll-arrow scroll-right">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z" fill="currentColor"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+       
+        
+        <!-- EC Section -->
+        <div class="section section-dark">
+            <div class="section-header">
+                <h2 class="section-title">オンラインショップ</h2>
+                <a href="#" class="view-all">
+                    すべてを見る
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.01 11H4V13H16.01V16L20 12L16.01 8V11Z" fill="white"/>
+                    </svg>
+                </a>
+            </div>
+            
+            <div class="content-grid-container">
+                <button class="scroll-arrow scroll-left">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" fill="currentColor"/>
+                    </svg>
+                </button>
+                <div class="content-grid">
+                    <div class="content-card">
+                        <div class="card-image" style="background-image: url('assets/img/food1.jpg');"></div>
+                        <div class="card-content">
+                            <div class="card-title">沖縄そば</div>
+                            <div style="color: #00a8ff; margin-top: 5px;">¥3,500</div>
+                        </div>
+                    </div>
+                    <div class="content-card">
+                        <div class="card-image" style="background-image: url('assets/img/food2.jpg');"></div>
+                        <div class="card-content">
+                            <div class="card-title">コーレーグース</div>
+                            <div style="color: #00a8ff; margin-top: 5px;">¥2,800</div>
+                        </div>
+                    </div>
+                    <div class="content-card">
+                        <div class="card-image" style="background-image: url('assets/img/food3.jpg');"></div>
+                        <div class="card-content">
+                            <div class="card-title">泡盛</div>
+                            <div style="color: #00a8ff; margin-top: 5px;">¥4,200</div>
+                        </div>
+                    </div>
+                    <div class="content-card">
+                        <div class="card-image" style="background-image: url('assets/img/food4.jpg');"></div>
+                        <div class="card-content">
+                            <div class="card-title">大阪豚まんセット</div>
+                            <div style="color: #00a8ff; margin-top: 5px;">¥1,800</div>
+                        </div>
+                    </div>
+             
+					 <div class="content-card">
+                        <div class="card-image" style="background-image: url('assets/img/food5.jpg');"></div>
+                        <div class="card-content">
+                            <div class="card-title">京都漬物セット</div>
+                            <div style="color: #00a8ff; margin-top: 5px;">¥2,980</div>
+                        </div>
+                    </div>
+                </div>
+                <button class="scroll-arrow scroll-right">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z" fill="currentColor"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Video Programming Section -->
+        <div class="section section-dark">
+            <div class="section-header">
+                <h2 class="section-title">ビデオプログラム</h2>
+                <a href="#" class="view-all">
+                    すべてを見る
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.01 11H4V13H16.01V16L20 12L16.01 8V11Z" fill="white"/>
+                    </svg>
+                </a>
+            </div>
+            
+            <div class="content-grid-container">
+                <button class="scroll-arrow scroll-left">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" fill="currentColor"/>
+                    </svg>
+                </button>
+                <div class="content-grid">
+                    <div class="content-card">
+                        <div class="card-image" style="background-image: url('assets/img/video6.jpg');"></div>
+                        <div class="card-content">
+                            <div class="card-title">SUITS／スーツ</div>
+                            <div style="color: #aaa; font-size: 12px; margin-top: 5px;">56分</div>
+                        </div>
+                    </div>
+                    <div class="content-card">
+                        <div class="card-image" style="background-image: url('assets/img/video9.jpg');"></div>
+                        <div class="card-content">
+                            <div class="card-title">君の名は</div>
+                            <div style="color: #aaa; font-size: 12px; margin-top: 5px;">2時間14分</div>
+                        </div>
+                    </div>
+                    <div class="content-card">
+                        <div class="card-image" style="background-image: url('assets/img/video3.jpg');"></div>
+                        <div class="card-content">
+                            <div class="card-title">名探偵コナン</div>
+                            <div style="color: #aaa; font-size: 12px; margin-top: 5px;">24分13秒</div>
+                        </div>
+                    </div>
+                    <div class="content-card">
+                        <div class="card-image" style="background-image: url('assets/img/video11.jpg');"></div>
+                        <div class="card-content">
+                            <div class="card-title">ブリジットジョーンズの日記</div>
+                            <div style="color: #aaa; font-size: 12px; margin-top: 5px;">2時間35分</div>
+                        </div>
+                    </div>
+                    <div class="content-card">
+                        <div class="card-image" style="background-image: url('assets/img/video10.jpg');"></div>
+                        <div class="card-content">
+                            <div class="card-title">オーシャンズ８</div>
+                            <div style="color: #aaa; font-size: 12px; margin-top: 5px;">2時間30分</div>
+                        </div>
+                    </div>
+                </div>
+                <button class="scroll-arrow scroll-right">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z" fill="currentColor"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <!-- Bottom Navigation -->
+        <div class="navbar">
+            <button class="nav-item" onclick="history.back()">
+                <div class="nav-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.42-1.41L7.83 13H20v-2z" fill="currentColor"/>
+                    </svg>
+                </div>
+                <div class="nav-text">戻る</div>
+            </button>
+            <button class="nav-item active" onclick="location.reload()">
+                <div class="nav-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z" fill="currentColor"/>
+                    </svg>
+                </div>
+                <div class="nav-text">更新</div>
+            </button>
+            <button class="nav-item" onclick="history.forward()">
+                <div class="nav-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 11h12.17l-5.59-5.59L12 4l8 8-8 8-1.41-1.41L16.17 13H4v-2z" fill="currentColor"/>
+                    </svg>
+                </div>
+                <div class="nav-text">進む</div>
+            </button>
+        </div>
+        
+        <!-- Copyright Information -->
+        <div class="copyright">
+            <p>© 2025 CABINTIME. All Rights Reserved.</p>
+            <p>安全で快適なフライトをお楽しみください</p>
+        </div>
+    </footer>
+
+    <script src="js/flight-info.js"></script>
+</body>
+</html>

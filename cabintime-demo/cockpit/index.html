@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>CabinTime - Video</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: calc(100vh - 160px);
+      background-color: #000;
+    }
+
+    .video-wrapper {
+      width: 360px;
+      height: 640px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .video-wrapper video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header">
+		  <a href="https://marslink.co.jp/cabintime/"style="text-decoration: none; color: inherit;">
+		<div class="logo">CABIN<span class="logo-accent">TIME</span></div>
+			  </a>
+
+      <div class="time-remaining">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18
+          c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25
+          3.15.75-1.23-4.5-2.67V7z" fill="white"/>
+        </svg>
+        <span id="time-left-header">1分</span>
+      </div>
+      <button class="menu-btn">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" fill="white"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="video-wrapper">
+      <video autoplay muted loop playsinline>
+        <source src="../assets/videos/kix.mp4" type="video/mp4">
+        お使いのブラウザは video タグに対応していません。
+      </video>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <!-- Bottom Navigation -->
+    <div class="navbar">
+      <button class="nav-item" onclick="history.back()">
+        <div class="nav-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.42-1.41L7.83 13H20v-2z" fill="currentColor"/>
+          </svg>
+        </div>
+        <div class="nav-text">戻る</div>
+      </button>
+      <button class="nav-item active" onclick="location.reload()">
+        <div class="nav-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z" fill="currentColor"/>
+          </svg>
+        </div>
+        <div class="nav-text">更新</div>
+      </button>
+      <button class="nav-item" onclick="history.forward()">
+        <div class="nav-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 11h12.17l-5.59-5.59L12 4l8 8-8 8-1.41-1.41L16.17 13H4v-2z" fill="currentColor"/>
+          </svg>
+        </div>
+        <div class="nav-text">進む</div>
+      </button>
+    </div>
+    
+    <!-- Copyright Information -->
+    <div class="copyright">
+      <p>© 2025 CABINTIME. All Rights Reserved.</p>
+      <p>安全で快適なフライトをお楽しみください</p>
+    </div>
+  </footer>
+
+</body>
+</html>
