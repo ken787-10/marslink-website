@@ -1,270 +1,132 @@
-<!-- Ecosystem Section - Enhanced -->
-<section class="py-24 bg-black overflow-hidden">
-    <div class="container mx-auto px-6">
-        <div class="text-center mb-16">
-            <h2 class="text-4xl md:text-5xl font-orbitron font-bold text-white mb-6">
+<!-- Ecosystem Section - Enhanced Visual Design -->
+<section id="ecosystem" class="relative py-24 sm:py-32 overflow-hidden">
+    <!-- Background with gradient mesh -->
+    <div class="absolute inset-0">
+        <div class="absolute inset-0 bg-gray-900"></div>
+        <img class="absolute inset-0 h-full w-full object-cover opacity-10" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="">
+    </div>
+    
+    <div class="relative mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+            <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl font-orbitron">
                 観光エコシステムの循環構造
             </h2>
-            <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-                MarsLinkが創る、途切れることのない観光体験の循環
+            <p class="mt-4 text-lg leading-8 text-gray-300">
+                5つのフェーズが生み出す、持続可能な観光体験の価値循環
             </p>
         </div>
-
-        <!-- Enhanced Circular Ecosystem -->
-        <div class="max-w-6xl mx-auto">
-            <div class="relative w-full aspect-square max-w-4xl mx-auto">
-                <!-- Center Logo/Text -->
-                <div class="absolute inset-0 flex items-center justify-center z-20">
-                    <div class="text-center bg-black/90 backdrop-blur-sm rounded-full p-8 border border-gray-800">
-                        <h3 class="text-3xl font-orbitron font-bold text-white mb-2">MarsLink</h3>
-                        <p class="text-gray-400 text-sm">Tourism Experience OS</p>
-                        <div class="mt-2 flex justify-center gap-2">
-                            <span class="text-xs text-cyan-400">発見</span>
-                            <span class="text-xs text-gray-500">•</span>
-                            <span class="text-xs text-blue-400">感動</span>
-                            <span class="text-xs text-gray-500">•</span>
-                            <span class="text-xs text-purple-400">共有</span>
-                            <span class="text-xs text-gray-500">•</span>
-                            <span class="text-xs text-green-400">記憶</span>
+        
+        <!-- Circular Flow Visualization -->
+        <div class="mx-auto mt-16 max-w-5xl">
+            <div class="relative">
+                <!-- Center Hub -->
+                <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+                    <div class="relative flex h-32 w-32 items-center justify-center">
+                        <div class="absolute inset-0 animate-ping rounded-full bg-gradient-to-r from-cyan-400 to-blue-600 opacity-20"></div>
+                        <div class="relative flex h-24 w-24 items-center justify-center rounded-full bg-gradient-to-r from-cyan-600 to-blue-600 shadow-2xl">
+                            <span class="font-orbitron text-lg font-bold text-white">MarsLink</span>
                         </div>
                     </div>
                 </div>
-
-                <!-- Rotating Circle Paths -->
-                <svg class="absolute inset-0 w-full h-full" viewBox="0 0 800 800">
-                    <!-- Main circulation path -->
-                    <circle cx="400" cy="400" r="280" fill="none" stroke="url(#mainGradient)" stroke-width="2" stroke-dasharray="5,5" opacity="0.3" class="animate-spin-slow"/>
-                    <!-- Inner path for local spots -->
-                    <circle cx="400" cy="400" r="200" fill="none" stroke="url(#innerGradient)" stroke-width="1" stroke-dasharray="3,3" opacity="0.2" class="animate-spin-reverse"/>
-                    <!-- Outer partner ring -->
-                    <circle cx="400" cy="400" r="360" fill="none" stroke="#374151" stroke-width="1" opacity="0.3"/>
+                
+                <!-- Circular Steps -->
+                <div class="relative h-[500px] w-full">
+                    <!-- Step 1: 移動中 -->
+                    <div class="absolute left-1/2 top-0 -translate-x-1/2 transform">
+                        <div class="group relative">
+                            <div class="flex h-24 w-24 items-center justify-center rounded-full bg-gray-800 ring-4 ring-cyan-400/30 transition-all group-hover:ring-cyan-400/60">
+                                <svg class="h-10 w-10 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                                </svg>
+                            </div>
+                            <p class="mt-2 text-center font-semibold text-white">移動中</p>
+                            <div class="absolute -bottom-8 left-1/2 hidden -translate-x-1/2 transform rounded-lg bg-gray-800 p-3 text-sm text-gray-300 shadow-xl group-hover:block">
+                                飛行機・船舶での移動時間
+                            </div>
+                        </div>
+                    </div>
                     
-                    <defs>
-                        <linearGradient id="mainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:1" />
-                            <stop offset="50%" style="stop-color:#3b82f6;stop-opacity:1" />
-                            <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
-                        </linearGradient>
-                        <linearGradient id="innerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
-                            <stop offset="100%" style="stop-color:#ef4444;stop-opacity:1" />
-                        </linearGradient>
-                    </defs>
-                </svg>
-
-                <!-- Ecosystem Nodes -->
-                <div class="absolute inset-0">
-                    <!-- Node 1: 移動中 (top) with transport icons -->
-                    <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-0">
-                        <div class="relative">
-                            <!-- Transport icons around the node -->
-                            <div class="absolute -left-20 top-4 opacity-60">
-                                <div class="w-10 h-10 bg-cyan-500/10 rounded-lg flex items-center justify-center">
-                                    <svg class="w-5 h-5 text-cyan-300" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
-                                    </svg>
-                                </div>
+                    <!-- Step 2: 現地体験 -->
+                    <div class="absolute right-[15%] top-[30%] transform">
+                        <div class="group relative">
+                            <div class="flex h-24 w-24 items-center justify-center rounded-full bg-gray-800 ring-4 ring-blue-400/30 transition-all group-hover:ring-blue-400/60">
+                                <svg class="h-10 w-10 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
                             </div>
-                            <div class="absolute -right-20 top-4 opacity-60">
-                                <div class="w-10 h-10 bg-cyan-500/10 rounded-lg flex items-center justify-center">
-                                    <svg class="w-5 h-5 text-cyan-300" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M3 13h1c0 1.11.89 2 2 2s2-.89 2-2h6c0 1.11.89 2 2 2s2-.89 2-2h1c1.11 0 2-.89 2-2v-3c0-1.11-.89-2-2-2h-1.05L16.97 4H11v2h4.05l.5 2H5c-1.11 0-2 .89-2 2v3c0 1.11.89 2 2 2zm0 5v-2h2v2h4v-2h6v2h4v-2h2v2c0 1.11-.89 2-2 2H5c-1.11 0-2-.89-2-2z"/>
-                                    </svg>
-                                </div>
-                            </div>
-                            
-                            <!-- Main node -->
-                            <div class="bg-gradient-to-br from-gray-900 to-gray-800 border-2 border-cyan-500 rounded-2xl p-6 w-56 hover:scale-110 transition-transform cursor-pointer group animate-float">
-                                <div class="text-center">
-                                    <div class="w-12 h-12 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-cyan-500/30">
-                                        <svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
-                                        </svg>
-                                    </div>
-                                    <h4 class="text-white font-bold mb-1">移動中</h4>
-                                    <p class="text-gray-400 text-xs mb-2">CabinTimeで情報入手</p>
-                                    <span class="text-cyan-400 text-xs font-medium">「発見」</span>
-                                </div>
+                            <p class="mt-2 text-center font-semibold text-white">現地体験</p>
+                            <div class="absolute -bottom-8 left-1/2 hidden -translate-x-1/2 transform rounded-lg bg-gray-800 p-3 text-sm text-gray-300 shadow-xl group-hover:block">
+                                観光地での実体験
                             </div>
                         </div>
                     </div>
-
-                    <!-- Node 2: 現地体験 (right) with local spots -->
-                    <div class="absolute top-1/2 right-0 transform translate-x-0 -translate-y-1/2">
-                        <div class="relative">
-                            <!-- Local experience icons -->
-                            <div class="absolute -top-16 right-4 opacity-60">
-                                <div class="w-8 h-8 bg-blue-500/10 rounded-lg flex items-center justify-center">
-                                    <svg class="w-4 h-4 text-blue-300" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M3 2v2h2v15c0 1.11.89 2 2 2h10c1.11 0 2-.89 2-2V4h2V2H3zm9 2c1.86 0 3.41 1.28 3.86 3H8.14A4.001 4.001 0 0112 4zm0 4c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2z"/>
-                                    </svg>
-                                </div>
+                    
+                    <!-- Step 3: 発信 -->
+                    <div class="absolute bottom-[15%] right-[5%] transform">
+                        <div class="group relative">
+                            <div class="flex h-24 w-24 items-center justify-center rounded-full bg-gray-800 ring-4 ring-purple-400/30 transition-all group-hover:ring-purple-400/60">
+                                <svg class="h-10 w-10 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                                </svg>
                             </div>
-                            <div class="absolute -bottom-16 right-4 opacity-60">
-                                <div class="w-8 h-8 bg-blue-500/10 rounded-lg flex items-center justify-center">
-                                    <svg class="w-4 h-4 text-blue-300" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M7 17c-1.11 0-2.11-.45-2.83-1.17-.21-.21-.37-.46-.48-.73H2v3c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-3h-1.69c-.11.27-.27.52-.48.73-.72.72-1.72 1.17-2.83 1.17s-2.11-.45-2.83-1.17c-.21-.21-.37-.46-.48-.73h-3.38c-.11.27-.27.52-.48.73-.72.72-1.72 1.17-2.83 1.17zm10-10.5c0 .83-.67 1.5-1.5 1.5S14 7.33 14 6.5 14.67 5 15.5 5 17 5.67 17 6.5zm-9 0C8 7.33 7.33 8 6.5 8S5 7.33 5 6.5 5.67 5 6.5 5 8 5.67 8 6.5zM22 8.5h-.78c-.4-1.96-1.77-3.56-3.58-4.31l-.43-1.08C16.93 2.45 16.27 2 15.54 2h-7.1c-.72 0-1.38.45-1.66 1.11l-.43 1.08C4.55 4.94 3.17 6.54 2.78 8.5H2c-.55 0-1 .45-1 1s.45 1 1 1h20c.55 0 1-.45 1-1s-.45-1-1-1z"/>
-                                    </svg>
-                                </div>
-                            </div>
-                            
-                            <div class="bg-gradient-to-br from-gray-900 to-gray-800 border-2 border-blue-500 rounded-2xl p-6 w-56 hover:scale-110 transition-transform cursor-pointer group animate-float" style="animation-delay: 0.5s">
-                                <div class="text-center">
-                                    <div class="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-blue-500/30">
-                                        <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                                        </svg>
-                                    </div>
-                                    <h4 class="text-white font-bold mb-1">現地体験</h4>
-                                    <p class="text-gray-400 text-xs mb-2">Map×動画で回遊</p>
-                                    <span class="text-blue-400 text-xs font-medium">「感動」</span>
-                                </div>
+                            <p class="mt-2 text-center font-semibold text-white">発信</p>
+                            <div class="absolute -bottom-8 left-1/2 hidden -translate-x-1/2 transform rounded-lg bg-gray-800 p-3 text-sm text-gray-300 shadow-xl group-hover:block">
+                                SNSでの体験共有
                             </div>
                         </div>
                     </div>
-
-                    <!-- Node 3: 発信 (bottom) -->
-                    <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-0">
-                        <div class="bg-gradient-to-br from-gray-900 to-gray-800 border-2 border-purple-500 rounded-2xl p-6 w-56 hover:scale-110 transition-transform cursor-pointer group animate-float" style="animation-delay: 1s">
-                            <div class="text-center">
-                                <div class="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-purple-500/30">
-                                    <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m9.032 4.026a9.001 9.001 0 010-5.368m0 5.368a9.003 9.003 0 01-6.716 3.316m6.716-8.684a9.001 9.001 0 00-6.716-3.316m6.716 3.316a9.003 9.003 0 010 5.368"></path>
-                                    </svg>
-                                </div>
-                                <h4 class="text-white font-bold mb-1">発信</h4>
-                                <p class="text-gray-400 text-xs mb-2">SNS統合で共有</p>
-                                <span class="text-purple-400 text-xs font-medium">「共有」</span>
+                    
+                    <!-- Step 4: 記録 -->
+                    <div class="absolute bottom-[15%] left-[5%] transform">
+                        <div class="group relative">
+                            <div class="flex h-24 w-24 items-center justify-center rounded-full bg-gray-800 ring-4 ring-green-400/30 transition-all group-hover:ring-green-400/60">
+                                <svg class="h-10 w-10 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                </svg>
+                            </div>
+                            <p class="mt-2 text-center font-semibold text-white">記録</p>
+                            <div class="absolute -bottom-8 left-1/2 hidden -translate-x-1/2 transform rounded-lg bg-gray-800 p-3 text-sm text-gray-300 shadow-xl group-hover:block">
+                                旅の思い出を保存
                             </div>
                         </div>
                     </div>
-
-                    <!-- Node 4: 記録・分析 (left) -->
-                    <div class="absolute top-1/2 left-0 transform -translate-x-0 -translate-y-1/2">
-                        <div class="bg-gradient-to-br from-gray-900 to-gray-800 border-2 border-green-500 rounded-2xl p-6 w-56 hover:scale-110 transition-transform cursor-pointer group animate-float" style="animation-delay: 1.5s">
-                            <div class="text-center">
-                                <div class="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-green-500/30">
-                                    <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-                                    </svg>
-                                </div>
-                                <h4 class="text-white font-bold mb-1">記録・分析</h4>
-                                <p class="text-gray-400 text-xs mb-2">GeoBuzzで可視化</p>
-                                <span class="text-green-400 text-xs font-medium">「記憶」</span>
+                    
+                    <!-- Step 5: 再訪 -->
+                    <div class="absolute left-[15%] top-[30%] transform">
+                        <div class="group relative">
+                            <div class="flex h-24 w-24 items-center justify-center rounded-full bg-gray-800 ring-4 ring-yellow-400/30 transition-all group-hover:ring-yellow-400/60">
+                                <svg class="h-10 w-10 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                                </svg>
+                            </div>
+                            <p class="mt-2 text-center font-semibold text-white">再訪</p>
+                            <div class="absolute -bottom-8 left-1/2 hidden -translate-x-1/2 transform rounded-lg bg-gray-800 p-3 text-sm text-gray-300 shadow-xl group-hover:block">
+                                次の旅へのつながり
                             </div>
                         </div>
                     </div>
-
-                    <!-- Connection Lines showing spot-to-spot flow -->
-                    <svg class="absolute inset-0 w-full h-full pointer-events-none">
-                        <!-- Dotted lines connecting spots -->
-                        <path d="M 400 120 Q 600 300 680 400" fill="none" stroke="#60a5fa" stroke-width="1" stroke-dasharray="2,4" opacity="0.3" class="animate-pulse"/>
-                        <path d="M 680 400 Q 600 600 400 680" fill="none" stroke="#a78bfa" stroke-width="1" stroke-dasharray="2,4" opacity="0.3" class="animate-pulse" style="animation-delay: 0.5s"/>
-                        <path d="M 400 680 Q 200 600 120 400" fill="none" stroke="#10b981" stroke-width="1" stroke-dasharray="2,4" opacity="0.3" class="animate-pulse" style="animation-delay: 1s"/>
-                        <path d="M 120 400 Q 200 200 400 120" fill="none" stroke="#f59e0b" stroke-width="1" stroke-dasharray="2,4" opacity="0.3" class="animate-pulse" style="animation-delay: 1.5s"/>
+                    
+                    <!-- Connecting Lines (SVG) -->
+                    <svg class="absolute inset-0 h-full w-full" style="z-index: -1;">
+                        <circle cx="50%" cy="50%" r="180" fill="none" stroke="url(#gradient)" stroke-width="2" stroke-dasharray="5,5" opacity="0.3" />
+                        <defs>
+                            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#06B6D4" />
+                                <stop offset="100%" stop-color="#3B82F6" />
+                            </linearGradient>
+                        </defs>
                     </svg>
                 </div>
-
-                <!-- Partner Ecosystem (outer ring) -->
-                <div class="absolute inset-0 pointer-events-none">
-                    <!-- Partner logos/text positioned around the outer circle -->
-                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 text-xs text-gray-500">
-                        航空会社・交通事業者
-                    </div>
-                    <div class="absolute -bottom-4 left-1/2 transform -translate-x-1/2 text-xs text-gray-500">
-                        地域DMO・観光協会
-                    </div>
-                    <div class="absolute top-1/2 -left-4 transform -translate-y-1/2 text-xs text-gray-500">
-                        百貨店・商業施設
-                    </div>
-                    <div class="absolute top-1/2 -right-4 transform -translate-y-1/2 text-xs text-gray-500">
-                        地方自治体
-                    </div>
-                </div>
-
-                <!-- 再訪の中心的な流れ -->
-                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-                    <div class="w-96 h-96 rounded-full border border-orange-500/10 animate-pulse"></div>
-                </div>
             </div>
-
+            
             <!-- Description -->
-            <div class="mt-16 text-center">
-                <h3 class="text-2xl font-bold text-white mb-4">継続的な価値循環</h3>
-                <p class="text-gray-300 max-w-2xl mx-auto">
-                    移動中の情報接点から始まり、現地での体験、SNSでの発信、データ分析を経て、
-                    再訪へとつながる。MarsLinkは観光体験を一過性のイベントから、
-                    持続的な関係構築のサイクルへと変革します。
+            <div class="mx-auto mt-16 max-w-3xl text-center">
+                <p class="text-lg leading-8 text-gray-300">
+                    移動時間から始まる観光体験を、持続的な価値循環へ。<br>
+                    MarsLinkは各フェーズをシームレスにつなぎ、観光の新しいエコシステムを構築します。
                 </p>
-            </div>
-
-            <!-- Key Features -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 max-w-3xl mx-auto">
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
-                        </svg>
-                    </div>
-                    <h4 class="text-white font-semibold mb-2">シームレスな連携</h4>
-                    <p class="text-gray-400 text-sm">各プロダクトが連携し、分断のない観光体験を実現</p>
-                </div>
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                        </svg>
-                    </div>
-                    <h4 class="text-white font-semibold mb-2">データの価値化</h4>
-                    <p class="text-gray-400 text-sm">蓄積されたデータが次の体験価値を生む</p>
-                </div>
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-purple-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
-                        </svg>
-                    </div>
-                    <h4 class="text-white font-semibold mb-2">関係性の構築</h4>
-                    <p class="text-gray-400 text-sm">旅人と地域の持続的な関係を育む</p>
-                </div>
             </div>
         </div>
     </div>
 </section>
-
-<style>
-@keyframes spin-slow {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-@keyframes spin-reverse {
-    from {
-        transform: rotate(360deg);
-    }
-    to {
-        transform: rotate(0deg);
-    }
-}
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-}
-.animate-spin-slow {
-    animation: spin-slow 40s linear infinite;
-}
-.animate-spin-reverse {
-    animation: spin-reverse 30s linear infinite;
-}
-.animate-float {
-    animation: float 4s ease-in-out infinite;
-}
-</style>
