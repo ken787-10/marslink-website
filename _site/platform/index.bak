@@ -465,7 +465,7 @@
 
 <!-- Platform Page Content -->
 <!-- Hero Section -->
-<section class="relative isolate min-h-screen flex items-center pt-[100px]" aria-labelledby="hero-heading">
+<section class="relative isolate min-h-[70vh] flex items-center pt-[100px]" aria-labelledby="hero-heading">
     <!-- Background image from Unsplash -->
     <div class="absolute inset-0">
         <img class="h-full w-full object-cover" src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80" alt="Ocean technology">
@@ -479,7 +479,7 @@
     </div>
     
     <!-- Content -->
-    <div class="relative mx-auto max-w-7xl px-6 lg:px-8 py-32 sm:py-48 lg:py-56">
+    <div class="relative mx-auto max-w-7xl px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
         <div class="mx-auto max-w-4xl text-center">
             <h1 id="hero-heading" class="text-4xl font-bold tracking-tight text-white sm:text-6xl lg:text-7xl font-orbitron animate-fade-in">
                 観光体験を、
