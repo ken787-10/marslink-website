@@ -1,0 +1,317 @@
+<!-- Products Grid Section - Value Chain Structure -->
+<section id="products-grid" class="py-24 sm:py-32 bg-gray-950">
+    <div class="mx-auto px-6 lg:px-8" style="max-width: 1400px;">
+        <div class="mx-auto max-w-2xl text-center">
+            <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl font-orbitron">
+                観光バリューチェーン構造
+            </h2>
+            <p class="mt-4 text-lg leading-8 text-gray-300">
+                興味喚起から再訪まで、観光体験の全フェーズをカバーするプロダクト群
+            </p>
+        </div>
+        
+        <!-- Products Grid -->
+        <style>
+            .products-grid-container {
+                display: grid !important;
+                grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+                gap: 24px !important;
+                width: 100% !important;
+            }
+            @media (max-width: 1024px) {
+                .products-grid-container {
+                    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+                }
+            }
+            @media (max-width: 640px) {
+                .products-grid-container {
+                    grid-template-columns: 1fr !important;
+                }
+            }
+            .products-grid-container > div {
+                min-width: 0;
+            }
+        </style>
+        <div class="mt-16 products-grid-container">
+            
+            <!-- Phase 1: CabinTime -->
+            <div class="group relative overflow-hidden rounded-2xl bg-gray-900 hover:bg-gray-800 transition-all duration-300">
+                <!-- Product Image -->
+                <div class="relative h-72 overflow-hidden bg-black">
+                    <img src="/assets/images/product2.png" alt="CabinTime Interface" class="absolute inset-0 h-full w-full object-contain group-hover:scale-105 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
+                </div>
+                
+                <div class="p-6">
+                    <!-- Phase Badge -->
+                    <div class="mb-4">
+                        <span class="inline-flex items-center rounded-full bg-cyan-900/20 px-3 py-1 text-sm font-medium text-cyan-400 ring-1 ring-cyan-400/30">
+                            フェーズ① 興味喚起・情報接点
+                        </span>
+                    </div>
+                
+                <!-- Product Name & Status -->
+                <div class="mb-2 flex items-center justify-between">
+                    <h3 class="text-xl font-semibold text-white">CabinTime</h3>
+                    <span class="rounded-full bg-cyan-100 px-2.5 py-0.5 text-xs font-medium text-cyan-800">Active</span>
+                </div>
+                
+                <!-- Catchphrase -->
+                <p class="mb-3 text-base font-medium text-cyan-300">
+                    旅の入口を、移動中につくる
+                </p>
+                
+                <!-- Description -->
+                <p class="mb-6 flex-grow text-sm text-gray-400">
+                    飛行機・船舶・列車などの移動時間を活用し、通信が届かない環境でも地域の観光情報や動画コンテンツを配信。移動中から旅の期待値を高めます。
+                </p>
+                
+                <!-- Tags -->
+                <div class="mb-6 flex flex-wrap gap-2">
+                    <span class="inline-flex items-center rounded-full bg-gray-800 px-2.5 py-0.5 text-xs font-medium text-gray-300">
+                        移動中UX
+                    </span>
+                    <span class="inline-flex items-center rounded-full bg-gray-800 px-2.5 py-0.5 text-xs font-medium text-gray-300">
+                        オフラインDX
+                    </span>
+                    <span class="inline-flex items-center rounded-full bg-gray-800 px-2.5 py-0.5 text-xs font-medium text-gray-300">
+                        観光起点
+                    </span>
+                </div>
+                
+                <!-- CTA Button -->
+                <a href="/cabintime/" class="inline-flex items-center justify-center rounded-md bg-cyan-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-cyan-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-600 transition-all">
+                    詳細を見る
+                    <svg class="ml-2 -mr-0.5 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </a>
+            </div>
+            
+            <!-- Phase 2: Map × 動画 -->
+            <div class="group relative overflow-hidden rounded-2xl bg-gray-900 hover:bg-gray-800 transition-all duration-300">
+                <!-- Product Image -->
+                <div class="relative h-72 overflow-hidden bg-gray-800">
+                    <img src="https://images.unsplash.com/photo-1553729459-efe14ef6055d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Map × Video Interface" class="absolute inset-0 h-full w-full object-cover object-center group-hover:scale-105 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
+                </div>
+                
+                <div class="p-6">
+                    <!-- Phase Badge -->
+                    <div class="mb-4">
+                        <span class="inline-flex items-center rounded-full bg-blue-900/20 px-3 py-1 text-sm font-medium text-blue-400 ring-1 ring-blue-400/30">
+                            フェーズ② 現地回遊・体験可視化
+                        </span>
+                    </div>
+                    
+                    <!-- Product Name & Status -->
+                    <div class="mb-2 flex items-center justify-between">
+                        <h3 class="text-xl font-semibold text-white">Map × 動画</h3>
+                        <span class="rounded-full bg-blue-100 px-2.5 py-0.5 text-xs font-medium text-blue-800">Coming Soon</span>
+                    </div>
+                    
+                    <!-- Catchphrase -->
+                    <p class="mb-3 text-base font-medium text-blue-300">
+                        旅先の体験を、地図と映像で可視化
+                    </p>
+                    
+                    <!-- Description -->
+                    <p class="mb-6 flex-grow text-sm text-gray-400">
+                        保存したスポットや他の旅行者の軌跡を動画付きマップUIで表示。観光地の回遊ルートが直感的にわかり、現地での体験価値を最大化します。
+                    </p>
+                    
+                    <!-- Tags -->
+                    <div class="mb-6 flex flex-wrap gap-2">
+                        <span class="inline-flex items-center rounded-full bg-gray-800 px-2.5 py-0.5 text-xs font-medium text-gray-300">
+                            体験構造化
+                        </span>
+                        <span class="inline-flex items-center rounded-full bg-gray-800 px-2.5 py-0.5 text-xs font-medium text-gray-300">
+                            回遊設計
+                        </span>
+                        <span class="inline-flex items-center rounded-full bg-gray-800 px-2.5 py-0.5 text-xs font-medium text-gray-300">
+                            行動可視化
+                        </span>
+                    </div>
+                    
+                    <!-- CTA Button -->
+                    <button disabled class="inline-flex items-center justify-center rounded-md bg-gray-700 px-4 py-2 text-sm font-semibold text-gray-400 cursor-not-allowed">
+                        準備中
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Phase 3: SNS統合 -->
+            <div class="group relative overflow-hidden rounded-2xl bg-gray-900 hover:bg-gray-800 transition-all duration-300">
+                <!-- Product Image -->
+                <div class="relative h-72 overflow-hidden bg-gray-800">
+                    <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="SNS Integration" class="absolute inset-0 h-full w-full object-cover object-center group-hover:scale-105 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
+                </div>
+                
+                <div class="p-6">
+                    <!-- Phase Badge -->
+                    <div class="mb-4">
+                        <span class="inline-flex items-center rounded-full bg-purple-900/20 px-3 py-1 text-sm font-medium text-purple-400 ring-1 ring-purple-400/30">
+                            フェーズ③ 発信・UGC共有
+                        </span>
+                    </div>
+                    
+                    <!-- Product Name & Status -->
+                    <div class="mb-2 flex items-center justify-between">
+                        <h3 class="text-xl font-semibold text-white">SNS統合</h3>
+                        <span class="rounded-full bg-purple-100 px-2.5 py-0.5 text-xs font-medium text-purple-800">Coming Soon</span>
+                    </div>
+                    
+                    <!-- Catchphrase -->
+                    <p class="mb-3 text-base font-medium text-purple-300">
+                        感動を、最適な形で発信
+                    </p>
+                    
+                    <!-- Description -->
+                    <p class="mb-6 flex-grow text-sm text-gray-400">
+                        AIが投稿文を各SNSに最適化して生成。X（旧Twitter）への自動投稿、Instagram・YouTubeのタイムライン管理で、旅の発信を効率化・資産化します。
+                    </p>
+                    
+                    <!-- Tags -->
+                    <div class="mb-6 flex flex-wrap gap-2">
+                        <span class="inline-flex items-center rounded-full bg-gray-800 px-2.5 py-0.5 text-xs font-medium text-gray-300">
+                            発信最適化
+                        </span>
+                        <span class="inline-flex items-center rounded-full bg-gray-800 px-2.5 py-0.5 text-xs font-medium text-gray-300">
+                            AI生成
+                        </span>
+                        <span class="inline-flex items-center rounded-full bg-gray-800 px-2.5 py-0.5 text-xs font-medium text-gray-300">
+                            UGC支援
+                        </span>
+                    </div>
+                    
+                    <!-- CTA Button -->
+                    <button disabled class="inline-flex items-center justify-center rounded-md bg-gray-700 px-4 py-2 text-sm font-semibold text-gray-400 cursor-not-allowed">
+                        準備中
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Phase 4: GeoBuzz -->
+            <div class="group relative overflow-hidden rounded-2xl bg-gray-900 hover:bg-gray-800 transition-all duration-300">
+                <!-- Product Image -->
+                <div class="relative h-72 overflow-hidden bg-gray-800">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="GeoBuzz Analytics" class="absolute inset-0 h-full w-full object-cover object-center group-hover:scale-105 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
+                </div>
+                
+                <div class="p-6">
+                    <!-- Phase Badge -->
+                    <div class="mb-4">
+                        <span class="inline-flex items-center rounded-full bg-green-900/20 px-3 py-1 text-sm font-medium text-green-400 ring-1 ring-green-400/30">
+                            フェーズ④ 分析・地域トレンド可視化
+                        </span>
+                    </div>
+                    
+                    <!-- Product Name & Status -->
+                    <div class="mb-2 flex items-center justify-between">
+                        <h3 class="text-xl font-semibold text-white">GeoBuzz</h3>
+                        <span class="rounded-full bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800">Coming Soon</span>
+                    </div>
+                    
+                    <!-- Catchphrase -->
+                    <p class="mb-3 text-base font-medium text-green-300">
+                        旅の流行を、地図で見える化
+                    </p>
+                    
+                    <!-- Description -->
+                    <p class="mb-6 flex-grow text-sm text-gray-400">
+                        地域別のSNS投稿・YouTube動画・ハッシュタグを分析。観光トレンドやホットスポット、インフルエンサーを可視化し、DMO・事業者に提供します。
+                    </p>
+                    
+                    <!-- Tags -->
+                    <div class="mb-6 flex flex-wrap gap-2">
+                        <span class="inline-flex items-center rounded-full bg-gray-800 px-2.5 py-0.5 text-xs font-medium text-gray-300">
+                            SNS分析
+                        </span>
+                        <span class="inline-flex items-center rounded-full bg-gray-800 px-2.5 py-0.5 text-xs font-medium text-gray-300">
+                            地域トレンド
+                        </span>
+                        <span class="inline-flex items-center rounded-full bg-gray-800 px-2.5 py-0.5 text-xs font-medium text-gray-300">
+                            インサイト
+                        </span>
+                    </div>
+                    
+                    <!-- CTA Button -->
+                    <button disabled class="inline-flex items-center justify-center rounded-md bg-gray-700 px-4 py-2 text-sm font-semibold text-gray-400 cursor-not-allowed">
+                        準備中
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Phase 5: MyTrails -->
+            <div class="group relative overflow-hidden rounded-2xl bg-gray-900 hover:bg-gray-800 transition-all duration-300" style="grid-column: span 2;">
+                <!-- Product Image -->
+                <div class="relative h-72 overflow-hidden bg-gray-800">
+                    <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="MyTrails Journey" class="absolute inset-0 h-full w-full object-cover object-center group-hover:scale-105 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
+                </div>
+                
+                <div class="p-6">
+                    <!-- Phase Badge -->
+                    <div class="mb-4">
+                        <span class="inline-flex items-center rounded-full bg-orange-900/20 px-3 py-1 text-sm font-medium text-orange-400 ring-1 ring-orange-400/30">
+                            フェーズ⑤ 再訪設計・旅の履歴資産化
+                        </span>
+                    </div>
+                    
+                    <!-- Product Name & Status -->
+                    <div class="mb-2 flex items-center justify-between">
+                        <h3 class="text-xl font-semibold text-white">MyTrails</h3>
+                        <span class="rounded-full bg-orange-100 px-2.5 py-0.5 text-xs font-medium text-orange-800">Ecosystem</span>
+                    </div>
+                    
+                    <!-- Catchphrase -->
+                    <p class="mb-3 text-base font-medium text-orange-300">
+                        「また行きたい」を、仕組みにする
+                    </p>
+                    
+                    <!-- Description -->
+                    <p class="mb-6 flex-grow text-sm text-gray-400">
+                        旅の履歴から再訪候補を提案し、地域からのクーポンやイベント情報を配信。過去の旅が次の旅につながり、地域との持続的な関係を構築します。
+                    </p>
+                    
+                    <!-- Tags -->
+                    <div class="mb-6 flex flex-wrap gap-2">
+                        <span class="inline-flex items-center rounded-full bg-gray-800 px-2.5 py-0.5 text-xs font-medium text-gray-300">
+                            リピート促進
+                        </span>
+                        <span class="inline-flex items-center rounded-full bg-gray-800 px-2.5 py-0.5 text-xs font-medium text-gray-300">
+                            地域連携
+                        </span>
+                        <span class="inline-flex items-center rounded-full bg-gray-800 px-2.5 py-0.5 text-xs font-medium text-gray-300">
+                            履歴資産化
+                        </span>
+                    </div>
+                    
+                    <!-- CTA Button -->
+                    <button disabled class="inline-flex items-center justify-center rounded-md bg-gray-700 px-4 py-2 text-sm font-semibold text-gray-400 cursor-not-allowed">
+                        準備中
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bottom Message -->
+        <div class="mx-auto mt-16 max-w-3xl text-center">
+            <div class="relative">
+                <div class="absolute inset-0 flex items-center" aria-hidden="true">
+                    <div class="w-full border-t border-gray-700"></div>
+                </div>
+                <div class="relative flex justify-center">
+                    <span class="bg-gray-950 px-6 text-sm text-gray-400">観光体験の価値循環</span>
+                </div>
+            </div>
+            <p class="mt-6 text-lg leading-8 text-gray-300">
+                これらのプロダクトが連携し、観光体験の価値循環を生み出します。<br>
+                MarsLinkは、テクノロジーで観光産業の構造を再設計し、<br>
+                地域・事業者・旅行者すべてに新しい価値を提供します。
+            </p>
+        </div>
+    </div>
+</section>

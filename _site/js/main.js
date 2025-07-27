@@ -141,7 +141,7 @@ window.addEventListener('scroll', function() {
 // Handle window load event
 window.addEventListener('load', function() {
     handleLoadingScreen();
-    checkFade(); // Initial check for fade elements
+    // checkFade(); // Initial check for fade elements - function not defined
 });
 
 // Scroll Indicator Visibility
