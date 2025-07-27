@@ -1,4 +1,13 @@
 <!-- Co-Creation Section -->
+<style>
+    .scrollbar-hide {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none;  /* Chrome, Safari and Opera */
+    }
+</style>
 <section class="py-24 bg-gray-950">
     <div class="container mx-auto px-6">
         <div class="max-w-7xl mx-auto">
@@ -12,11 +21,28 @@
                 </p>
             </div>
 
-            <!-- Partner Categories Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            <!-- Partner Categories Horizontal Scroll -->
+            <div class="relative mb-16">
+                <!-- Left Scroll Button -->
+                <button class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-gray-900/90 backdrop-blur-sm border border-gray-700 rounded-full p-3 hover:bg-gray-800 transition-all opacity-75 hover:opacity-100" onclick="document.getElementById('partner-scroll').scrollBy({left: -340, behavior: 'smooth'})">
+                    <svg class="w-6 h-6 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                </button>
+                
+                <!-- Right Scroll Button -->
+                <button class="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-gray-900/90 backdrop-blur-sm border border-gray-700 rounded-full p-3 hover:bg-gray-800 transition-all opacity-75 hover:opacity-100" onclick="document.getElementById('partner-scroll').scrollBy({left: 340, behavior: 'smooth'})">
+                    <svg class="w-6 h-6 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+                
+                <!-- Scroll Container -->
+                <div id="partner-scroll" class="overflow-x-auto scrollbar-hide px-12">
+                    <div class="flex gap-6 pb-4" style="width: max-content;">
                 
                 <!-- Transportation Partners -->
-                <div class="group relative bg-gray-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-cyan-500/50 transition-all duration-300 flex flex-col h-full">
+                <div class="group relative bg-gray-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-cyan-500/50 transition-all duration-300 flex flex-col" style="min-width: 320px; width: 320px; height: 400px;">
                     <!-- Image Section -->
                     <div class="relative h-48 overflow-hidden">
                         <img src="/assets/images/partner1.jpg" alt="航空機" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
@@ -36,7 +62,7 @@
                 </div>
 
                 <!-- Accommodation Partners -->
-                <div class="group relative bg-gray-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-blue-500/50 transition-all duration-300 flex flex-col h-full">
+                <div class="group relative bg-gray-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-blue-500/50 transition-all duration-300 flex flex-col" style="min-width: 320px; width: 320px; height: 400px;">
                     <!-- Image Section -->
                     <div class="relative h-48 overflow-hidden">
                         <img src="/assets/images/partner2.jpg" alt="ホテル" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
@@ -56,7 +82,7 @@
                 </div>
 
                 <!-- F&B Partners -->
-                <div class="group relative bg-gray-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-purple-500/50 transition-all duration-300 flex flex-col h-full">
+                <div class="group relative bg-gray-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-purple-500/50 transition-all duration-300 flex flex-col" style="min-width: 320px; width: 320px; height: 400px;">
                     <!-- Image Section -->
                     <div class="relative h-48 overflow-hidden">
                         <img src="/assets/images/partner3.jpg" alt="飲食" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
@@ -76,7 +102,7 @@
                 </div>
 
                 <!-- DMO Partners -->
-                <div class="group relative bg-gray-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-green-500/50 transition-all duration-300 flex flex-col h-full">
+                <div class="group relative bg-gray-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-green-500/50 transition-all duration-300 flex flex-col" style="min-width: 320px; width: 320px; height: 400px;">
                     <!-- Image Section -->
                     <div class="relative h-48 overflow-hidden">
                         <img src="/assets/images/partner4.jpg" alt="観光地" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
@@ -92,6 +118,28 @@
                                 地域全体の観光DXを推進。データに基づく戦略立案と、持続可能な観光エコシステムを構築します。
                             </p>
                         </div>
+                    </div>
+                </div>
+                
+                <!-- VC/CVC Partners -->
+                <div class="group relative bg-gray-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-orange-500/50 transition-all duration-300 flex flex-col" style="min-width: 320px; width: 320px; height: 400px;">
+                    <!-- Image Section -->
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="/assets/images/partner5.jpg" alt="VC/CVC" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent"></div>
+                    </div>
+                    
+                    <!-- Content Section -->
+                    <div class="relative p-6 flex-1 flex flex-col">
+                        <div class="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                        <div class="relative flex flex-col h-full">
+                            <h3 class="text-xl font-bold text-white mb-3">VC・CVC・投資家</h3>
+                            <p class="text-gray-400 mb-6 leading-relaxed text-sm flex-1">
+                                観光×テクノロジーの可能性に共に挑戦。次世代の観光インフラ構築に向けた成長を支援いただけるパートナーを募集しています。
+                            </p>
+                        </div>
+                    </div>
+                </div>
                     </div>
                 </div>
             </div>
