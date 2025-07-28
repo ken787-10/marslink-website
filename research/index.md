@@ -152,18 +152,21 @@ keywords: "京都大学, 共同研究, 観光DX, インフルエンサーマー�
                 <div class="space-y-6 ml-0 lg:ml-8">
                     <div class="paper-item rounded-xl p-6">
                         <h3 class="text-xl font-bold text-white mb-3">
-                            おいナイト
+                            Influencer attributes and characterizations on Tourists' intention to revisit destination in social media influencer marketing
                         </h3>
                         <p class="text-gray-300 mb-4">
-                            増田央
+                            Masuda, H and Ichii, K.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="conference-tag px-3 py-1 rounded-full text-sm text-cyan-400">
-                                2023年度
+                                Human Side of Service Engineering
+                            </span>
+                            <span class="conference-tag px-3 py-1 rounded-full text-sm text-cyan-400">
+                                2022
                             </span>
                         </div>
                         <div class="text-sm text-gray-400">
-                            <p>観光DXにおける夜間経済活性化プロジェクト</p>
+                            <p>Paper presented at the Human Side of Service Engineering</p>
                         </div>
                     </div>
                 </div>
