@@ -152,28 +152,18 @@ keywords: "京都大学, 共同研究, 観光DX, インフルエンサーマー�
                 <div class="space-y-6 ml-0 lg:ml-8">
                     <div class="paper-item rounded-xl p-6">
                         <h3 class="text-xl font-bold text-white mb-3">
-                            Influencer attributes and characterizations on Tourists' intention to revisit destination in social media influencer marketing
+                            おいナイト
                         </h3>
                         <p class="text-gray-300 mb-4">
-                            Masuda, H and Ichii, K.
+                            増田央
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="conference-tag px-3 py-1 rounded-full text-sm text-cyan-400">
-                                Human Side of Service Engineering
+                                2023年度
                             </span>
                         </div>
                         <div class="text-sm text-gray-400">
-                            <p>スライド資料: 観光PR動画実験_旧三井家下鴨別邸_分析結果_増田央_v0.1.pdf</p>
-                            <p class="mt-2">
-                                <a href="{{ '/research/Influencer-attributes-and-characterizations-on-Tourists-intention-to-revisit-destination-in-social-media-influencer-marketing.pdf' | relative_url }}" 
-                                   class="text-cyan-400 hover:text-cyan-300 underline inline-flex items-center" 
-                                   target="_blank">
-                                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                                    </svg>
-                                    論文PDFをダウンロード
-                                </a>
-                            </p>
+                            <p>観光DXにおける夜間経済活性化プロジェクト</p>
                         </div>
                     </div>
                 </div>
