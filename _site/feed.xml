@@ -1,114 +1,142 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-07-28T10:28:25+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">MarsLink-マーズリンク-</title><subtitle>MarsLink（マーズリンク）は、主力サービス「CabinTime」で移動空間をメディアに変革するスタートアップです。飛行機から宇宙船まで、すべての移動時間を価値ある体験空間に変えます。</subtitle><author><name>MarsLink</name></author><entry><title type="html">大手航空会社との戦略的パートナーシップ締結について</title><link href="http://localhost:4000/%E4%BC%81%E6%A5%AD/2024/02/01/partnership-announcement.html" rel="alternate" type="text/html" title="大手航空会社との戦略的パートナーシップ締結について" /><published>2024-02-01T14:30:00+09:00</published><updated>2024-02-01T14:30:00+09:00</updated><id>http://localhost:4000/%E4%BC%81%E6%A5%AD/2024/02/01/partnership-announcement</id><content type="html" xml:base="http://localhost:4000/%E4%BC%81%E6%A5%AD/2024/02/01/partnership-announcement.html"><![CDATA[株式会社MarsLinkは、この度、大手航空会社との戦略的パートナーシップを締結したことをお知らせいたします。
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-07-28T10:43:07+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">MarsLink-マーズリンク-</title><subtitle>MarsLink（マーズリンク）は、主力サービス「CabinTime」で移動空間をメディアに変革するスタートアップです。飛行機から宇宙船まで、すべての移動時間を価値ある体験空間に変えます。</subtitle><author><name>MarsLink</name></author><entry><title type="html">大手航空会社との戦略的パートナーシップ締結について</title><link href="http://localhost:4000/%E4%BC%81%E6%A5%AD/2024/02/01/partnership-announcement.html" rel="alternate" type="text/html" title="大手航空会社との戦略的パートナーシップ締結について" /><published>2024-02-01T14:30:00+09:00</published><updated>2024-02-01T14:30:00+09:00</updated><id>http://localhost:4000/%E4%BC%81%E6%A5%AD/2024/02/01/partnership-announcement</id><content type="html" xml:base="http://localhost:4000/%E4%BC%81%E6%A5%AD/2024/02/01/partnership-announcement.html"><![CDATA[<p>株式会社MarsLinkは、この度、大手航空会社との戦略的パートナーシップを締結したことをお知らせいたします。</p>
 
-## パートナーシップの概要
+<h2 id="パートナーシップの概要">パートナーシップの概要</h2>
 
-今回の提携により、当社の「CabinTime」サービスが、パートナー航空会社の国内線・国際線において順次導入されることとなりました。
+<p>今回の提携により、当社の「CabinTime」サービスが、パートナー航空会社の国内線・国際線において順次導入されることとなりました。</p>
 
-### 提携の背景
+<h3 id="提携の背景">提携の背景</h3>
 
-- **乗客満足度の向上**: 移動時間の価値創造による顧客体験の向上
-- **運営コストの削減**: 従来IFEシステムの1/200のコストでサービス提供
-- **差別化の実現**: 競合他社にない独自価値の提供
+<ul>
+  <li><strong>乗客満足度の向上</strong>: 移動時間の価値創造による顧客体験の向上</li>
+  <li><strong>運営コストの削減</strong>: 従来IFEシステムの1/200のコストでサービス提供</li>
+  <li><strong>差別化の実現</strong>: 競合他社にない独自価値の提供</li>
+</ul>
 
-### 導入スケジュール
+<h3 id="導入スケジュール">導入スケジュール</h3>
 
-#### フェーズ1（2024年2月-3月）
-- 国内線主要路線での試験運用開始
-- 乗客フィードバックの収集・分析
+<h4 id="フェーズ12024年2月-3月">フェーズ1（2024年2月-3月）</h4>
+<ul>
+  <li>国内線主要路線での試験運用開始</li>
+  <li>乗客フィードバックの収集・分析</li>
+</ul>
 
-#### フェーズ2（2024年4月-6月）
-- 全国内線への段階的展開
-- サービス機能の拡充
+<h4 id="フェーズ22024年4月-6月">フェーズ2（2024年4月-6月）</h4>
+<ul>
+  <li>全国内線への段階的展開</li>
+  <li>サービス機能の拡充</li>
+</ul>
 
-#### フェーズ3（2024年7月以降）
-- 国際線への展開検討
-- 他航空会社への水平展開
+<h4 id="フェーズ32024年7月以降">フェーズ3（2024年7月以降）</h4>
+<ul>
+  <li>国際線への展開検討</li>
+  <li>他航空会社への水平展開</li>
+</ul>
 
-## 期待される効果
+<h2 id="期待される効果">期待される効果</h2>
 
-### 乗客にとって
-- **移動時間の有効活用**: 目的地情報の事前確認
-- **旅行体験の向上**: 現地での初動スピード向上
-- **無料サービス**: 追加料金なしでの利用
+<h3 id="乗客にとって">乗客にとって</h3>
+<ul>
+  <li><strong>移動時間の有効活用</strong>: 目的地情報の事前確認</li>
+  <li><strong>旅行体験の向上</strong>: 現地での初動スピード向上</li>
+  <li><strong>無料サービス</strong>: 追加料金なしでの利用</li>
+</ul>
 
-### 航空会社にとって
-- **顧客満足度向上**: 2時間の価値創造時間を提供
-- **コスト削減**: 従来システム比200分の1の導入コスト
-- **競争優位性**: 業界初のオフライン観光ナビゲーション
+<h3 id="航空会社にとって">航空会社にとって</h3>
+<ul>
+  <li><strong>顧客満足度向上</strong>: 2時間の価値創造時間を提供</li>
+  <li><strong>コスト削減</strong>: 従来システム比200分の1の導入コスト</li>
+  <li><strong>競争優位性</strong>: 業界初のオフライン観光ナビゲーション</li>
+</ul>
 
-### 地域経済にとって
-- **観光促進**: 隠れた魅力の効果的な発信
-- **中小事業者支援**: 新たな集客チャネルの提供
-- **地域活性化**: 移動前からの観光意識醸成
+<h3 id="地域経済にとって">地域経済にとって</h3>
+<ul>
+  <li><strong>観光促進</strong>: 隠れた魅力の効果的な発信</li>
+  <li><strong>中小事業者支援</strong>: 新たな集客チャネルの提供</li>
+  <li><strong>地域活性化</strong>: 移動前からの観光意識醸成</li>
+</ul>
 
-## 今後の展望
+<h2 id="今後の展望">今後の展望</h2>
 
-この戦略的パートナーシップを皮切りに、当社では以下の展開を予定しております：
+<p>この戦略的パートナーシップを皮切りに、当社では以下の展開を予定しております：</p>
 
-1. **業界標準化**: 航空業界でのデファクトスタンダード確立
-2. **技術革新**: AI・機械学習を活用したパーソナライゼーション
-3. **事業拡大**: 船舶・バス・鉄道への展開
-4. **国際展開**: アジア太平洋地域での事業開始
+<ol>
+  <li><strong>業界標準化</strong>: 航空業界でのデファクトスタンダード確立</li>
+  <li><strong>技術革新</strong>: AI・機械学習を活用したパーソナライゼーション</li>
+  <li><strong>事業拡大</strong>: 船舶・バス・鉄道への展開</li>
+  <li><strong>国際展開</strong>: アジア太平洋地域での事業開始</li>
+</ol>
 
-## 代表コメント
+<h2 id="代表コメント">代表コメント</h2>
 
-株式会社MarsLink代表より：
+<p>株式会社MarsLink代表より：</p>
 
-> 「この度の大手航空会社様との提携は、当社にとって大きなマイルストーンです。CabinTimeが目指す『移動時間の価値創造』が、いよいよ現実のものとなります。乗客の皆様、航空会社様、そして地域の皆様、すべてのステークホルダーにとって価値ある時間を創造してまいります。」
+<blockquote>
+  <p>「この度の大手航空会社様との提携は、当社にとって大きなマイルストーンです。CabinTimeが目指す『移動時間の価値創造』が、いよいよ現実のものとなります。乗客の皆様、航空会社様、そして地域の皆様、すべてのステークホルダーにとって価値ある時間を創造してまいります。」</p>
+</blockquote>
 
-## お問い合わせ
+<h2 id="お問い合わせ">お問い合わせ</h2>
 
-本件に関するお問い合わせは、[お問い合わせページ]({{ '/contact/' | relative_url }})よりお気軽にご連絡ください。
+<p>本件に関するお問い合わせは、<a href="/contact/">お問い合わせページ</a>よりお気軽にご連絡ください。</p>
 
----
+<hr />
 
-**報道関係者様へ**  
-本件に関する取材・お問い合わせは上記連絡先までお願いいたします。]]></content><author><name>MarsLink</name></author><category term="企業" /><category term="パートナーシップ" /><category term="提携" /><category term="航空業界" /><summary type="html"><![CDATA[株式会社MarsLinkは大手航空会社との戦略的パートナーシップを締結し、CabinTimeサービスの本格展開を開始いたします。]]></summary></entry><entry><title type="html">新サービス「CabinTime」正式リリースのお知らせ</title><link href="http://localhost:4000/%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9/2024/01/15/cabin-time-service-launch.html" rel="alternate" type="text/html" title="新サービス「CabinTime」正式リリースのお知らせ" /><published>2024-01-15T10:00:00+09:00</published><updated>2024-01-15T10:00:00+09:00</updated><id>http://localhost:4000/%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9/2024/01/15/cabin-time-service-launch</id><content type="html" xml:base="http://localhost:4000/%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9/2024/01/15/cabin-time-service-launch.html"><![CDATA[この度、株式会社MarsLinkでは、移動時間を価値ある体験に変革する革新的プラットフォーム「**CabinTime**」の正式リリースを発表いたします。
+<p><strong>報道関係者様へ</strong><br />
+本件に関する取材・お問い合わせは上記連絡先までお願いいたします。</p>]]></content><author><name>MarsLink</name></author><category term="企業" /><category term="パートナーシップ" /><category term="提携" /><category term="航空業界" /><summary type="html"><![CDATA[株式会社MarsLinkは大手航空会社との戦略的パートナーシップを締結し、CabinTimeサービスの本格展開を開始いたします。]]></summary></entry><entry><title type="html">新サービス「CabinTime」正式リリースのお知らせ</title><link href="http://localhost:4000/%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9/2024/01/15/cabin-time-service-launch.html" rel="alternate" type="text/html" title="新サービス「CabinTime」正式リリースのお知らせ" /><published>2024-01-15T10:00:00+09:00</published><updated>2024-01-15T10:00:00+09:00</updated><id>http://localhost:4000/%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9/2024/01/15/cabin-time-service-launch</id><content type="html" xml:base="http://localhost:4000/%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9/2024/01/15/cabin-time-service-launch.html"><![CDATA[<p>この度、株式会社MarsLinkでは、移動時間を価値ある体験に変革する革新的プラットフォーム「<strong>CabinTime</strong>」の正式リリースを発表いたします。</p>
 
-## CabinTimeについて
+<h2 id="cabintimeについて">CabinTimeについて</h2>
 
-CabinTimeは、航空機や船舶での移動中における通信断絶状態を解決し、乗客の移動時間を有効活用できる画期的なサービスです。
+<p>CabinTimeは、航空機や船舶での移動中における通信断絶状態を解決し、乗客の移動時間を有効活用できる画期的なサービスです。</p>
 
-### 主な特徴
+<h3 id="主な特徴">主な特徴</h3>
 
-- **完全オフライン対応**: 通信環境に依存しない独自技術
-- **観光情報提供**: 目的地の詳細な観光・グルメ情報
-- **無料サービス**: 乗客は追加料金なしで全機能を利用可能
-- **省コスト**: 従来システムの1/200のコストで導入可能
+<ul>
+  <li><strong>完全オフライン対応</strong>: 通信環境に依存しない独自技術</li>
+  <li><strong>観光情報提供</strong>: 目的地の詳細な観光・グルメ情報</li>
+  <li><strong>無料サービス</strong>: 乗客は追加料金なしで全機能を利用可能</li>
+  <li><strong>省コスト</strong>: 従来システムの1/200のコストで導入可能</li>
+</ul>
 
-### 解決する課題
+<h3 id="解決する課題">解決する課題</h3>
 
-#### 乗客の課題
-- 2時間の完全オフライン状態の解決
-- 商談先周辺情報の事前確認
-- 移動時間の有効活用
+<h4 id="乗客の課題">乗客の課題</h4>
+<ul>
+  <li>2時間の完全オフライン状態の解決</li>
+  <li>商談先周辺情報の事前確認</li>
+  <li>移動時間の有効活用</li>
+</ul>
 
-#### 航空会社・船社の課題
-- 巨額な初期投資（2-3億円）の削減
-- 月額通信費（400万円）の大幅カット
-- LCC・地方路線での収益性向上
+<h4 id="航空会社船社の課題">航空会社・船社の課題</h4>
+<ul>
+  <li>巨額な初期投資（2-3億円）の削減</li>
+  <li>月額通信費（400万円）の大幅カット</li>
+  <li>LCC・地方路線での収益性向上</li>
+</ul>
 
-#### 自治体の課題
-- 観光客への事前情報発信
-- 隠れた魅力の効果的なPR
-- 中小事業者への送客
+<h4 id="自治体の課題">自治体の課題</h4>
+<ul>
+  <li>観光客への事前情報発信</li>
+  <li>隠れた魅力の効果的なPR</li>
+  <li>中小事業者への送客</li>
+</ul>
 
-## サービス開始について
+<h2 id="サービス開始について">サービス開始について</h2>
 
-2024年1月15日より、パートナー企業様向けにサービス提供を開始いたします。詳細については、お問い合わせページよりご連絡ください。
+<p>2024年1月15日より、パートナー企業様向けにサービス提供を開始いたします。詳細については、お問い合わせページよりご連絡ください。</p>
 
-### 今後の展開
+<h3 id="今後の展開">今後の展開</h3>
 
-1. **2024年Q1**: パートナー企業との実証実験開始
-2. **2024年Q2**: 一般航空会社への本格展開
-3. **2024年Q3**: 船舶・バス等への拡張予定
-4. **2024年Q4**: 海外展開の検討開始
+<ol>
+  <li><strong>2024年Q1</strong>: パートナー企業との実証実験開始</li>
+  <li><strong>2024年Q2</strong>: 一般航空会社への本格展開</li>
+  <li><strong>2024年Q3</strong>: 船舶・バス等への拡張予定</li>
+  <li><strong>2024年Q4</strong>: 海外展開の検討開始</li>
+</ol>
 
-## お問い合わせ
+<h2 id="お問い合わせ">お問い合わせ</h2>
 
-CabinTimeに関するお問い合わせは、[お問い合わせページ]({{ '/contact/' | relative_url }})よりお気軽にご連絡ください。
+<p>CabinTimeに関するお問い合わせは、<a href="/contact/">お問い合わせページ</a>よりお気軽にご連絡ください。</p>
 
----
+<hr />
 
-**株式会社MarsLink**  
-移動空間とデジタルの融合で未来を創る革新的テクノロジーカンパニー]]></content><author><name>MarsLink</name></author><category term="サービス" /><category term="CabinTime" /><category term="リリース" /><category term="新サービス" /><summary type="html"><![CDATA[移動時間を価値ある体験に変革する革新的プラットフォーム「CabinTime」が正式にリリースされました。]]></summary></entry></feed>
+<p><strong>株式会社MarsLink</strong><br />
+移動空間とデジタルの融合で未来を創る革新的テクノロジーカンパニー</p>]]></content><author><name>MarsLink</name></author><category term="サービス" /><category term="CabinTime" /><category term="リリース" /><category term="新サービス" /><summary type="html"><![CDATA[移動時間を価値ある体験に変革する革新的プラットフォーム「CabinTime」が正式にリリースされました。]]></summary></entry></feed>
