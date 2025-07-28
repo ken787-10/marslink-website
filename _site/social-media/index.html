@@ -271,30 +271,30 @@
     </style>
     
     <!-- Page Title -->
-    <title>404 - お探しのページが見つかりません - MarsLink-マーズリンク-</title>
+    <title>ソーシャルメディア統合 | MarsLink - MarsLink-マーズリンク-</title>
     
     <!-- Meta Tags -->
-    <meta name="description" content="お探しのページが見つかりません - 株式会社MarsLink">
-    <meta name="keywords" content="MarsLink, CabinTime, 移動空間, 観光DX, 機内エンタメ, オフライン観光情報, 観光テック, 観光SaaS, 航空会社DX, テックスタートアップ">
+    <meta name="description" content="旅の感動を世界へ。SNS統合プラットフォームで観光体験を共有・拡散">
+    <meta name="keywords" content="ソーシャルメディア, SNS統合, 観光マーケティング, UGC, インフルエンサー">
     <meta name="author" content="MarsLink">
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="http://localhost:4000/404.html">
+    <link rel="canonical" href="http://localhost:4000/social-media/">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="http://localhost:4000/404.html">
-    <meta property="og:title" content="404 - お探しのページが見つかりません - MarsLink-マーズリンク-">
-    <meta property="og:description" content="お探しのページが見つかりません - 株式会社MarsLink">
+    <meta property="og:url" content="http://localhost:4000/social-media/">
+    <meta property="og:title" content="ソーシャルメディア統合 | MarsLink - MarsLink-マーズリンク-">
+    <meta property="og:description" content="旅の感動を世界へ。SNS統合プラットフォームで観光体験を共有・拡散">
     <meta property="og:image" content="http://localhost:4000/assets/images/hero-bg-1.jpg">
     <meta property="og:site_name" content="MarsLink-マーズリンク-">
     <meta property="og:locale" content="ja_JP">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="http://localhost:4000/404.html">
-    <meta property="twitter:title" content="404 - お探しのページが見つかりません - MarsLink-マーズリンク-">
-    <meta property="twitter:description" content="お探しのページが見つかりません - 株式会社MarsLink">
+    <meta property="twitter:url" content="http://localhost:4000/social-media/">
+    <meta property="twitter:title" content="ソーシャルメディア統合 | MarsLink - MarsLink-マーズリンク-">
+    <meta property="twitter:description" content="旅の感動を世界へ。SNS統合プラットフォームで観光体験を共有・拡散">
     <meta property="twitter:image" content="http://localhost:4000/assets/images/hero-bg-1.jpg">
     <meta name="twitter:site" content="@marslink_japan">
     
@@ -398,116 +398,155 @@
             <!-- Main Content Area -->
             <main class="relative">
                 <style>
-.float-animation {
-    animation: float 6s ease-in-out infinite;
-}
-
-.float-animation-delay {
-    animation: float 6s ease-in-out infinite;
-    animation-delay: -3s;
-}
-
-.glow-animation {
-    animation: glow 2s ease-in-out infinite alternate;
-}
-
-@keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
-}
-
-@keyframes glow {
-    0% { text-shadow: 0 0 5px rgba(6, 182, 212, 0.2); }
-    100% { text-shadow: 0 0 20px rgba(6, 182, 212, 0.8); }
-}
+    .coming-soon-section {
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+        min-height: calc(100vh - 200px);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .floating-icon {
+        position: absolute;
+        opacity: 0.1;
+        animation: float 20s infinite ease-in-out;
+    }
+    
+    .floating-icon:nth-child(odd) {
+        animation-duration: 25s;
+        animation-delay: -5s;
+    }
+    
+    @keyframes float {
+        0%, 100% { transform: translate(0, 0) rotate(0deg); }
+        25% { transform: translate(30px, -30px) rotate(90deg); }
+        50% { transform: translate(-20px, 20px) rotate(180deg); }
+        75% { transform: translate(-30px, -20px) rotate(270deg); }
+    }
+    
+    .pulse-border {
+        animation: pulse-border 2s infinite;
+    }
+    
+    @keyframes pulse-border {
+        0% {
+            box-shadow: 0 0 0 0 rgba(168, 85, 247, 0.7);
+        }
+        70% {
+            box-shadow: 0 0 0 10px rgba(168, 85, 247, 0);
+        }
+        100% {
+            box-shadow: 0 0 0 0 rgba(168, 85, 247, 0);
+        }
+    }
 </style>
 
-<!-- 404 Content -->
-<main class="flex-grow flex items-center justify-center relative overflow-hidden pt-[120px] md:pt-[100px] min-h-screen">
-    <!-- Background gradient -->
-    <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-blue-900 to-black"></div>
+<section class="coming-soon-section relative">
+    <!-- Floating Background Icons -->
+    <div class="floating-icon top-20 left-10 text-purple-500">
+        <svg class="w-24 h-24" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1112.324 0 6.162 6.162 0 01-12.324 0zM12 16a4 4 0 110-8 4 4 0 010 8zm4.965-10.405a1.44 1.44 0 112.881.001 1.44 1.44 0 01-2.881-.001z" />
+        </svg>
+    </div>
     
-    <!-- Animated elements -->
-    <div class="absolute inset-0 overflow-hidden">
-        <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl float-animation"></div>
-        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl float-animation-delay"></div>
+    <div class="floating-icon top-40 right-20 text-blue-400">
+        <svg class="w-20 h-20" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+        </svg>
+    </div>
+    
+    <div class="floating-icon bottom-32 left-1/4 text-pink-500">
+        <svg class="w-16 h-16" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12c0-5.523-4.477-10-10-10z" />
+        </svg>
+    </div>
+    
+    <div class="floating-icon bottom-20 right-1/3 text-red-500">
+        <svg class="w-20 h-20" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+        </svg>
     </div>
 
-    <div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
-        <!-- 404 Number -->
-        <div class="mb-8">
-            <h1 class="font-orbitron text-9xl lg:text-[12rem] font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 glow-animation">
-                404
+    <div class="container mx-auto px-6 py-24 relative z-10">
+        <div class="max-w-4xl mx-auto text-center">
+            <!-- Coming Soon Badge -->
+            <div class="inline-flex items-center px-4 py-2 bg-purple-500/20 rounded-full mb-8">
+                <span class="relative flex h-3 w-3 mr-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-3 w-3 bg-purple-500"></span>
+                </span>
+                <span class="text-purple-400 font-medium">Coming Soon</span>
+            </div>
+            
+            <!-- Title -->
+            <h1 class="font-orbitron text-5xl lg:text-7xl font-black text-white mb-6">
+                ソーシャルメディア統合
             </h1>
-        </div>
-
-        <!-- Error Message -->
-        <div class="mb-12">
-            <h2 class="font-orbitron text-3xl lg:text-4xl font-bold text-white mb-4">
-                お探しのページが見つかりません
-            </h2>
-            <p class="text-xl text-gray-300 mb-6">
-                申し訳ございませんが、アクセスしようとしたページは存在しないか、移動された可能性があります。
+            
+            <!-- Description -->
+            <p class="text-xl lg:text-2xl text-gray-300 mb-12 leading-relaxed">
+                旅の感動を世界へ。<br />
+                SNS統合プラットフォームで観光体験を共有・拡散
             </p>
-            <p class="text-lg text-gray-400">
-                URLをご確認いただくか、以下のリンクからサイトをご利用ください。
-            </p>
-        </div>
-
-        <!-- Navigation Options -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            <a href="/" class="group bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-1">
-                <div class="text-cyan-400 mb-3">
-                    <svg class="w-8 h-8 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                    </svg>
+            
+            <!-- Feature Preview -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-purple-500/50 transition-all">
+                    <div class="w-16 h-16 bg-purple-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 16h4m10 0h4" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">マルチSNS連携</h3>
+                    <p class="text-gray-400 text-sm">Instagram、Twitter、TikTokなど主要SNSと連携</p>
                 </div>
-                <h3 class="text-white font-semibold mb-2">ホーム</h3>
-                <p class="text-gray-300 text-sm">トップページに戻る</p>
-            </a>
-
-            <a href="/#service" class="group bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-1">
-                <div class="text-cyan-400 mb-3">
-                    <svg class="w-8 h-8 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9" />
-                    </svg>
+                
+                <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-purple-500/50 transition-all">
+                    <div class="w-16 h-16 bg-purple-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">効果測定</h3>
+                    <p class="text-gray-400 text-sm">投稿のリーチやエンゲージメントを分析</p>
                 </div>
-                <h3 class="text-white font-semibold mb-2">CabinTime</h3>
-                <p class="text-gray-300 text-sm">サービス詳細を見る</p>
-            </a>
-
-            <a href="/profile/" class="group bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-1">
-                <div class="text-cyan-400 mb-3">
-                    <svg class="w-8 h-8 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                    </svg>
+                
+                <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-purple-500/50 transition-all">
+                    <div class="w-16 h-16 bg-purple-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">インフルエンサー連携</h3>
+                    <p class="text-gray-400 text-sm">地域の魅力を発信するクリエイターネットワーク</p>
                 </div>
-                <h3 class="text-white font-semibold mb-2">会社概要</h3>
-                <p class="text-gray-300 text-sm">会社情報を確認</p>
-            </a>
-
-            <a href="/contact/" class="group bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-1">
-                <div class="text-cyan-400 mb-3">
-                    <svg class="w-8 h-8 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
+            </div>
+            
+            <!-- Progress Indicator -->
+            <div class="mb-12">
+                <div class="flex items-center justify-center space-x-2 mb-4">
+                    <div class="w-3 h-3 bg-purple-500 rounded-full animate-pulse"></div>
+                    <div class="w-3 h-3 bg-purple-500 rounded-full animate-pulse" style="animation-delay: 0.2s"></div>
+                    <div class="w-3 h-3 bg-purple-500 rounded-full animate-pulse" style="animation-delay: 0.4s"></div>
                 </div>
-                <h3 class="text-white font-semibold mb-2">お問い合わせ</h3>
-                <p class="text-gray-300 text-sm">ご質問・ご相談</p>
-            </a>
-        </div>
-
-        <!-- Back Button -->
-        <div class="flex justify-center space-x-4">
-            <button onclick="history.back()" class="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-orbitron font-semibold rounded-full hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl">
-                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-                </svg>
-                前のページに戻る
-            </button>
+                <p class="text-gray-400">現在開発中...</p>
+            </div>
+            
+            <!-- CTA -->
+            <div class="space-y-4">
+                <p class="text-lg text-gray-300 mb-6">
+                    本サービスに関するお問い合わせや<br class="sm:hidden" />
+                    事前登録をご希望の方はこちら
+                </p>
+                <a href="/contact/" class="inline-flex items-center px-8 py-4 bg-purple-600 text-white font-bold rounded-full hover:bg-purple-700 transition-all duration-300 transform hover:scale-105 pulse-border">
+                    <span class="mr-2">お問い合わせ</span>
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </a>
+            </div>
         </div>
     </div>
-</main>
+</section>
 
             </main>
         </div>
