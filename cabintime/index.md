@@ -31,14 +31,14 @@ additional_css: |
   }
 ---
 
-<div class="relative isolate overflow-hidden pt-[120px] md:pt-[100px] min-h-screen" id="hero">
+<div class="relative isolate overflow-hidden pt-[120px] md:pt-[100px] min-h-[70vh] md:min-h-[80vh]" id="hero">
 <!-- Background Images with cycling -->
-<div class="hero-bg absolute inset-0 -z-10 bg-cover bg-center opacity-100 transition-opacity duration-2000 ease-in-out" style="background-image: url('{{ '/assets/images/hero-bg-1.jpg' | relative_url }}')"></div>
+<div class="hero-bg absolute inset-0 -z-10 bg-cover bg-center opacity-100 transition-opacity duration-2000 ease-in-out" style="background-image: url('{{ '/assets/images/hero-bg-5.jpg' | relative_url }}')"></div>
     
 <!-- Gradient overlay - darker at top and bottom, lighter in middle -->
 <div class="absolute inset-0 -z-10 bg-gradient-to-b from-slate-900/90 via-slate-900/30 to-black"></div>
     
-<div class="mx-auto max-w-7xl px-6 lg:px-8 flex items-center justify-center min-h-screen">
+<div class="mx-auto max-w-7xl px-6 lg:px-8 flex items-center justify-center min-h-[70vh] md:min-h-[80vh] py-12">
         <div class="mx-auto max-w-4xl text-center relative z-10">
             <h1 class="font-orbitron text-6xl font-black tracking-tight text-balance text-white sm:text-7xl lg:text-8xl xl:text-9xl relative z-10" style="text-shadow: 4px 4px 8px rgba(0,0,0,0.9), 2px 2px 4px rgba(0,0,0,0.8); color: white !important; display: block !important;">
                 <span class="inline-block relative z-10" style="color: white !important;">
@@ -53,7 +53,7 @@ additional_css: |
                 移動時間の価値最大化プラットフォーム
             </p>
             <div class="mt-12 flex items-center justify-center gap-x-6 relative z-10">
-                <a href="{{ 'contact/' | relative_url }}" class="group relative inline-flex items-center px-10 py-5 md:px-12 md:py-6 bg-white text-gray-900 font-orbitron font-black text-base md:text-lg tracking-widest uppercase rounded-full overflow-hidden border-2 border-white hover:bg-gray-900 hover:text-white transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl">
+                <a href="{{ 'contact/' | relative_url }}" class="group relative inline-flex items-center px-10 py-5 md:px-12 md:py-6 bg-white text-gray-900 font-orbitron font-black text-lg md:text-xl tracking-widest uppercase rounded-full overflow-hidden border-2 border-white hover:bg-gray-900 hover:text-white transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl">
                     <span class="relative z-10">お問い合わせ</span>
                 </a>
             </div>
@@ -75,7 +75,7 @@ additional_css: |
                 </div>
             </div>
             
-            <!-- Stakeholder Comparisons -->
+            <!-- Simplified Stakeholder Comparisons -->
             <div class="space-y-16">
                 
                 <!-- 統合比較セクション -->
@@ -83,89 +83,63 @@ additional_css: |
                     <!-- 現状の課題 -->
                     <div class="bg-gray-900/40 border border-gray-600 rounded-xl p-8 lg:p-10">
                         <div class="text-center mb-8">
-                            <div class="inline-flex items-center justify-center w-16 h-16 bg-gray-700/40 rounded-full mb-4">
-                                <svg class="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <div class="inline-flex items-center justify-center w-20 h-20 bg-gray-700/40 rounded-full mb-4">
+                                <svg class="w-10 h-10 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
                                 </svg>
                             </div>
                             <h3 class="font-orbitron text-2xl lg:text-3xl font-black text-gray-300 mb-4">現状の課題</h3>
                         </div>
                         
-                        <div class="space-y-6">
+                        <div class="space-y-8">
                             <!-- 乗客の課題 -->
-                            <div class="">
-                                <p class="text-gray-400 font-semibold mb-3">👤 乗客</p>
+                            <div class="bg-gray-800/30 rounded-lg p-6">
+                                <div class="flex items-center mb-4">
+                                    <div class="w-12 h-12 bg-gray-700/50 rounded-full flex items-center justify-center mr-4">
+                                        <svg class="w-6 h-6 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                                        </svg>
+                                    </div>
+                                    <p class="text-gray-300 font-bold text-lg">乗客の課題</p>
+                                </div>
                                 <div class="space-y-3">
-                                    
                                     <div class="flex items-start space-x-3">
-                                        <div class="flex-shrink-0 w-2 h-2 bg-gray-400 rounded-full mt-2"></div>
-                                        <p class="text-gray-300 text-sm">長時間のオフライン状態で外界から完全遮断</p>
+                                        <div class="flex-shrink-0 w-6 h-6 bg-red-500/20 rounded-full flex items-center justify-center mt-0.5">
+                                            <div class="w-2 h-2 bg-red-500 rounded-full"></div>
+                                        </div>
+                                        <p class="text-gray-300 text-lg font-medium">2時間の完全オフライン状態で情報から遮断</p>
                                     </div>
                                     <div class="flex items-start space-x-3">
-                                        <div class="flex-shrink-0 w-2 h-2 bg-gray-400 rounded-full mt-2"></div>
-                                        <p class="text-gray-300 text-sm">機内WiFi提供便でも実用性に課題）</p>
+                                        <div class="flex-shrink-0 w-6 h-6 bg-red-500/20 rounded-full flex items-center justify-center mt-0.5">
+                                            <div class="w-2 h-2 bg-red-500 rounded-full"></div>
+                                        </div>
+                                        <p class="text-gray-300 text-lg font-medium">目的地の観光・グルメ情報を事前確認できない</p>
                                     </div>
-                                    <div class="flex items-start space-x-3">
-                                        <div class="flex-shrink-0 w-2 h-2 bg-gray-400 rounded-full mt-2"></div>
-                                        <p class="text-gray-300 text-sm">観光先周辺の飲食店・宿泊施設を事前確認不可</p>
-                                    </div>
-                                   
                                 </div>
                             </div>
 
                             <!-- 航空会社・船社の課題 -->
-                            <div class="">
-                                <p class="text-gray-400 font-semibold mb-3">✈️ 航空会社・船社</p>
-                                <div class="space-y-3">
-                                    <div class="flex items-start space-x-3">
-                                        <div class="flex-shrink-0 w-2 h-2 bg-gray-400 rounded-full mt-2"></div>
-                                        <p class="text-gray-300 text-sm">従来IFE導入に2〜3億円の巨額初期投資</p>
+                            <div class="bg-gray-800/30 rounded-lg p-6">
+                                <div class="flex items-center mb-4">
+                                    <div class="w-12 h-12 bg-gray-700/50 rounded-full flex items-center justify-center mr-4">
+                                        <svg class="w-6 h-6 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5.72,8.35 L11.39,4.34 C11.77,4.05 12.31,4.05 12.70,4.34 L18.37,8.35 C18.71,8.61 18.91,9.01 18.91,9.43 L18.91,15.82 C18.91,16.66 18.24,17.33 17.40,17.33 L14.17,17.33 C13.87,17.33 13.62,17.09 13.62,16.78 L13.62,13.77 C13.62,13.07 13.04,12.49 12.34,12.49 L11.77,12.49 C11.07,12.49 10.49,13.07 10.49,13.77 L10.49,16.78 C10.49,17.09 10.24,17.33 9.94,17.33 L6.71,17.33 C5.87,17.33 5.20,16.66 5.20,15.82 L5.20,9.43 C5.20,9.01 5.40,8.61 5.72,8.35 Z M2,10 L5,7.5 M20,10 L22,7.5"></path>
+                                        </svg>
                                     </div>
-                                    <div class="flex items-start space-x-3">
-                                        <div class="flex-shrink-0 w-2 h-2 bg-gray-400 rounded-full mt-2"></div>
-                                        <p class="text-gray-300 text-sm">衛星通信費　設置費2200万円から月額400万円</p>
-                                    </div>
-                                    <div class="flex items-start space-x-3">
-                                        <div class="flex-shrink-0 w-2 h-2 bg-gray-400 rounded-full mt-2"></div>
-                                        <p class="text-gray-300 text-sm">船舶での海洋航海も同様の課題</p>
-                                    </div>
-                                    <div class="flex items-start space-x-3">
-                                        <div class="flex-shrink-0 w-2 h-2 bg-gray-400 rounded-full mt-2"></div>
-                                        <p class="text-gray-300 text-sm">LCC・地方路線では投資回収困難</p>
-                                    </div>
+                                    <p class="text-gray-300 font-bold text-lg">航空会社の課題</p>
                                 </div>
-                            </div>
-
-                            <!-- 自治体の課題 -->
-                            <div class="">
-                                <p class="text-gray-400 font-semibold mb-3">🏞️ 自治体</p>
                                 <div class="space-y-3">
                                     <div class="flex items-start space-x-3">
-                                        <div class="flex-shrink-0 w-2 h-2 bg-gray-400 rounded-full mt-2"></div>
-                                        <p class="text-gray-300 text-sm">観光客到着後の情報発信では手遅れ、隠れた魅力が埋没</p>
+                                        <div class="flex-shrink-0 w-6 h-6 bg-red-500/20 rounded-full flex items-center justify-center mt-0.5">
+                                            <div class="w-2 h-2 bg-red-500 rounded-full"></div>
+                                        </div>
+                                        <p class="text-gray-300 text-lg font-medium">機内エンタメ導入に2〜3億円の巨額投資</p>
                                     </div>
                                     <div class="flex items-start space-x-3">
-                                        <div class="flex-shrink-0 w-2 h-2 bg-gray-400 rounded-full mt-2"></div>
-                                        <p class="text-gray-300 text-sm">中小事業者への送客困難</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- 広告主の課題 -->
-                            <div class="">
-                                <p class="text-gray-400 font-semibold mb-3">📢 広告主</p>
-                                <div class="space-y-3">
-                                    <div class="flex items-start space-x-3">
-                                        <div class="flex-shrink-0 w-2 h-2 bg-gray-400 rounded-full mt-2"></div>
-                                        <p class="text-gray-300 text-sm">精密ターゲティングが技術的に困難</p>
-                                    </div>
-                                    <div class="flex items-start space-x-3">
-                                        <div class="flex-shrink-0 w-2 h-2 bg-gray-400 rounded-full mt-2"></div>
-                                        <p class="text-gray-300 text-sm">購買意欲ピーク時にアプローチできない</p>
-                                    </div>
-                                    <div class="flex items-start space-x-3">
-                                        <div class="flex-shrink-0 w-2 h-2 bg-gray-400 rounded-full mt-2"></div>
-                                        <p class="text-gray-300 text-sm">ROI可視化困難、物理広告枠は限定的</p>
+                                        <div class="flex-shrink-0 w-6 h-6 bg-red-500/20 rounded-full flex items-center justify-center mt-0.5">
+                                            <div class="w-2 h-2 bg-red-500 rounded-full"></div>
+                                        </div>
+                                        <p class="text-gray-300 text-lg font-medium">LCC・地方路線では投資回収が困難</p>
                                     </div>
                                 </div>
                             </div>
@@ -175,93 +149,71 @@ additional_css: |
                     <!-- CabinTimeの解決策 -->
                     <div class="bg-white/5 border border-white/20 rounded-xl p-8 lg:p-10">
                         <div class="text-center mb-8">
-                            <div class="inline-flex items-center justify-center w-16 h-16 bg-white/10 rounded-full mb-4">
-                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <div class="inline-flex items-center justify-center w-20 h-20 bg-cyan-500/20 rounded-full mb-4">
+                                <svg class="w-10 h-10 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                 </svg>
                             </div>
                             <h3 class="font-orbitron text-2xl lg:text-3xl font-black text-white mb-4">CabinTimeなら</h3>
                         </div>
                         
-                        <div class="space-y-6">
+                        <div class="space-y-8">
                             <!-- 乗客への解決策 -->
-                            <div class="">
-                                <p class="text-gray-300 font-semibold mb-3">👤 乗客</p>
+                            <div class="bg-white/5 rounded-lg p-6">
+                                <div class="flex items-center mb-4">
+                                    <div class="w-12 h-12 bg-cyan-500/20 rounded-full flex items-center justify-center mr-4">
+                                        <svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                                        </svg>
+                                    </div>
+                                    <p class="text-white font-bold text-lg">乗客への価値</p>
+                                </div>
                                 <div class="space-y-3">
-                                   
                                     <div class="flex items-start space-x-3">
-                                        <div class="flex-shrink-0 w-2 h-2 bg-white rounded-full mt-2"></div>
-                                        <p class="text-gray-300 text-sm">オフライン技術で通信環境に関係なく安定利用</p>
+                                        <div class="flex-shrink-0 w-6 h-6 bg-cyan-500/20 rounded-full flex items-center justify-center mt-0.5">
+                                            <svg class="w-3 h-3 text-cyan-400" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                            </svg>
+                                        </div>
+                                        <p class="text-gray-200 text-lg font-medium">オフラインでも安定した観光情報アクセス</p>
                                     </div>
                                     <div class="flex items-start space-x-3">
-                                        <div class="flex-shrink-0 w-2 h-2 bg-white rounded-full mt-2"></div>
-                                        <p class="text-gray-300 text-sm">観光エリアの飲食店・観光情報を移動中に確認</p>
+                                        <div class="flex-shrink-0 w-6 h-6 bg-cyan-500/20 rounded-full flex items-center justify-center mt-0.5">
+                                            <svg class="w-3 h-3 text-cyan-400" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                            </svg>
+                                        </div>
+                                        <p class="text-gray-200 text-lg font-medium">移動時間を旅行計画の充実した時間に変換</p>
                                     </div>
-                                    <div class="flex items-start space-x-3">
-                                        <div class="flex-shrink-0 w-2 h-2 bg-white rounded-full mt-2"></div>
-                                        <p class="text-gray-300 text-sm">到着後の初動スピードが格段に向上</p>
-                                    </div>
-                                    
                                 </div>
                             </div>
 
                             <!-- 航空会社・船社への解決策 -->
-                            <div class="">
-                                <p class="text-gray-300 font-semibold mb-3">✈️ 航空会社・船社</p>
-                                <div class="space-y-3">
-                                    <div class="flex items-start space-x-3">
-                                        <div class="flex-shrink-0 w-2 h-2 bg-white rounded-full mt-2"></div>
-                                        <p class="text-gray-300 text-sm">従来の1/200でコスト革命</p>
+                            <div class="bg-white/5 rounded-lg p-6">
+                                <div class="flex items-center mb-4">
+                                    <div class="w-12 h-12 bg-cyan-500/20 rounded-full flex items-center justify-center mr-4">
+                                        <svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5.72,8.35 L11.39,4.34 C11.77,4.05 12.31,4.05 12.70,4.34 L18.37,8.35 C18.71,8.61 18.91,9.01 18.91,9.43 L18.91,15.82 C18.91,16.66 18.24,17.33 17.40,17.33 L14.17,17.33 C13.87,17.33 13.62,17.09 13.62,16.78 L13.62,13.77 C13.62,13.07 13.04,12.49 12.34,12.49 L11.77,12.49 C11.07,12.49 10.49,13.07 10.49,13.77 L10.49,16.78 C10.49,17.09 10.24,17.33 9.94,17.33 L6.71,17.33 C5.87,17.33 5.20,16.66 5.20,15.82 L5.20,9.43 C5.20,9.01 5.40,8.61 5.72,8.35 Z M2,10 L5,7.5 M20,10 L22,7.5"></path>
+                                        </svg>
                                     </div>
-                                    <div class="flex items-start space-x-3">
-                                        <div class="flex-shrink-0 w-2 h-2 bg-white rounded-full mt-2"></div>
-                                        <p class="text-gray-300 text-sm">導入期間わずか1日</p>
-                                    </div>
-                                    <div class="flex items-start space-x-3">
-                                        <div class="flex-shrink-0 w-2 h-2 bg-white rounded-full mt-2"></div>
-                                        <p class="text-gray-300 text-sm">複数収益源を確保</p>
-                                    </div>
-                                    <div class="flex items-start space-x-3">
-                                        <div class="flex-shrink-0 w-2 h-2 bg-white rounded-full mt-2"></div>
-                                        <p class="text-gray-300 text-sm">船舶での長距離移動も対象範囲に</p>
-                                    </div>
+                                    <p class="text-white font-bold text-lg">航空会社への価値</p>
                                 </div>
-                            </div>
-
-                            <!-- 自治体への解決策 -->
-                            <div class="">
-                                <p class="text-gray-300 font-semibold mb-3">🏞️ 自治体</p>
                                 <div class="space-y-3">
                                     <div class="flex items-start space-x-3">
-                                        <div class="flex-shrink-0 w-2 h-2 bg-white rounded-full mt-2"></div>
-                                        <p class="text-gray-300 text-sm">移動中の事前情報発信で期待値最大化</p>
+                                        <div class="flex-shrink-0 w-6 h-6 bg-cyan-500/20 rounded-full flex items-center justify-center mt-0.5">
+                                            <svg class="w-3 h-3 text-cyan-400" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                            </svg>
+                                        </div>
+                                        <p class="text-gray-200 text-lg font-medium">従来の1/200のコストで即日導入可能</p>
                                     </div>
                                     <div class="flex items-start space-x-3">
-                                        <div class="flex-shrink-0 w-2 h-2 bg-white rounded-full mt-2"></div>
-                                        <p class="text-gray-300 text-sm">隠れスポットを効果的にPR、観光客分散実現</p>
-                                    </div>
-                                    <div class="flex items-start space-x-3">
-                                        <div class="flex-shrink-0 w-2 h-2 bg-white rounded-full mt-2"></div>
-                                        <p class="text-gray-300 text-sm">中小事業者への直接送客で地域経済底上げ</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- 広告主への解決策 -->
-                            <div class="">
-                                <p class="text-gray-300 font-semibold mb-3">📢 広告主</p>
-                                <div class="space-y-3">
-                                    <div class="flex items-start space-x-3">
-                                        <div class="flex-shrink-0 w-2 h-2 bg-white rounded-full mt-2"></div>
-                                        <p class="text-gray-300 text-sm">到着地連動の精密ターゲティングでCVR向上</p>
-                                    </div>
-                                    <div class="flex items-start space-x-3">
-                                        <div class="flex-shrink-0 w-2 h-2 bg-white rounded-full mt-2"></div>
-                                        <p class="text-gray-300 text-sm">購買意欲ピーク時に的確アプローチ</p>
-                                    </div>
-                                    <div class="flex items-start space-x-3">
-                                        <div class="flex-shrink-0 w-2 h-2 bg-white rounded-full mt-2"></div>
-                                        <p class="text-gray-300 text-sm">従来比50%コストで3倍リーチ効果</p>
+                                        <div class="flex-shrink-0 w-6 h-6 bg-cyan-500/20 rounded-full flex items-center justify-center mt-0.5">
+                                            <svg class="w-3 h-3 text-cyan-400" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                            </svg>
+                                        </div>
+                                        <p class="text-gray-200 text-lg font-medium">広告・物販による新たな収益源を確保</p>
                                     </div>
                                 </div>
                             </div>
@@ -279,7 +231,7 @@ additional_css: |
             <div class="flex flex-col">
                 <div class="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
                     <h1 class="sm:w-2/5 text-white font-orbitron font-black title-font text-3xl lg:text-4xl mb-2 sm:mb-0">通信断絶の機内空間を価値創造の場へ</h1>
-                    <p class="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0 text-gray-300">年間5,000万人が体験する『通信が繋がらない2時間』を、目的地への期待を高める充実した時間に変革。LCC・インバウンド市場に特化した革新的ソリューション。</p>
+                    <p class="sm:w-3/5 leading-relaxed text-lg sm:pl-10 pl-0 text-gray-300">年間5,000万人が体験する『通信が繋がらない2時間』を、目的地への期待を高める充実した時間に変革。LCC・インバウンド市場に特化した革新的ソリューション。</p>
                 </div>
             </div>
             <!-- Cards Container with Navigation -->
@@ -306,35 +258,35 @@ additional_css: |
                                 <img alt="乗客の課題とメリット" class="object-cover object-center h-full w-full" src="{{ '/assets/images/merit1.jpg' | relative_url }}">
                             </div>
                             <h2 class="text-xl font-medium title-font text-white mt-5 font-orbitron">乗客の課題とメリット</h2>
-                            <p class="text-base leading-relaxed mt-2 text-gray-300">2時間完全オフライン状態から解放。到着地の隠れた名店・観光スポット情報を事前確認し、移動時間を価値創造時間に変換。商談エリアの下調べも可能で、到着後の初動スピードが格段に向上。</p>
+                            <p class="text-lg leading-relaxed mt-2 text-gray-300">2時間完全オフライン状態から解放。到着地の隠れた名店・観光スポット情報を事前確認し、移動時間を価値創造時間に変換。商談エリアの下調べも可能で、到着後の初動スピードが格段に向上。</p>
                         </div>
                         <div class="flex-shrink-0 w-80">
                             <div class="rounded-lg h-44 overflow-hidden">
                                 <img alt="機内エンターテイメントの革命" class="object-cover object-center h-full w-full" src="{{ '/assets/images/flightdemo1.png' | relative_url }}">
                             </div>
                             <h2 class="text-xl font-medium title-font text-white mt-5 font-orbitron">機内エンターテイメントの革命</h2>
-                            <p class="text-base leading-relaxed mt-2 text-gray-300">従来の画一的コンテンツから、到着地連動のパーソナライズ情報へ。高額なWiFi料金も不要で、通信環境に左右されない安定した高品質デジタル体験を全乗客に提供。移動目的に応じた最適化コンテンツ。</p>
+                            <p class="text-lg leading-relaxed mt-2 text-gray-300">従来の画一的コンテンツから、到着地連動のパーソナライズ情報へ。高額なWiFi料金も不要で、通信環境に左右されない安定した高品質デジタル体験を全乗客に提供。移動目的に応じた最適化コンテンツ。</p>
                         </div>
                         <div class="flex-shrink-0 w-80">
                             <div class="rounded-lg h-44 overflow-hidden">
                                 <img alt="収益性" class="object-cover object-center h-full w-full" src="{{ '/assets/images/merit3.jpg' | relative_url }}">
                             </div>
                             <h2 class="text-xl font-medium title-font text-white mt-5 font-orbitron">収益性</h2>
-                            <p class="text-base leading-relaxed mt-2 text-gray-300">従来の1/200という圧倒的低コストで高品質サービスを提供。広告収入・物販売上・予約手数料による新たな収益源を確保し、投資回収も迅速。機内WiFi導入困難なLCCでも競合他社との明確な差別化を実現。</p>
+                            <p class="text-lg leading-relaxed mt-2 text-gray-300">従来の1/200という圧倒的低コストで高品質サービスを提供。広告収入・物販売上・予約手数料による新たな収益源を確保し、投資回収も迅速。機内WiFi導入困難なLCCでも競合他社との明確な差別化を実現。</p>
                         </div>
                         <div class="flex-shrink-0 w-80">
                             <div class="rounded-lg h-44 overflow-hidden">
                                 <img alt="地域連携" class="object-cover object-center h-full w-full" src="{{ '/assets/images/merit4.jpg' | relative_url }}">
                             </div>
                             <h2 class="text-xl font-medium title-font text-white mt-5 font-orbitron">地域連携</h2>
-                            <p class="text-base leading-relaxed mt-2 text-gray-300">観光客の分散化により混雑緩和を実現。隠れた観光スポットや地元文化体験への誘導で地域経済活性化。訪問前の情報提供により滞在時間延長と地域全体の消費向上。持続可能な観光発展をサポート。</p>
+                            <p class="text-lg leading-relaxed mt-2 text-gray-300">観光客の分散化により混雑緩和を実現。隠れた観光スポットや地元文化体験への誘導で地域経済活性化。訪問前の情報提供により滞在時間延長と地域全体の消費向上。持続可能な観光発展をサポート。</p>
                         </div>
                         <div class="flex-shrink-0 w-80">
                             <div class="rounded-lg h-44 overflow-hidden">
                                 <img alt="広告メリット" class="object-cover object-center h-full w-full" src="{{ '/assets/images/merit5.jpg' | relative_url }}">
                             </div>
                             <h2 class="text-xl font-medium title-font text-white mt-5 font-orbitron">広告メリット</h2>
-                            <p class="text-base leading-relaxed mt-2 text-gray-300">到着地連動の精密ターゲティングで旅行客に直接リーチ。移動中の集中した環境で高いエンゲージメントを獲得。従来アプローチ困難な訪日観光客への確実な情報届け。購買意欲の高い旅行直前タイミングでの効果的な広告配信。</p>
+                            <p class="text-lg leading-relaxed mt-2 text-gray-300">到着地連動の精密ターゲティングで旅行客に直接リーチ。移動中の集中した環境で高いエンゲージメントを獲得。従来アプローチ困難な訪日観光客への確実な情報届け。購買意欲の高い旅行直前タイミングでの効果的な広告配信。</p>
                         </div>
                     </div>
                 </div>
@@ -342,66 +294,38 @@ additional_css: |
         </div>
 </section>
 
-<!-- Offline CDN Section -->
-<div id="technology" class="overflow-hidden bg-black py-24 sm:py-32 h-screen">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8 h-full">
-            <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 h-full items-center">
-                <div class="lg:pt-4 lg:pr-8">
-                    <div class="lg:max-w-lg">
-                        <h2 class="text-base/7 font-semibold text-cyan-400">オフラインCDN技術</h2>
-                        <p class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-white sm:text-5xl">移動空間を豊かな時間に変えるデジタルプラットフォーム</p>
-                        <p class="mt-6 text-lg/8 text-gray-300">Webベースの次世代デジタルプラットフォーム。機内・船内Wi-Fiを活用し、乗客のスマートフォンやタブレットから快適なエンターテイメント体験を提供。航空会社・船社・電鉄会社等の交通事業者は低コスト導入が可能で、広告収益モデルによる新たな収益源を確保できます。。</p>
-                        <dl class="mt-10 max-w-xl space-y-8 text-base/7 text-gray-300 lg:max-w-none">
-                            <div class="relative pl-9">
-                                <dt class="inline font-semibold text-white">
-                                    <svg class="absolute top-1 left-1 size-5 text-cyan-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
-                                        <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
-                                    </svg>
-                                    乗客への価値提供
-                                </dt>
-                                <dd class="inline">地元の名店グルメ動画、穴場観光スポット、限定体験の事前予約で「地元の人だけが知る旅」を実現</dd>
-                            </div>
-                            <div class="relative pl-9">
-                                <dt class="inline font-semibold text-white">
-                                    <svg class="absolute top-1 left-1 size-5 text-cyan-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
-                                        <path fill-rule="evenodd" d="M4 16.5v-13h-.25a.75.75 0 010-1.5h12.5a.75.75 0 010 1.5H16v13h.25a.75.75 0 010 1.5H3.75a.75.75 0 010-1.5H4zM5.5 4v12h9V4h-9z" clip-rule="evenodd" />
-                                    </svg>
-                                    交通事業者のメリット
-                                </dt>
-                                <dd class="inline">地域連携による差別化とブランド価値向上、安定した収益源確保</dd>
-                            </div>
-                            <div class="relative pl-9">
-                                <dt class="inline font-semibold text-white">
-                                    <svg class="absolute top-1 left-1 size-5 text-cyan-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
-                                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a.75.75 0 000 1.5h.253a.25.25 0 01.244.304l-.459 2.066A1.75 1.75 0 0010.747 15H11a.75.75 0 000-1.5h-.253a.25.25 0 01-.244-.304l.459-2.066A1.75 1.75 0 009.253 9H9z" clip-rule="evenodd" />
-                                    </svg>
-                                    地域社会への貢献
-                                </dt>
-                                <dd class="inline">中小事業者への直接送客、伝統文化・地域産業の効果的な情報発信</dd>
-                            </div>
-                        </dl>
-                    </div>
-                </div>
-                <div class="relative overflow-hidden h-full flex items-center justify-center">
-                    <img src="{{ '/assets/images/product2.png' | relative_url }}" alt="Product screenshot" class="rounded-xl shadow-xl" style="object-fit: contain; mix-blend-mode: normal; filter: none; background: transparent;">
-                    <style>
-                        .relative img {
-                            max-height: 45vh;
-                        }
-                        @media (min-width: 1024px) {
-                            .relative img {
-                                max-height: 1000px !important;
-                            }
-                        }
-                    </style>
-                </div>
+
+<!-- Journey Begins Section -->
+<section class="bg-black py-16 sm:py-24">
+    <div class="container mx-auto px-6 lg:px-8">
+        <div class="text-center max-w-4xl mx-auto">
+            <h2 class="font-orbitron text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-6" style="text-shadow: 3px 3px 6px rgba(0,0,0,0.8);">
+                オフライン環境にも対応した、可搬性の高い観光UXプラットフォーム
+            </h2>
+            <h3 class="font-orbitron text-xl sm:text-2xl lg:text-3xl font-bold text-cyan-400 mb-8">
+                空白時間が、観光UXの最前線に
+            </h3>
+            <div class="space-y-6 text-xl text-gray-300 leading-relaxed">
+                <p>
+                    CabinTimeは、飛行機・フェリー・列車・観光バスなどの移動空間において、<br class="hidden lg:inline">
+                    オフライン環境でも、オンライン環境でも観光情報を快適に届けられるハイブリッド観光プラットフォームです。
+                </p>
+                <p>
+                    "空白時間"を、地域の魅力と出会える時間へ。<br class="hidden sm:inline">
+                    場所を選ばず、旅の価値を最大化する体験導線を実現します。
+                </p>
+            </div>
+            <!-- Optional: Add product preview image -->
+            <div class="mt-12 flex justify-center">
+                <img src="{{ '/assets/images/product2.png' | relative_url }}" alt="CabinTime App Preview" class="rounded-xl shadow-2xl max-w-[300px] sm:max-w-[400px] lg:max-w-[500px] w-full h-auto transform hover:scale-105 transition-transform duration-300">
             </div>
         </div>
-</div>
+    </div>
+</section>
 
 <!-- Service Features Section -->
 <section class="text-gray-300 bg-black body-font service-features-section" id="service">
-        <div class="container px-6 pt-6 pb-3 mx-auto lg:px-8">
+        <div class="container px-6 pt-0 pb-3 mx-auto lg:px-8">
             <div class="text-center mb-6">
                 <h2 class="text-base/7 font-semibold text-cyan-400 uppercase tracking-wide">Main Features</h2>
                 <h1 class="font-orbitron text-4xl lg:text-5xl font-black text-white mb-4" style="text-shadow: 3px 3px 6px rgba(0,0,0,0.8);">
@@ -420,7 +344,7 @@ additional_css: |
                     </div>
                     <div class="flex-grow pl-6">
                         <h2 class="text-white text-lg font-orbitron font-semibold mb-2">フライト情報</h2>
-                        <p class="leading-relaxed text-base text-gray-300">現在地情報、フライトマップ、到着予定時刻、コックピットからの映像などをリアルタイムで配信。通信圏外でも最新の情報を確認でき、スムーズな到着準備が可能です。</p>
+                        <p class="leading-relaxed text-lg text-gray-300">現在地情報、フライトマップ、到着予定時刻、コックピットからの映像などをリアルタイムで配信。通信圏外でも最新の情報を確認でき、スムーズな到着準備が可能です。</p>
                     </div>
                 </div>
                 <div class="p-4 md:w-1/3 flex">
@@ -432,7 +356,7 @@ additional_css: |
                     </div>
                     <div class="flex-grow pl-6">
                         <h2 class="text-white text-lg font-orbitron font-semibold mb-2">グルメ・観光情報</h2>
-                        <p class="leading-relaxed text-base text-gray-300">地元民だけが知る隠れた名店から話題のスポットまで、厳選された現地情報を事前チェック。到着前にレストラン予約・観光プランを完成させ、限られた旅行時間を最大限活用できます。</p>
+                        <p class="leading-relaxed text-lg text-gray-300">地元民だけが知る隠れた名店から話題のスポットまで、厳選された現地情報を事前チェック。到着前にレストラン予約・観光プランを完成させ、限られた旅行時間を最大限活用できます。</p>
                     </div>
                 </div>
                 <div class="p-4 md:w-1/3 flex">
@@ -443,7 +367,7 @@ additional_css: |
                     </div>
                     <div class="flex-grow pl-6">
                         <h2 class="text-white text-lg font-orbitron font-semibold mb-2">オンラインショッピング</h2>
-                        <p class="leading-relaxed text-base text-gray-300">地域特産品・伝統工芸品を移動中に購入し、空港受取・ホテル配送で手ぶら観光を実現。体験チケットの事前購入で人気施設もスムーズに楽しめ、旅行効率が劇的に向上します。</p>
+                        <p class="leading-relaxed text-lg text-gray-300">地域特産品・伝統工芸品を移動中に購入し、空港受取・ホテル配送で手ぶら観光を実現。体験チケットの事前購入で人気施設もスムーズに楽しめ、旅行効率が劇的に向上します。</p>
                     </div>
                 </div>
             </div>
@@ -456,7 +380,7 @@ additional_css: |
             <div class="mx-auto max-w-2xl text-center mb-16">
                 <h2 class="text-base/7 font-semibold text-cyan-400 uppercase tracking-wide">How It Works</h2>
                 <p class="mt-2 text-4xl font-bold tracking-tight text-white sm:text-5xl">シンプル6ステップの体験フロー</p>
-                <p class="mt-6 text-lg leading-8 text-gray-300">QRコードをスキャンするだけで始まる、移動時間を価値ある体験に変える革新的なワークフロー</p>
+                <p class="mt-6 text-xl leading-8 text-gray-300">QRコードをスキャンするだけで始まる、移動時間を価値ある体験に変える革新的なワークフロー</p>
             </div>
             
             <!-- Two Column Layout -->
@@ -491,7 +415,7 @@ additional_css: |
                             </div>
                             <div class="flex-grow pl-4">
                                 <h2 class="font-medium title-font text-sm text-white mb-1 tracking-wider">STEP 1</h2>
-                                <p class="leading-relaxed text-gray-300">座席・カードに配置されたQRコードをスマートフォンでスキャン</p>
+                                <p class="leading-relaxed text-gray-300 text-lg">座席・カードに配置されたQRコードをスマートフォンでスキャン</p>
                             </div>
                         </div>
                         
@@ -507,7 +431,7 @@ additional_css: |
                             </div>
                             <div class="flex-grow pl-4">
                                 <h2 class="font-medium title-font text-sm text-white mb-1 tracking-wider">STEP 2</h2>
-                                <p class="leading-relaxed text-gray-300">ブラウザでCabinTimeが自動的に起動、即座に利用開始</p>
+                                <p class="leading-relaxed text-gray-300 text-lg">ブラウザでCabinTimeが自動的に起動、即座に利用開始</p>
                             </div>
                         </div>
                         
@@ -523,7 +447,7 @@ additional_css: |
                             </div>
                             <div class="flex-grow pl-4">
                                 <h2 class="font-medium title-font text-sm text-white mb-1 tracking-wider">STEP 3</h2>
-                                <p class="leading-relaxed text-gray-300">現在のフライト状況と到着予定時刻を確認</p>
+                                <p class="leading-relaxed text-gray-300 text-lg">現在のフライト状況と到着予定時刻を確認</p>
                             </div>
                         </div>
                         
@@ -540,7 +464,7 @@ additional_css: |
                             </div>
                             <div class="flex-grow pl-4">
                                 <h2 class="font-medium title-font text-sm text-white mb-1 tracking-wider">STEP 4</h2>
-                                <p class="leading-relaxed text-gray-300">地元グルメ・隠れた観光スポット情報を事前にチェック</p>
+                                <p class="leading-relaxed text-gray-300 text-lg">地元グルメ・隠れた観光スポット情報を事前にチェック</p>
                             </div>
                         </div>
                         
@@ -556,7 +480,7 @@ additional_css: |
                             </div>
                             <div class="flex-grow pl-4">
                                 <h2 class="font-medium title-font text-sm text-white mb-1 tracking-wider">STEP 5</h2>
-                                <p class="leading-relaxed text-gray-300">気になる地元特産品や限定商品を事前購入</p>
+                                <p class="leading-relaxed text-gray-300 text-lg">気になる地元特産品や限定商品を事前購入</p>
                             </div>
                         </div>
                         
@@ -569,7 +493,7 @@ additional_css: |
                             </div>
                             <div class="flex-grow pl-4">
                                 <h2 class="font-medium title-font text-sm text-white mb-1 tracking-wider">FINISH</h2>
-                                <p class="leading-relaxed text-gray-300">着陸後、計画に基づいて充実した観光体験を開始</p>
+                                <p class="leading-relaxed text-gray-300 text-lg">着陸後、計画に基づいて充実した観光体験を開始</p>
                             </div>
                         </div>
                     </div>
@@ -584,7 +508,7 @@ additional_css: |
             <div class="mx-auto max-w-2xl lg:text-center">
                 <h2 class="text-base/7 font-semibold text-cyan-400">Launch instantly</h2>
                 <p class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-white sm:text-5xl lg:text-balance">移動時間を価値に変える観光DXプラットフォーム</p>
-                <p class="mt-6 text-lg/8 text-gray-300">年間5,000万人が利用する移動空間で、これまで「空白の時間」だった移動時間を「価値創造の時間」に変換。交通事業者は設備投資ゼロで新たな収益源を獲得し、乗客は目的地への期待を高める充実した体験を得られます。地方自治体や観光事業者にとっても、最適なタイミングでの情報発信が可能になります。</p>
+                <p class="mt-6 text-xl/8 text-gray-300">年間5,000万人が利用する移動空間で、これまで「空白の時間」だった移動時間を「価値創造の時間」に変換。交通事業者は設備投資ゼロで新たな収益源を獲得し、乗客は目的地への期待を高める充実した体験を得られます。地方自治体や観光事業者にとっても、最適なタイミングでの情報発信が可能になります。</p>
             </div>
             <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
                 <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
@@ -596,7 +520,7 @@ additional_css: |
                             即座に導入可能
                         </dt>
                         <dd class="mt-4 flex flex-auto flex-col text-base/7 text-gray-300">
-                            <p class="flex-auto">複雑な配線工事も専門技術者も不要。手のひらサイズの小型サーバーを既存の機内LANに接続するだけで、わずか1日で全システムが稼働開始。座席にQRコードを配置すれば、乗客は自分のスマートフォンから瞬時に観光情報とエンターテイメントにアクセスできます。</p>
+                            <p class="flex-auto text-lg">複雑な配線工事も専門技術者も不要。手のひらサイズの小型サーバーを既存の機内LANに接続するだけで、わずか1日で全システムが稼働開始。座席にQRコードを配置すれば、乗客は自分のスマートフォンから瞬時に観光情報とエンターテイメントにアクセスできます。</p>
                         </dd>
                     </div>
                     <div class="flex flex-col">
@@ -607,7 +531,7 @@ additional_css: |
                             革新的オフライン技術
                         </dt>
                         <dd class="mt-4 flex flex-auto flex-col text-base/7 text-gray-300">
-                            <p class="flex-auto">従来の機内システムが抱える「通信依存」「高額投資」「複雑導入」の3大課題を革新的オフライン配信技術で解決。DO-326航空サイバーセキュリティ指針完全準拠で、上空・洋上の通信切断環境でも安定したデジタル体験を提供します。</p>
+                            <p class="flex-auto text-lg">従来の機内システムが抱える「通信依存」「高額投資」「複雑導入」の3大課題を革新的オフライン配信技術で解決。DO-326航空サイバーセキュリティ指針完全準拠で、上空・洋上の通信切断環境でも安定したデジタル体験を提供します。</p>
                         </dd>
                     </div>
                     <div class="flex flex-col">
@@ -618,7 +542,7 @@ additional_css: |
                             巨大な未開拓市場
                         </dt>
                         <dd class="mt-4 flex flex-auto flex-col text-base/7 text-gray-300">
-                            <p class="flex-auto">LCC航空2,800万人、長距離フェリー利用者、地方路線バス。年間5,000万人が利用する移動空間で、これまでデジタル投資が困難だった市場に低コスト・高品質な観光DXを提供。交通事業者・観光業界・乗客すべてのWin-Win-Winを実現します。</p>
+                            <p class="flex-auto text-lg">LCC航空2,800万人、長距離フェリー利用者、地方路線バス。年間5,000万人が利用する移動空間で、これまでデジタル投資が困難だった市場に低コスト・高品質な観光DXを提供。交通事業者・観光業界・乗客すべてのWin-Win-Winを実現します。</p>
                         </dd>
                     </div>
                 </dl>
@@ -632,7 +556,7 @@ additional_css: |
             <div class="lg:grid lg:grid-cols-12 lg:gap-8">
                 <div class="lg:col-span-5">
                     <h2 class="text-3xl font-semibold tracking-tight text-pretty text-white sm:text-4xl font-orbitron">よくあるご質問</h2>
-                    <p class="mt-4 text-base/7 text-pretty text-gray-300">
+                    <p class="mt-4 text-lg/7 text-pretty text-gray-300">
                         他にご質問がございましたら、
                         <a href="{{ '/contact/' | relative_url }}" class="font-semibold text-cyan-400 hover:text-cyan-300">お問い合わせフォーム</a>
                         からお気軽にご連絡ください。
@@ -642,52 +566,52 @@ additional_css: |
                     <dl class="space-y-10">
                         <div>
                             <dt class="text-base/7 font-semibold text-white">Q1. CabinTimeとは何ですか？</dt>
-                            <dd class="mt-2 text-base/7 text-gray-300">航空機や船舶などの移動中に、通信環境に関係なく現地の観光・グルメ情報やオンラインショッピング、コンテンツ視聴を楽しめるサービスです。座席のQRコードをスキャンするだけで、ブラウザから簡単にアクセスできます。</dd>
+                            <dd class="mt-2 text-lg/7 text-gray-300">航空機や船舶などの移動中に、通信環境に関係なく現地の観光・グルメ情報やオンラインショッピング、コンテンツ視聴を楽しめるサービスです。座席のQRコードをスキャンするだけで、ブラウザから簡単にアクセスできます。</dd>
                         </div>
 
                         <div>
                             <dt class="text-base/7 font-semibold text-white">Q2. アプリのダウンロードは必要ですか？</dt>
-                            <dd class="mt-2 text-base/7 text-gray-300">いいえ、アプリのダウンロードは不要です。QRコードをスキャンすると、お使いのブラウザで自動的にサービスが起動します。</dd>
+                            <dd class="mt-2 text-lg/7 text-gray-300">いいえ、アプリのダウンロードは不要です。QRコードをスキャンすると、お使いのブラウザで自動的にサービスが起動します。</dd>
                         </div>
 
                         <div>
                             <dt class="text-base/7 font-semibold text-white">Q3. 利用料金はかかりますか？</dt>
-                            <dd class="mt-2 text-base/7 text-gray-300">基本的な情報閲覧は無料でご利用いただけます。オンラインショッピングや一部のプレミアム情報については、別途料金が発生する場合があります。</dd>
+                            <dd class="mt-2 text-lg/7 text-gray-300">基本的な情報閲覧は無料でご利用いただけます。オンラインショッピングや一部のプレミアム情報については、別途料金が発生する場合があります。</dd>
                         </div>
 
                         <div>
                             <dt class="text-base/7 font-semibold text-white">Q4. どの航空会社で利用できますか？</dt>
-                            <dd class="mt-2 text-base/7 text-gray-300">現在導入準備中の航空会社については、公式サイトで随時お知らせいたします。将来的には多くの航空会社・船舶会社での導入を予定しています。</dd>
+                            <dd class="mt-2 text-lg/7 text-gray-300">現在導入準備中の航空会社については、公式サイトで随時お知らせいたします。将来的には多くの航空会社・船舶会社での導入を予定しています。</dd>
                         </div>
 
                         <div>
                             <dt class="text-base/7 font-semibold text-white">Q5. 船舶会社でも導入できますか？</dt>
-                            <dd class="mt-2 text-base/7 text-gray-300">はい、CabinTimeは船舶での導入にも最適です。フェリー、クルーズ船、高速船など船舶の種類を問わず導入可能で、長時間の航行時間を活用した充実した旅行体験を提供できます。船舶特有の通信環境が不安定な海上でも、オフライン機能により安定したサービスをご利用いただけます。</dd>
+                            <dd class="mt-2 text-lg/7 text-gray-300">はい、CabinTimeは船舶での導入にも最適です。フェリー、クルーズ船、高速船など船舶の種類を問わず導入可能で、長時間の航行時間を活用した充実した旅行体験を提供できます。船舶特有の通信環境が不安定な海上でも、オフライン機能により安定したサービスをご利用いただけます。</dd>
                         </div>
 
                         <div>
                             <dt class="text-base/7 font-semibold text-white">Q6. 個人の好みに合わせた情報提供はありますか？</dt>
-                            <dd class="mt-2 text-base/7 text-gray-300">はい、将来的には初回利用時に簡単な設定（予算・食べ物の好み・旅行スタイル等）をしていただくことで、お客様に最適な情報を優先的に表示する機能を予定しています。</dd>
+                            <dd class="mt-2 text-lg/7 text-gray-300">はい、将来的には初回利用時に簡単な設定（予算・食べ物の好み・旅行スタイル等）をしていただくことで、お客様に最適な情報を優先的に表示する機能を予定しています。</dd>
                         </div>
 
                         <div>
                             <dt class="text-base/7 font-semibold text-white">Q7. 航空会社です。導入費用はどのくらいですか？</dt>
-                            <dd class="mt-2 text-base/7 text-gray-300">従来のWiFiレドームの取り付けや機内WiFiシステムの約1/200のコストで導入可能です。詳細な費用については、お問い合わせフォームからご相談ください。</dd>
+                            <dd class="mt-2 text-lg/7 text-gray-300">従来のWiFiレドームの取り付けや機内WiFiシステムの約1/200のコストで導入可能です。詳細な費用については、お問い合わせフォームからご相談ください。</dd>
                         </div>
 
                         <div>
                             <dt class="text-base/7 font-semibold text-white">Q8. 収益分配の仕組みを教えてください</dt>
-                            <dd class="mt-2 text-base/7 text-gray-300">広告収入・物販売上・予約手数料の一定割合を航空・交通事業者様にお支払いします。詳細な条件については個別にご相談させていただきます。</dd>
+                            <dd class="mt-2 text-lg/7 text-gray-300">広告収入・物販売上・予約手数料の一定割合を航空・交通事業者様にお支払いします。詳細な条件については個別にご相談させていただきます。</dd>
                         </div>
 
                         <div>
                             <dt class="text-base/7 font-semibold text-white">Q9. 自治体です。地域の観光PRに活用できますか？</dt>
-                            <dd class="mt-2 text-base/7 text-gray-300">はい、地域の魅力的な情報発信や特産品販売により、観光誘致と地域経済活性化を支援します。費用は無料で、売上の一部が地域に還元されます。</dd>
+                            <dd class="mt-2 text-lg/7 text-gray-300">はい、地域の魅力的な情報発信や特産品販売により、観光誘致と地域経済活性化を支援します。費用は無料で、売上の一部が地域に還元されます。</dd>
                         </div>
 
                         <div>
                             <dt class="text-base/7 font-semibold text-white">Q10. プライバシーは保護されますか？</dt>
-                            <dd class="mt-2 text-base/7 text-gray-300">はい、個人情報は厳重に管理し、第三者への提供は行いません。閲覧履歴はサービス改善のみに使用し、お客様のプライバシーを最優先に保護します。</dd>
+                            <dd class="mt-2 text-lg/7 text-gray-300">はい、個人情報は厳重に管理し、第三者への提供は行いません。閲覧履歴はサービス改善のみに使用し、お客様のプライバシーを最優先に保護します。</dd>
                         </div>
                     </dl>
                 </div>
@@ -702,7 +626,7 @@ additional_css: |
                 飛行中も<span class="text-cyan-400">観光のナビゲーション</span>をオン
             </h2>
 
-            <p class="max-w-4xl mt-6 text-center text-gray-300">
+            <p class="max-w-4xl mt-6 text-center text-gray-300 text-lg">
                 CabinTimeで移動時間を価値ある体験に変換しませんか？導入のご相談から技術的な詳細まで、お気軽にお問い合わせください。専門チームが丁寧にサポートいたします。
             </p>
 
