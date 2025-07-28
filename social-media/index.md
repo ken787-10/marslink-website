@@ -1,8 +1,8 @@
 ---
 layout: default
-title: "ソーシャルメディア統合 | MarsLink"
-description: "旅の感動を世界へ。SNS統合プラットフォームで観光体験を共有・拡散"
-keywords: "ソーシャルメディア, SNS統合, 観光マーケティング, UGC, インフルエンサー"
+title: "Social Life Stream | MarsLink"
+description: "複数のソーシャルメディアを一元管理できる個人ブランド管理プラットフォーム。AI執筆アシスタント搭載"
+keywords: "Social Life Stream, SNS統合, AI執筆支援, 個人ブランディング, マルチプラットフォーム"
 ---
 
 <style>
@@ -87,13 +87,13 @@ keywords: "ソーシャルメディア, SNS統合, 観光マーケティング, 
             
             <!-- Title -->
             <h1 class="font-orbitron text-5xl lg:text-7xl font-black text-white mb-6">
-                ソーシャルメディア統合
+                Social Life Stream
             </h1>
             
             <!-- Description -->
             <p class="text-xl lg:text-2xl text-gray-300 mb-12 leading-relaxed">
-                旅の感動を純粋に共有。<br>
-                広告なしのブログ型SNSで、他のソーシャルメディアからのコンテンツも統合表示
+                複数のソーシャルメディアを一元管理。<br>
+                AI支援で個人ブランドを最大化する統合プラットフォーム
             </p>
             
             <!-- Feature Preview -->
@@ -101,31 +101,74 @@ keywords: "ソーシャルメディア, SNS統合, 観光マーケティング, 
                 <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-purple-500/50 transition-all">
                     <div class="w-16 h-16 bg-purple-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                         <svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 16h4m10 0h4"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14v6m-3-3h6M6 10h2a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2zm10 0h2a2 2 0 002-2V6a2 2 0 00-2-2h-2a2 2 0 00-2 2v2a2 2 0 002 2zM6 20h2a2 2 0 002-2v-2a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2z"/>
                         </svg>
                     </div>
-                    <h3 class="text-lg font-bold text-white mb-2">SNS統合タイムライン</h3>
-                    <p class="text-gray-400 text-sm">Instagram、Twitterなど他SNSのコンテンツを一元表示</p>
+                    <h3 class="text-lg font-bold text-white mb-2">マルチプラットフォーム連携</h3>
+                    <p class="text-gray-400 text-sm">Twitter/X、Instagram、YouTube等を一元管理</p>
                 </div>
                 
                 <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-purple-500/50 transition-all">
                     <div class="w-16 h-16 bg-purple-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                         <svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                         </svg>
                     </div>
-                    <h3 class="text-lg font-bold text-white mb-2">気軽に投稿</h3>
-                    <p class="text-gray-400 text-sm">ブログのように簡単に旅の思い出を記録</p>
+                    <h3 class="text-lg font-bold text-white mb-2">AI執筆アシスタント</h3>
+                    <p class="text-gray-400 text-sm">GPT-4o-miniでプロ品質のコンテンツ作成支援</p>
                 </div>
                 
                 <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-purple-500/50 transition-all">
                     <div class="w-16 h-16 bg-purple-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                         <svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
                         </svg>
                     </div>
-                    <h3 class="text-lg font-bold text-white mb-2">広告フリー</h3>
-                    <p class="text-gray-400 text-sm">純粋な体験共有のための、広告なしの空間</p>
+                    <h3 class="text-lg font-bold text-white mb-2">SEO最適化</h3>
+                    <p class="text-gray-400 text-sm">メタタグ自動生成でパーソナルブランドを強化</p>
+                </div>
+            </div>
+            
+            <!-- Additional Features -->
+            <div class="bg-purple-500/10 backdrop-blur-sm rounded-2xl p-8 mb-12 border border-purple-500/30">
+                <h3 class="text-2xl font-bold text-white mb-6">その他の主要機能</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
+                    <div class="flex items-start space-x-3">
+                        <svg class="w-5 h-5 text-purple-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                        </svg>
+                        <div>
+                            <p class="text-white font-medium">予約投稿機能</p>
+                            <p class="text-gray-400 text-sm">最適な時間に自動投稿</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <svg class="w-5 h-5 text-purple-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                        </svg>
+                        <div>
+                            <p class="text-white font-medium">リンクプレビュー</p>
+                            <p class="text-gray-400 text-sm">自動生成で見栄え向上</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <svg class="w-5 h-5 text-purple-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                        </svg>
+                        <div>
+                            <p class="text-white font-medium">日記→ブログ変換</p>
+                            <p class="text-gray-400 text-sm">AIがプロ仕様の文体に</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <svg class="w-5 h-5 text-purple-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                        </svg>
+                        <div>
+                            <p class="text-white font-medium">Next.js 15搭載</p>
+                            <p class="text-gray-400 text-sm">高速・安定動作を実現</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             
