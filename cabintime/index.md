@@ -225,6 +225,34 @@ additional_css: |
         </div>
 </section>
 
+<!-- Journey Begins Section -->
+<section class="bg-black py-16 sm:py-24">
+    <div class="container mx-auto px-6 lg:px-8">
+        <div class="text-center max-w-4xl mx-auto">
+            <h2 class="font-orbitron text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-6" style="text-shadow: 3px 3px 6px rgba(0,0,0,0.8);">
+                オフライン環境にも対応した、可搬性の高い観光UXプラットフォーム
+            </h2>
+            <h3 class="font-orbitron text-xl sm:text-2xl lg:text-3xl font-bold text-cyan-400 mb-8">
+                空白時間が、観光UXの最前線に
+            </h3>
+            <div class="space-y-6 text-xl text-gray-300 leading-relaxed">
+                <p>
+                    CabinTimeは、飛行機・フェリー・列車・観光バスなどの移動空間において、<br class="hidden lg:inline">
+                    オフライン環境でも、オンライン環境でも観光情報を快適に届けられるハイブリッド観光プラットフォームです。
+                </p>
+                <p>
+                    "空白時間"を、地域の魅力と出会える時間へ。<br class="hidden sm:inline">
+                    場所を選ばず、旅の価値を最大化する体験導線を実現します。
+                </p>
+            </div>
+            <!-- Optional: Add product preview image -->
+            <div class="mt-12 flex justify-center">
+                <img src="{{ '/assets/images/product2.png' | relative_url }}" alt="CabinTime App Preview" class="rounded-xl shadow-2xl max-w-[300px] sm:max-w-[400px] lg:max-w-[500px] w-full h-auto transform hover:scale-105 transition-transform duration-300">
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Value Creation Section -->
 <section class="text-gray-400 bg-black body-font">
         <div class="container px-5 py-24 mx-auto">
@@ -292,35 +320,6 @@ additional_css: |
                 </div>
             </div>
         </div>
-</section>
-
-
-<!-- Journey Begins Section -->
-<section class="bg-black py-16 sm:py-24">
-    <div class="container mx-auto px-6 lg:px-8">
-        <div class="text-center max-w-4xl mx-auto">
-            <h2 class="font-orbitron text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-6" style="text-shadow: 3px 3px 6px rgba(0,0,0,0.8);">
-                オフライン環境にも対応した、可搬性の高い観光UXプラットフォーム
-            </h2>
-            <h3 class="font-orbitron text-xl sm:text-2xl lg:text-3xl font-bold text-cyan-400 mb-8">
-                空白時間が、観光UXの最前線に
-            </h3>
-            <div class="space-y-6 text-xl text-gray-300 leading-relaxed">
-                <p>
-                    CabinTimeは、飛行機・フェリー・列車・観光バスなどの移動空間において、<br class="hidden lg:inline">
-                    オフライン環境でも、オンライン環境でも観光情報を快適に届けられるハイブリッド観光プラットフォームです。
-                </p>
-                <p>
-                    "空白時間"を、地域の魅力と出会える時間へ。<br class="hidden sm:inline">
-                    場所を選ばず、旅の価値を最大化する体験導線を実現します。
-                </p>
-            </div>
-            <!-- Optional: Add product preview image -->
-            <div class="mt-12 flex justify-center">
-                <img src="{{ '/assets/images/product2.png' | relative_url }}" alt="CabinTime App Preview" class="rounded-xl shadow-2xl max-w-[300px] sm:max-w-[400px] lg:max-w-[500px] w-full h-auto transform hover:scale-105 transition-transform duration-300">
-            </div>
-        </div>
-    </div>
 </section>
 
 <!-- Service Features Section -->
