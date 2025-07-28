@@ -105,21 +105,41 @@ keywords: "GeoBuzz, 地域トレンド, 位置情報分析, 観光動向, デー
                 位置情報と連動したトレンド分析プラットフォーム
             </p>
             
-            <!-- Trend Graph Preview -->
+            <!-- Heatmap Preview -->
             <div class="buzz-card rounded-2xl p-8 max-w-2xl mx-auto mb-16">
                 <svg class="w-full h-48" viewBox="0 0 400 150">
                     <defs>
-                        <linearGradient id="trendGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <radialGradient id="heat1" cx="50%" cy="50%">
                             <stop offset="0%" style="stop-color:#10b981;stop-opacity:0.8" />
-                            <stop offset="100%" style="stop-color:#34d399;stop-opacity:0.8" />
-                        </linearGradient>
+                            <stop offset="50%" style="stop-color:#34d399;stop-opacity:0.4" />
+                            <stop offset="100%" style="stop-color:#34d399;stop-opacity:0" />
+                        </radialGradient>
+                        <radialGradient id="heat2" cx="50%" cy="50%">
+                            <stop offset="0%" style="stop-color:#34d399;stop-opacity:0.9" />
+                            <stop offset="40%" style="stop-color:#4ade80;stop-opacity:0.5" />
+                            <stop offset="100%" style="stop-color:#4ade80;stop-opacity:0" />
+                        </radialGradient>
+                        <radialGradient id="heat3" cx="50%" cy="50%">
+                            <stop offset="0%" style="stop-color:#22c55e;stop-opacity:0.7" />
+                            <stop offset="60%" style="stop-color:#4ade80;stop-opacity:0.3" />
+                            <stop offset="100%" style="stop-color:#4ade80;stop-opacity:0" />
+                        </radialGradient>
                     </defs>
-                    <path class="trend-line" d="M50,120 Q100,80 150,90 T250,60 Q300,40 350,20" 
-                          fill="none" stroke="url(#trendGradient)" stroke-width="3"/>
-                    <circle cx="50" cy="120" r="4" fill="#10b981"/>
-                    <circle cx="150" cy="90" r="4" fill="#10b981"/>
-                    <circle cx="250" cy="60" r="4" fill="#10b981"/>
-                    <circle cx="350" cy="20" r="4" fill="#10b981"/>
+                    <!-- Heatmap cells -->
+                    <circle cx="80" cy="40" r="40" fill="url(#heat1)" class="animate-pulse" style="animation-duration: 3s"/>
+                    <circle cx="150" cy="80" r="50" fill="url(#heat2)" class="animate-pulse" style="animation-duration: 3.5s; animation-delay: 0.5s"/>
+                    <circle cx="250" cy="50" r="35" fill="url(#heat3)" class="animate-pulse" style="animation-duration: 4s; animation-delay: 1s"/>
+                    <circle cx="320" cy="90" r="45" fill="url(#heat1)" class="animate-pulse" style="animation-duration: 3.2s; animation-delay: 0.3s"/>
+                    <circle cx="180" cy="120" r="30" fill="url(#heat3)" class="animate-pulse" style="animation-duration: 3.8s; animation-delay: 0.7s"/>
+                    <circle cx="300" cy="30" r="25" fill="url(#heat2)" class="animate-pulse" style="animation-duration: 3.3s; animation-delay: 1.2s"/>
+                    <!-- Map grid overlay -->
+                    <g opacity="0.2">
+                        <line x1="0" y1="50" x2="400" y2="50" stroke="#10b981" stroke-width="0.5"/>
+                        <line x1="0" y1="100" x2="400" y2="100" stroke="#10b981" stroke-width="0.5"/>
+                        <line x1="100" y1="0" x2="100" y2="150" stroke="#10b981" stroke-width="0.5"/>
+                        <line x1="200" y1="0" x2="200" y2="150" stroke="#10b981" stroke-width="0.5"/>
+                        <line x1="300" y1="0" x2="300" y2="150" stroke="#10b981" stroke-width="0.5"/>
+                    </g>
                 </svg>
             </div>
             
