@@ -2,7 +2,7 @@
 layout: default
 title: "Social Life Stream | MarsLink"
 description: "複数のソーシャルメディアを一元管理できる個人ブランド管理プラットフォーム。AI執筆アシスタント搭載"
-keywords: "Social Life Stream, SNS統合, AI執筆支援, 個人ブランディング, マルチプラットフォーム"
+keywords: "Social Life Stream, SNS All Stars, AI執筆支援, 個人ブランディング, マルチプラットフォーム"
 ---
 
 <style>
