@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "MAP×動画 | MarsLink"
+title: "NIGIWAI MAP | MarsLink"
 description: "地図と動画で観光体験を可視化。現地での回遊を促進する次世代プラットフォーム"
 keywords: "地図連動動画, 観光マップ, 動画ガイド, 回遊促進, ロケーションベース"
 ---
@@ -87,7 +87,7 @@ keywords: "地図連動動画, 観光マップ, 動画ガイド, 回遊促進, �
             
             <!-- Title -->
             <h1 class="font-orbitron text-5xl lg:text-7xl font-black text-white mb-6">
-                MAP × 動画
+                NIGIWAI MAP
             </h1>
             
             <!-- Description -->
