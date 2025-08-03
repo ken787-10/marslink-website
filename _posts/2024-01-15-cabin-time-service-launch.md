@@ -1,12 +1,8 @@
 ---
-layout: post
-title: "新サービス「CabinTime」正式リリースのお知らせ"
-date: 2024-01-15 10:00:00 +0900
-category: サービス
-tags: [CabinTime, リリース, 新サービス]
-author: MarsLink
-description: "移動時間を価値ある体験に変革する革新的プラットフォーム「CabinTime」が正式にリリースされました。"
+tags: []
+title: 新サービス「CabinTime」正式リリースのお知らせ
 ---
+
 
 この度、株式会社MarsLinkでは、移動時間を価値ある体験に変革する革新的プラットフォーム「**CabinTime**」の正式リリースを発表いたします。
 
