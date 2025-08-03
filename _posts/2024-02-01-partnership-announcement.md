@@ -1,7 +1,9 @@
 ---
 tags: []
+published: false
 title: 大手航空会社との戦略的パートナーシップ締結について
 ---
+
 
 
 
