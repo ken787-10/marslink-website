@@ -5,9 +5,39 @@ permalink: /privacy/
 description: 株式会社MarsLink（以下「当社」）のプライバシーポリシーです。
 ---
 
+<style>
+.policy-content h1 {
+  font-family: 'Orbitron', monospace;
+  font-weight: 800;
+  font-size: 2rem; /* ~text-3xl */
+  line-height: 1.25;
+  margin: 0 0 1rem 0;
+}
+.policy-content h2 {
+  font-weight: 700;
+  font-size: 1.5rem; /* ~text-2xl */
+  line-height: 1.3;
+  margin: 2rem 0 0.75rem 0;
+}
+.policy-content h3 {
+  font-weight: 700;
+  font-size: 1.25rem; /* ~text-xl */
+  line-height: 1.35;
+  margin: 1.5rem 0 0.5rem 0;
+}
+.policy-content p {
+  margin: 0 0 1rem 0;
+}
+.policy-content ul {
+  margin: 0.5rem 0 1rem 1.25rem;
+  list-style: disc;
+}
+.policy-content li { margin: 0.25rem 0; }
+</style>
+
 <section class="relative bg-black text-white pt-40 md:pt-48 pb-24">
 <div class="mx-auto max-w-4xl px-6 sm:px-8 lg:px-10">
-  <div markdown="1" class="bg-white/10 border border-white/15 rounded-2xl p-8 lg:p-12 shadow-xl">
+  <div markdown="1" class="policy-content bg-white/10 border border-white/15 rounded-2xl p-8 lg:p-12 shadow-xl">
 # プライバシーポリシー
 
 株式会社MarsLink（以下「当社」）は、当社が提供するウェブサイトおよび各種サービス（以下「本サービス」）における利用者の個人情報の取扱いについて、以下のとおりプライバシーポリシー（以下「本ポリシー」）を定め、適切な保護と管理に努めます。
