@@ -11,14 +11,14 @@ html {
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: -apple-system, "system-ui", "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
     line-height: 1.5;
     color: #fff;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Orbitron', sans-serif;
-    letter-spacing: 1px;
+    font-family: inherit;
+    letter-spacing: 0.2px;
     line-height: 1.3;
 }
 
