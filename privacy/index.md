@@ -5,12 +5,12 @@ permalink: /privacy/
 description: 株式会社MarsLink（以下「当社」）のプライバシーポリシーです。
 ---
 
-<section class="relative bg-black text-white pt-32 pb-16">
-<div class="mx-auto max-w-5xl px-6 lg:px-8">
-  <header class="mb-8 text-center">
+<section class="relative bg-black text-white pt-40 md:pt-48 pb-24">
+<div class="mx-auto max-w-4xl px-6 sm:px-8 lg:px-10">
+  <header class="mb-10 text-center">
     <h1 class="font-orbitron text-4xl font-black tracking-tight text-white">プライバシーポリシー</h1>
   </header>
-  <div class="bg-white/5 border border-white/10 rounded-2xl p-6 lg:p-10">
+  <div class="bg-white/10 border border-white/15 rounded-2xl p-8 lg:p-12 shadow-xl">
 
 株式会社MarsLink（以下「当社」）は、当社が提供するウェブサイトおよび各種サービス（以下「本サービス」）における利用者の個人情報の取扱いについて、以下のとおりプライバシーポリシー（以下「本ポリシー」）を定め、適切な保護と管理に努めます。
 
