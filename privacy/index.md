@@ -10,7 +10,7 @@ description: 株式会社MarsLink（以下「当社」）のプライバシー�
   <header class="mb-10 text-center">
     <h1 class="font-orbitron text-4xl font-black tracking-tight text-white">プライバシーポリシー</h1>
   </header>
-  <div class="bg-white/10 border border-white/15 rounded-2xl p-8 lg:p-12 shadow-xl">
+  <div markdown="1" class="bg-white/10 border border-white/15 rounded-2xl p-8 lg:p-12 shadow-xl">
 
 株式会社MarsLink（以下「当社」）は、当社が提供するウェブサイトおよび各種サービス（以下「本サービス」）における利用者の個人情報の取扱いについて、以下のとおりプライバシーポリシー（以下「本ポリシー」）を定め、適切な保護と管理に努めます。
 
