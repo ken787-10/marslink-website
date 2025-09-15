@@ -6,24 +6,29 @@ description: 株式会社MarsLink（以下「当社」）のプライバシー�
 ---
 
 <style>
+.policy-content {
+  font-family: -apple-system, "system-ui", "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji" !important;
+}
 .policy-content h1 {
-  font-family: 'Orbitron', monospace;
-  font-weight: 800;
-  font-size: 2rem; /* ~text-3xl */
-  line-height: 1.25;
-  margin: 0 0 1rem 0;
+  font-family: inherit !important;
+  font-weight: 800 !important;
+  font-size: 2.25rem !important; /* ≈ text-4xl */
+  line-height: 1.25 !important;
+  margin: 0 0 1rem 0 !important;
 }
 .policy-content h2 {
-  font-weight: 700;
-  font-size: 1.5rem; /* ~text-2xl */
-  line-height: 1.3;
-  margin: 2rem 0 0.75rem 0;
+  font-family: inherit !important;
+  font-weight: 700 !important;
+  font-size: 1.75rem !important; /* ≈ text-3xl */
+  line-height: 1.3 !important;
+  margin: 2rem 0 0.75rem 0 !important;
 }
 .policy-content h3 {
-  font-weight: 700;
-  font-size: 1.25rem; /* ~text-xl */
-  line-height: 1.35;
-  margin: 1.5rem 0 0.5rem 0;
+  font-family: inherit !important;
+  font-weight: 700 !important;
+  font-size: 1.375rem !important; /* ≈ text-2xl */
+  line-height: 1.35 !important;
+  margin: 1.5rem 0 0.5rem 0 !important;
 }
 .policy-content p {
   margin: 0 0 1rem 0;
