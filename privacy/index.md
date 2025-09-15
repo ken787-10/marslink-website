@@ -8,6 +8,7 @@ description: 株式会社MarsLink（以下「当社」）のプライバシー�
 <section class="relative bg-black text-white pt-40 md:pt-48 pb-24">
 <div class="mx-auto max-w-4xl px-6 sm:px-8 lg:px-10">
   <div markdown="1" class="bg-white/10 border border-white/15 rounded-2xl p-8 lg:p-12 shadow-xl">
+# プライバシーポリシー
 
 株式会社MarsLink（以下「当社」）は、当社が提供するウェブサイトおよび各種サービス（以下「本サービス」）における利用者の個人情報の取扱いについて、以下のとおりプライバシーポリシー（以下「本ポリシー」）を定め、適切な保護と管理に努めます。
 
