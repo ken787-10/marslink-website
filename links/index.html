@@ -1,0 +1,161 @@
+---
+layout: null
+permalink: /links/
+---
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>市位謙太 - MarsLink</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            background: #000;
+        }
+        
+        .full-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        
+        .hero-overlay {
+            background: linear-gradient(to bottom, 
+                rgba(0, 26, 51, 0.3) 0%, 
+                rgba(0, 26, 51, 0.7) 50%, 
+                rgba(0, 26, 51, 0.9) 100%);
+        }
+        
+        .profile-image {
+            box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1);
+        }
+        
+        .link-button {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .link-button:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .save-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .save-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.5);
+        }
+    </style>
+</head>
+<body class="min-h-screen text-white">
+    <!-- Full Screen Background -->
+    <div 
+        class="full-background bg-cover bg-center"
+        style="background-image: url('https://images.unsplash.com/photo-1449034446853-66c86144b0ad?w=1920&fit=crop&q=80');"
+    ></div>
+    <div class="hero-overlay fixed inset-0"></div>
+
+    <!-- Profile Content -->
+    <div class="relative z-10 pt-20">
+        <div class="container mx-auto px-4 max-w-2xl">
+            <!-- Profile Section -->
+            <div class="text-center mb-8">
+                <div class="inline-block">
+                    <img 
+                        src="/assets/images/kentaichii.jpg" 
+                        alt="市位謙太"
+                        class="w-40 h-40 rounded-full profile-image mb-4 object-cover"
+                    />
+                </div>
+                
+                <h1 class="text-3xl font-bold mb-2">市位謙太</h1>
+                <p class="text-gray-300 mb-1">元大阪市会議員（2期）</p>
+                <p class="text-gray-300 mb-1">米国国務省IVLP修了</p>
+                <p class="text-gray-300 mb-1">株式会社FunMake / MarsLink</p>
+                <p class="text-gray-300">代表取締役CEO</p>
+            </div>
+
+            <!-- Links -->
+            <div class="space-y-4 mb-8">
+                <!-- Email -->
+                <a href="mailto:ken@funmake.net" class="block">
+                    <div class="link-button rounded-2xl p-5 flex items-center">
+                        <div class="w-12 h-12 bg-gray-700 rounded-xl flex items-center justify-center mr-4">
+                            <i class="fas fa-envelope text-xl"></i>
+                        </div>
+                        <span class="text-lg font-medium flex-grow text-left">MAIL</span>
+                        <i class="fas fa-chevron-right text-gray-400"></i>
+                    </div>
+                </a>
+
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/kenta.ichii/" class="block">
+                    <div class="link-button rounded-2xl p-5 flex items-center">
+                        <div class="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center mr-4">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </div>
+                        <span class="text-lg font-medium flex-grow text-left">Facebook</span>
+                        <i class="fas fa-chevron-right text-gray-400"></i>
+                    </div>
+                </a>
+
+                <!-- FunMake -->
+                <a href="https://funmake.net" class="block">
+                    <div class="link-button rounded-2xl p-5 flex items-center">
+                        <div class="w-12 h-12 rounded-xl overflow-hidden mr-4">
+                            <img src="/assets/images/funmake_favi.png" alt="FunMake" class="w-full h-full object-cover">
+                        </div>
+                        <span class="text-lg font-medium flex-grow text-left">株式会社FunMake</span>
+                        <i class="fas fa-chevron-right text-gray-400"></i>
+                    </div>
+                </a>
+
+                <!-- MarsLink -->
+                <a href="https://marslink.co.jp" class="block">
+                    <div class="link-button rounded-2xl p-5 flex items-center">
+                        <div class="w-12 h-12 bg-white bg-opacity-20 rounded-xl flex items-center justify-center mr-4 p-2">
+                            <img src="/assets/images/marslink-512.png" alt="MarsLink" class="w-full h-full object-contain">
+                        </div>
+                        <span class="text-lg font-medium flex-grow text-left">株式会社MarsLink</span>
+                        <i class="fas fa-chevron-right text-gray-400"></i>
+                    </div>
+                </a>
+
+                <!-- SNS Mee -->
+                <a href="https://ken787.net" class="block">
+                    <div class="link-button rounded-2xl p-5 flex items-center">
+                        <div class="w-12 h-12 rounded-xl overflow-hidden mr-4">
+                            <img src="/assets/images/mee-icon-192.png" alt="Mee" class="w-full h-full object-cover">
+                        </div>
+                        <span class="text-lg font-medium flex-grow text-left">MEE</span>
+                        <i class="fas fa-chevron-right text-gray-400"></i>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Save Profile Button -->
+            <div class="text-center mb-12">
+                <a href="/links/ichii-kenta.vcf" download class="inline-block">
+                    <button class="save-button px-8 py-4 rounded-full text-white font-medium text-lg shadow-lg flex items-center gap-2">
+                        <i class="fas fa-address-card"></i>
+                        <span>連絡先に追加</span>
+                    </button>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
