@@ -55,7 +55,10 @@
             </div>
         </div>
         <div class="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24 text-center">
-            <p class="text-sm/6 text-gray-400">&copy; <span id="current-year">2025</span> MarsLink Co., Ltd. All rights reserved.</p>
+            <p class="text-sm/6 text-gray-400">
+                &copy; {{ site.time | date: '%Y' }}
+                <a href="https://marslink.co.jp" class="hover:text-cyan-400">株式会社MarsLink</a>
+            </p>
         </div>
     </div>
 </footer> 

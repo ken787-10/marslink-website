@@ -156,5 +156,20 @@ permalink: /links/
 
         </div>
     </div>
+
+    <!-- Footer -->
+    <footer class="relative z-10 text-center pb-8">
+        <p class="text-sm text-gray-400">
+            &copy; <span id="year-links-index">2025</span>
+            <a href="https://marslink.co.jp" class="hover:underline">株式会社MarsLink</a>
+        </p>
+    </footer>
+
+    <script>
+        (function(){
+            var y = document.getElementById('year-links-index');
+            if (y) y.textContent = new Date().getFullYear();
+        })();
+    </script>
 </body>
 </html> 
