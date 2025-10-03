@@ -55,6 +55,10 @@ permalink: /links/
         
         .profile-image {
             box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1);
+            /* Ensure perfect circle crop and centered subject */
+            object-fit: cover;
+            object-position: center center;
+            border-radius: 9999px;
         }
         
         .link-button {
