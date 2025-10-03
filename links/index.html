@@ -272,59 +272,17 @@ permalink: /links/
             if (y) y.textContent = new Date().getFullYear();
         })();
 
-        // Simple slider for links page
-        (function(){
-            const slider = document.getElementById('links-slider');
-            if (!slider) return;
-            const slides = slider.querySelectorAll('.slide');
-            const prev = document.getElementById('links-prev');
-            const next = document.getElementById('links-next');
-            const dotsWrap = document.getElementById('links-dots');
-            let index = 0;
-            const count = slides.length;
-            let startX = 0, deltaX = 0, isTouch = false;
-            let timer;
-
-            // Build dots
-            const dots = [];
-            for (let i = 0; i < count; i++) {
-                const d = document.createElement('button');
-                d.setAttribute('type','button');
-                d.className = 'h-2 w-2 rounded-full bg-white/40 hover:bg-white/70';
-                d.addEventListener('click', () => { index = i; update(true); });
-                dotsWrap.appendChild(d); dots.push(d);
-            }
-
-            function update(stopAuto){
-                slider.style.transform = `translateX(-${index * 100}%)`;
-                dots.forEach((d, i) => d.style.opacity = i === index ? '1' : '0.6');
-                if (stopAuto) restart();
-            }
-            function restart(){ clearInterval(timer); timer = setInterval(()=>{ nextSlide(); }, 4000); }
-            function nextSlide(){ index = (index + 1) % count; update(); }
-            function prevSlide(){ index = (index - 1 + count) % count; update(); }
-
-            if (next) next.addEventListener('click', ()=>{ nextSlide(); restart(); });
-            if (prev) prev.addEventListener('click', ()=>{ prevSlide(); restart(); });
-
-            // Touch swipe
-            slider.addEventListener('touchstart', (e)=>{ isTouch = true; startX = e.touches[0].clientX; deltaX = 0; clearInterval(timer); }, {passive:true});
-            slider.addEventListener('touchmove', (e)=>{ if(!isTouch) return; deltaX = e.touches[0].clientX - startX; }, {passive:true});
-            slider.addEventListener('touchend', ()=>{
-                if(!isTouch) return; isTouch = false;
-                if (Math.abs(deltaX) > 50) { deltaX < 0 ? nextSlide() : prevSlide(); }
-                restart();
-            });
-
-            // Mouse drag (optional)
-            let isDown=false;
-            slider.addEventListener('mousedown', (e)=>{ isDown=true; startX=e.clientX; deltaX=0; clearInterval(timer); });
-            window.addEventListener('mousemove', (e)=>{ if(!isDown) return; deltaX = e.clientX - startX; });
-            window.addEventListener('mouseup', ()=>{ if(!isDown) return; isDown=false; if(Math.abs(deltaX)>50){ deltaX<0?nextSlide():prevSlide(); } restart(); });
-
-            // Init
-            update(true);
-        })();
+        // Lightbox helpers for 3x3 grid
+        function openLightbox(src){
+            var lb = document.getElementById('lightbox');
+            var img = document.getElementById('lightbox-img');
+            if (img) img.src = src;
+            if (lb) lb.classList.remove('hidden');
+        }
+        function closeLightbox(){
+            var lb = document.getElementById('lightbox');
+            if (lb) lb.classList.add('hidden');
+        }
     </script>
 </body>
 </html> 

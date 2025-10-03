@@ -192,27 +192,44 @@
                     </div>
                 </a>
                 
-                <!-- Photo Slideshow (16:9, full width) -->
+                <!-- 3x3 Photo Grid -->
                 <div class="mt-4">
-                    <div class="relative overflow-hidden rounded-2xl border border-white/20 bg-black/30">
-                        <!-- aspect-ratio fallback shim -->
-                        <div class="block pt-[56.25%]"></div>
-                        <div id="links-slider" class="absolute inset-0 flex h-full w-full transition-transform duration-500 ease-in-out" style="transform: translateX(0);">
-                            <img src="assets/images/slide1.jpg" alt="Slide 1" class="slide w-full h-full min-w-full object-cover select-none" draggable="false">
-                            <img src="assets/images/slide2.jpg" alt="Slide 2" class="slide w-full h-full min-w-full object-cover select-none" draggable="false">
-                            <img src="assets/images/slide3.jpg" alt="Slide 3" class="slide w-full h-full min-w-full object-cover select-none" draggable="false">
-                            <img src="assets/images/slide4.jpg" alt="Slide 4" class="slide w-full h-full min-w-full object-cover select-none" draggable="false">
-                            <img src="assets/images/slide5.jpg" alt="Slide 5" class="slide w-full h-full min-w-full object-cover select-none" draggable="false">
+                    <div class="grid grid-cols-3 gap-2 rounded-2xl border border-white/20 bg-black/30 p-2">
+                        <div class="aspect-square overflow-hidden rounded-lg cursor-pointer" onclick="openLightbox('assets/images/slide1.jpg')">
+                            <img src="assets/images/slide1.jpg" alt="Photo 1" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
                         </div>
-                        <!-- Nav buttons -->
-                        <button type="button" aria-label="Previous" id="links-prev" class="absolute inset-y-0 left-0 z-10 m-2 h-10 w-10 rounded-full bg-black/40 text-white grid place-items-center hover:bg-black/60">
-                            <i class="fas fa-chevron-left"></i>
-                        </button>
-                        <button type="button" aria-label="Next" id="links-next" class="absolute inset-y-0 right-0 z-10 m-2 h-10 w-10 rounded-full bg-black/40 text-white grid place-items-center hover:bg-black/60">
-                            <i class="fas fa-chevron-right"></i>
-                        </button>
-                        <!-- Dots -->
-                        <div id="links-dots" class="absolute bottom-2 left-1/2 z-10 -translate-x-1/2 flex gap-2"></div>
+                        <div class="aspect-square overflow-hidden rounded-lg cursor-pointer" onclick="openLightbox('assets/images/slide2.jpg')">
+                            <img src="assets/images/slide2.jpg" alt="Photo 2" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="aspect-square overflow-hidden rounded-lg cursor-pointer" onclick="openLightbox('assets/images/slide3.jpg')">
+                            <img src="assets/images/slide3.jpg" alt="Photo 3" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="aspect-square overflow-hidden rounded-lg cursor-pointer" onclick="openLightbox('assets/images/slide4.jpg')">
+                            <img src="assets/images/slide4.jpg" alt="Photo 4" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="aspect-square overflow-hidden rounded-lg cursor-pointer" onclick="openLightbox('assets/images/slide5.jpg')">
+                            <img src="assets/images/slide5.jpg" alt="Photo 5" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="aspect-square overflow-hidden rounded-lg cursor-pointer" onclick="openLightbox('assets/images/ceo1.jpg')">
+                            <img src="assets/images/ceo1.jpg" alt="Photo 6" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="aspect-square overflow-hidden rounded-lg cursor-pointer" onclick="openLightbox('assets/images/ceo-pic2.jpg')">
+                            <img src="assets/images/ceo-pic2.jpg" alt="Photo 7" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="aspect-square overflow-hidden rounded-lg cursor-pointer" onclick="openLightbox('assets/images/ceo-pic3.jpg')">
+                            <img src="assets/images/ceo-pic3.jpg" alt="Photo 8" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="aspect-square overflow-hidden rounded-lg cursor-pointer" onclick="openLightbox('assets/images/ceo-pic5.jpg')">
+                            <img src="assets/images/ceo-pic5.jpg" alt="Photo 9" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lightbox Modal -->
+                <div id="lightbox" class="fixed inset-0 z-50 hidden bg-black/90 flex items-center justify-center p-4" onclick="closeLightbox()">
+                    <div class="relative max-w-5xl max-h-[90vh] w-full h-full flex items-center justify-center">
+                        <img id="lightbox-img" src="" alt="" class="max-w-full max-h-full object-contain">
+                        <button class="absolute top-4 right-4 text-white text-4xl hover:text-gray-300" onclick="closeLightbox()">&times;</button>
                     </div>
                 </div>
             </div>
@@ -252,59 +269,17 @@
             if (y) y.textContent = new Date().getFullYear();
         })();
 
-        // Simple slider for links page
-        (function(){
-            const slider = document.getElementById('links-slider');
-            if (!slider) return;
-            const slides = slider.querySelectorAll('.slide');
-            const prev = document.getElementById('links-prev');
-            const next = document.getElementById('links-next');
-            const dotsWrap = document.getElementById('links-dots');
-            let index = 0;
-            const count = slides.length;
-            let startX = 0, deltaX = 0, isTouch = false;
-            let timer;
-
-            // Build dots
-            const dots = [];
-            for (let i = 0; i < count; i++) {
-                const d = document.createElement('button');
-                d.setAttribute('type','button');
-                d.className = 'h-2 w-2 rounded-full bg-white/40 hover:bg-white/70';
-                d.addEventListener('click', () => { index = i; update(true); });
-                dotsWrap.appendChild(d); dots.push(d);
-            }
-
-            function update(stopAuto){
-                slider.style.transform = `translateX(-${index * 100}%)`;
-                dots.forEach((d, i) => d.style.opacity = i === index ? '1' : '0.6');
-                if (stopAuto) restart();
-            }
-            function restart(){ clearInterval(timer); timer = setInterval(()=>{ nextSlide(); }, 4000); }
-            function nextSlide(){ index = (index + 1) % count; update(); }
-            function prevSlide(){ index = (index - 1 + count) % count; update(); }
-
-            if (next) next.addEventListener('click', ()=>{ nextSlide(); restart(); });
-            if (prev) prev.addEventListener('click', ()=>{ prevSlide(); restart(); });
-
-            // Touch swipe
-            slider.addEventListener('touchstart', (e)=>{ isTouch = true; startX = e.touches[0].clientX; deltaX = 0; clearInterval(timer); }, {passive:true});
-            slider.addEventListener('touchmove', (e)=>{ if(!isTouch) return; deltaX = e.touches[0].clientX - startX; }, {passive:true});
-            slider.addEventListener('touchend', ()=>{
-                if(!isTouch) return; isTouch = false;
-                if (Math.abs(deltaX) > 50) { deltaX < 0 ? nextSlide() : prevSlide(); }
-                restart();
-            });
-
-            // Mouse drag (optional)
-            let isDown=false;
-            slider.addEventListener('mousedown', (e)=>{ isDown=true; startX=e.clientX; deltaX=0; clearInterval(timer); });
-            window.addEventListener('mousemove', (e)=>{ if(!isDown) return; deltaX = e.clientX - startX; });
-            window.addEventListener('mouseup', ()=>{ if(!isDown) return; isDown=false; if(Math.abs(deltaX)>50){ deltaX<0?nextSlide():prevSlide(); } restart(); });
-
-            // Init
-            update(true);
-        })();
+        // Lightbox helpers for 3x3 grid
+        function openLightbox(src){
+            var lb = document.getElementById('lightbox');
+            var img = document.getElementById('lightbox-img');
+            if (img) img.src = src;
+            if (lb) lb.classList.remove('hidden');
+        }
+        function closeLightbox(){
+            var lb = document.getElementById('lightbox');
+            if (lb) lb.classList.add('hidden');
+        }
     </script>
 </body>
 </html>
