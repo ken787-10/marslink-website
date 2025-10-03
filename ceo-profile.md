@@ -140,43 +140,42 @@ published: true
         <p class="mt-6 text-lg/8 text-gray-300">議会・米国・スタートアップ</p>
       </div>
       
-      <div class="mt-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        <div class="gallery-container">
-          <img src="{{ '/assets/images/ceo1.jpg' | relative_url }}" alt="CEO活動写真1">
+      <div class="mt-16 grid grid-cols-3 gap-4 max-w-4xl mx-auto">
+        <div class="gallery-container cursor-pointer" onclick="openLightbox('{{ '/assets/images/ceo1.jpg' | relative_url }}')">
+          <img src="{{ '/assets/images/ceo1.jpg' | relative_url }}" alt="CEO活動写真1" loading="lazy">
         </div>
-        <div class="gallery-container">
-          <img src="{{ '/assets/images/ceo-pic2.jpg' | relative_url }}" alt="CEO活動写真2">
+        <div class="gallery-container cursor-pointer" onclick="openLightbox('{{ '/assets/images/ceo-pic2.jpg' | relative_url }}')">
+          <img src="{{ '/assets/images/ceo-pic2.jpg' | relative_url }}" alt="CEO活動写真2" loading="lazy">
         </div>
-        <div class="gallery-container">
-          <img src="{{ '/assets/images/ceo-pic3.jpg' | relative_url }}" alt="CEO活動写真3">
+        <div class="gallery-container cursor-pointer" onclick="openLightbox('{{ '/assets/images/ceo-pic3.jpg' | relative_url }}')">
+          <img src="{{ '/assets/images/ceo-pic3.jpg' | relative_url }}" alt="CEO活動写真3" loading="lazy">
         </div>
-        <div class="gallery-container">
-          <img src="{{ '/assets/images/ceo-pic5.jpg' | relative_url }}" alt="CEO活動写真4">
+        <div class="gallery-container cursor-pointer" onclick="openLightbox('{{ '/assets/images/ceo-pic5.jpg' | relative_url }}')">
+          <img src="{{ '/assets/images/ceo-pic5.jpg' | relative_url }}" alt="CEO活動写真4" loading="lazy">
         </div>
-        <div class="gallery-container">
-          <img src="{{ '/assets/images/ceo-pic7.JPG' | relative_url }}" alt="CEO活動写真5">
+        <div class="gallery-container cursor-pointer" onclick="openLightbox('{{ '/assets/images/ceo-pic7.JPG' | relative_url }}')">
+          <img src="{{ '/assets/images/ceo-pic7.JPG' | relative_url }}" alt="CEO活動写真5" loading="lazy">
         </div>
-        <div class="gallery-container">
-          <img src="{{ '/assets/images/ceo-pic8.jpg' | relative_url }}" alt="CEO活動写真6">
+        <div class="gallery-container cursor-pointer" onclick="openLightbox('{{ '/assets/images/ceo-pic8.jpg' | relative_url }}')">
+          <img src="{{ '/assets/images/ceo-pic8.jpg' | relative_url }}" alt="CEO活動写真6" loading="lazy">
         </div>
-        <div class="gallery-container">
-          <img src="{{ '/assets/images/ceo10.JPG' | relative_url }}" alt="CEO活動写真7">
+        <div class="gallery-container cursor-pointer" onclick="openLightbox('{{ '/assets/images/ceo10.JPG' | relative_url }}')">
+          <img src="{{ '/assets/images/ceo10.JPG' | relative_url }}" alt="CEO活動写真7" loading="lazy">
         </div>
-       <div class="gallery-container">
-          <img src="{{ '/assets/images/ana.jpg' | relative_url }}" alt="CEO活動写真8">
+        <div class="gallery-container cursor-pointer" onclick="openLightbox('{{ '/assets/images/ana.jpg' | relative_url }}')">
+          <img src="{{ '/assets/images/ana.jpg' | relative_url }}" alt="CEO活動写真8" loading="lazy">
         </div>
-        <!--  <div class="gallery-container">
-          <img src="{{ '/assets/images/ceo9.JPG' | relative_url }}" alt="CEO活動写真9">
+        <div class="gallery-container cursor-pointer" onclick="openLightbox('{{ '/assets/images/ceo-pic11.jpg' | relative_url }}')">
+          <img src="{{ '/assets/images/ceo-pic11.jpg' | relative_url }}" alt="CEO活動写真9" loading="lazy">
         </div>
-        <div class="gallery-container">
-          <img src="{{ 'assets/images/ceo10.JPG' | relative_url }}" alt="CEO活動写真10">
+      </div>
+      
+      <!-- Lightbox Modal -->
+      <div id="lightbox" class="fixed inset-0 z-50 hidden bg-black/90 flex items-center justify-center p-4" onclick="closeLightbox()">
+        <div class="relative max-w-5xl max-h-[90vh] w-full h-full flex items-center justify-center">
+          <img id="lightbox-img" src="" alt="" class="max-w-full max-h-full object-contain">
+          <button class="absolute top-4 right-4 text-white text-4xl hover:text-gray-300" onclick="closeLightbox()">&times;</button>
         </div>
-        <div class="gallery-container">
-          <img src="{{ '/assets/images/ceo-pic11.jpg' | relative_url }}" alt="CEO活動写真11">
-        </div>
-        <div class="gallery-container">
-          <img src="{{ '/assets/images/ceo10.JPG' | relative_url }}" alt="CEO活動写真12">
-        </div> -->
       </div>
     </div>
   </div>
@@ -531,4 +530,35 @@ img {
 .gallery-container:hover img {
     transform: scale(1.05);
 }
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 640px) {
+    .gallery-container {
+        aspect-ratio: 1;
+    }
+}
 </style>
+
+<script>
+function openLightbox(imageSrc) {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    lightboxImg.src = imageSrc;
+    lightbox.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    lightbox.classList.add('hidden');
+    document.body.style.overflow = 'auto';
+}
+
+// ESCキーで閉じる
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        closeLightbox();
+    }
+});
+</script>
