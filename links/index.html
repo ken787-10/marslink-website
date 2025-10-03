@@ -20,19 +20,45 @@ permalink: /links/
             top: 0;
             left: 0;
             width: 100%;
-            height: 100%;
+            /* Use stable viewport height to avoid iOS URL bar reflow */
+            height: 100vh;
+            /* Promote to its own layer to reduce jank */
+            will-change: transform;
+            transform: translateZ(0);
+            backface-visibility: hidden;
+            contain: paint;
             z-index: -1;
         }
         
         .hero-overlay {
+            /* Match stable height and promote layer */
+            position: fixed;
+            inset: 0;
+            height: 100vh;
+            will-change: transform;
+            transform: translateZ(0);
             background: linear-gradient(to bottom, 
                 rgba(0, 26, 51, 0.3) 0%, 
                 rgba(0, 26, 51, 0.7) 50%, 
                 rgba(0, 26, 51, 0.9) 100%);
         }
+
+        /* Prefer stable viewport units when supported */
+        @supports (height: 100svh) {
+            .full-background,
+            .hero-overlay { height: 100svh; }
+        }
+        @supports (height: 100dvh) {
+            .full-background,
+            .hero-overlay { height: 100dvh; }
+        }
         
         .profile-image {
             box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1);
+            /* Ensure perfect circle crop and centered subject */
+            object-fit: cover;
+            object-position: center center;
+            border-radius: 9999px;
         }
         
         .link-button {
@@ -57,6 +83,21 @@ permalink: /links/
             transform: translateY(-2px);
             box-shadow: 0 10px 20px rgba(102, 126, 234, 0.5);
         }
+
+        /* Reduce heavy filters on small screens for smoother scroll */
+        @media (max-width: 640px) {
+            .link-button { backdrop-filter: none; }
+            /* Switch to scroll background on mobile to avoid jitter */
+            .full-background,
+            .hero-overlay { display: none; }
+            body {
+                background-image: linear-gradient(to bottom, rgba(0, 26, 51, 0.3) 0%, rgba(0, 26, 51, 0.7) 50%, rgba(0, 26, 51, 0.9) 100%), url('https://images.unsplash.com/photo-1449034446853-66c86144b0ad?w=1920&fit=crop&q=80');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-attachment: scroll;
+            }
+        }
     </style>
 </head>
 <body class="min-h-screen text-white">
@@ -74,7 +115,7 @@ permalink: /links/
             <div class="text-center mb-8">
                 <div class="inline-block">
                     <img 
-                        src="/assets/images/kentaichii.jpg" 
+                        src="/assets/images/kentaichii4.png?v=20251003" 
                         alt="市位謙太"
                         class="w-40 h-40 rounded-full profile-image mb-4 object-cover"
                     />
@@ -83,26 +124,27 @@ permalink: /links/
                 <h1 class="text-3xl font-bold mb-2">市位謙太</h1>
                 <p class="text-gray-300 mb-1">元大阪市会議員（2期）</p>
                 <p class="text-gray-300 mb-1">米国国務省IVLP修了</p>
-                <p class="text-gray-300 mb-1">株式会社FunMake / MarsLink</p>
-                <p class="text-gray-300">代表取締役CEO</p>
+                <p class="text-gray-300 mb-1">株式会社FunMake 代表取締役CEO</p>
+                <p class="text-gray-300">株式会社MarsLink 代表取締役CEO</p>
             </div>
 
             <!-- Links -->
             <div class="space-y-4 mb-8">
-                <!-- Email -->
-                <a href="mailto:ken@funmake.net" class="block">
-                    <div class="link-button rounded-2xl p-5 flex items-center">
+                <!-- プロフィール -->
+                <a href="https://funmake.co.jp/company/ceo/" class="block">
+                    <div class="link-button rounded-2xl px-5 py-[15px] flex items-center">
                         <div class="w-12 h-12 bg-gray-700 rounded-xl flex items-center justify-center mr-4">
-                            <i class="fas fa-envelope text-xl"></i>
+                            <i class="fas fa-user text-xl"></i>
                         </div>
-                        <span class="text-lg font-medium flex-grow text-left">MAIL</span>
+                        <span class="text-lg font-medium flex-grow text-left">プロフィール</span>
                         <i class="fas fa-chevron-right text-gray-400"></i>
                     </div>
                 </a>
+                
 
                 <!-- Facebook -->
                 <a href="https://www.facebook.com/kenta.ichii/" class="block">
-                    <div class="link-button rounded-2xl p-5 flex items-center">
+                    <div class="link-button rounded-2xl px-5 py-[15px] flex items-center">
                         <div class="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center mr-4">
                             <i class="fab fa-facebook-f text-xl"></i>
                         </div>
@@ -113,7 +155,7 @@ permalink: /links/
 
                 <!-- FunMake -->
                 <a href="https://funmake.co.jp" class="block">
-                    <div class="link-button rounded-2xl p-5 flex items-center">
+                    <div class="link-button rounded-2xl px-5 py-[15px] flex items-center">
                         <div class="w-12 h-12 rounded-xl overflow-hidden mr-4">
                             <img src="/assets/images/funmake_favi.png" alt="FunMake" class="w-full h-full object-cover">
                         </div>
@@ -124,7 +166,7 @@ permalink: /links/
 
                 <!-- MarsLink -->
                 <a href="https://marslink.co.jp" class="block">
-                    <div class="link-button rounded-2xl p-5 flex items-center">
+                    <div class="link-button rounded-2xl px-5 py-[15px] flex items-center">
                         <div class="w-12 h-12 bg-white bg-opacity-20 rounded-xl flex items-center justify-center mr-4 p-2">
                             <img src="/assets/images/marslink-512.png" alt="MarsLink" class="w-full h-full object-contain">
                         </div>
@@ -135,7 +177,7 @@ permalink: /links/
 
                 <!-- SNS Mee -->
                 <a href="https://ken787.net" class="block">
-                    <div class="link-button rounded-2xl p-5 flex items-center">
+                    <div class="link-button rounded-2xl px-5 py-[15px] flex items-center">
                         <div class="w-12 h-12 rounded-xl overflow-hidden mr-4">
                             <img src="/assets/images/mee-icon-192.png" alt="Mee" class="w-full h-full object-cover">
                         </div>
@@ -143,6 +185,40 @@ permalink: /links/
                         <i class="fas fa-chevron-right text-gray-400"></i>
                     </div>
                 </a>
+                <!-- Email -->
+                <a href="mailto:ken@funmake.net" class="block">
+                    <div class="link-button rounded-2xl px-5 py-[15px] flex items-center">
+                        <div class="w-12 h-12 bg-gray-700 rounded-xl flex items-center justify-center mr-4">
+                            <i class="fas fa-envelope text-xl"></i>
+                        </div>
+                        <span class="text-lg font-medium flex-grow text-left">MAIL</span>
+                        <i class="fas fa-chevron-right text-gray-400"></i>
+                    </div>
+                </a>
+                
+                <!-- Photo Slideshow (16:9, full width) -->
+                <div class="mt-4">
+                    <div class="relative overflow-hidden rounded-2xl border border-white/20 bg-black/30">
+                        <!-- aspect-ratio fallback shim -->
+                        <div class="block pt-[56.25%]"></div>
+                        <div id="links-slider" class="absolute inset-0 flex h-full w-full transition-transform duration-500 ease-in-out" style="transform: translateX(0);">
+                            <img src="/assets/images/slide1.jpg" alt="Slide 1" class="slide w-full h-full min-w-full object-cover select-none" draggable="false">
+                            <img src="/assets/images/slide2.jpg" alt="Slide 2" class="slide w-full h-full min-w-full object-cover select-none" draggable="false">
+                            <img src="/assets/images/slide3.jpg" alt="Slide 3" class="slide w-full h-full min-w-full object-cover select-none" draggable="false">
+                            <img src="/assets/images/slide4.jpg" alt="Slide 4" class="slide w-full h-full min-w-full object-cover select-none" draggable="false">
+                            <img src="/assets/images/slide5.jpg" alt="Slide 5" class="slide w-full h-full min-w-full object-cover select-none" draggable="false">
+                        </div>
+                        <!-- Nav buttons -->
+                        <button type="button" aria-label="Previous" id="links-prev" class="absolute inset-y-0 left-0 z-10 m-2 h-10 w-10 rounded-full bg-black/40 text-white grid place-items-center hover:bg-black/60">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button type="button" aria-label="Next" id="links-next" class="absolute inset-y-0 right-0 z-10 m-2 h-10 w-10 rounded-full bg-black/40 text-white grid place-items-center hover:bg-black/60">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <!-- Dots -->
+                        <div id="links-dots" class="absolute bottom-2 left-1/2 z-10 -translate-x-1/2 flex gap-2"></div>
+                    </div>
+                </div>
             </div>
 
             <!-- Save Profile Button -->
@@ -154,7 +230,84 @@ permalink: /links/
                 </a>
             </div>
 
+            <!-- Hire Profile Page CTA (icon + text link) -->
+            <div class="text-center mb-8">
+                <a href="https://marslink.co.jp/contact/" class="inline-flex items-center gap-2 text-gray-300 hover:text-cyan-400 transition-colors underline-offset-2 hover:underline">
+                    <i class="fas fa-desktop"></i>
+                    <span>デジタル名刺制作依頼</span>
+                </a>
+            </div>
+
         </div>
     </div>
+
+    <!-- Footer -->
+    <footer class="relative z-10 text-center pb-8">
+        <p class="text-sm text-gray-400">
+            &copy; <span id="year-links-index">2025</span>
+            <a href="https://marslink.co.jp" class="hover:underline">株式会社MarsLink</a>
+        </p>
+    </footer>
+
+    <script>
+        (function(){
+            var y = document.getElementById('year-links-index');
+            if (y) y.textContent = new Date().getFullYear();
+        })();
+
+        // Simple slider for links page
+        (function(){
+            const slider = document.getElementById('links-slider');
+            if (!slider) return;
+            const slides = slider.querySelectorAll('.slide');
+            const prev = document.getElementById('links-prev');
+            const next = document.getElementById('links-next');
+            const dotsWrap = document.getElementById('links-dots');
+            let index = 0;
+            const count = slides.length;
+            let startX = 0, deltaX = 0, isTouch = false;
+            let timer;
+
+            // Build dots
+            const dots = [];
+            for (let i = 0; i < count; i++) {
+                const d = document.createElement('button');
+                d.setAttribute('type','button');
+                d.className = 'h-2 w-2 rounded-full bg-white/40 hover:bg-white/70';
+                d.addEventListener('click', () => { index = i; update(true); });
+                dotsWrap.appendChild(d); dots.push(d);
+            }
+
+            function update(stopAuto){
+                slider.style.transform = `translateX(-${index * 100}%)`;
+                dots.forEach((d, i) => d.style.opacity = i === index ? '1' : '0.6');
+                if (stopAuto) restart();
+            }
+            function restart(){ clearInterval(timer); timer = setInterval(()=>{ nextSlide(); }, 4000); }
+            function nextSlide(){ index = (index + 1) % count; update(); }
+            function prevSlide(){ index = (index - 1 + count) % count; update(); }
+
+            if (next) next.addEventListener('click', ()=>{ nextSlide(); restart(); });
+            if (prev) prev.addEventListener('click', ()=>{ prevSlide(); restart(); });
+
+            // Touch swipe
+            slider.addEventListener('touchstart', (e)=>{ isTouch = true; startX = e.touches[0].clientX; deltaX = 0; clearInterval(timer); }, {passive:true});
+            slider.addEventListener('touchmove', (e)=>{ if(!isTouch) return; deltaX = e.touches[0].clientX - startX; }, {passive:true});
+            slider.addEventListener('touchend', ()=>{
+                if(!isTouch) return; isTouch = false;
+                if (Math.abs(deltaX) > 50) { deltaX < 0 ? nextSlide() : prevSlide(); }
+                restart();
+            });
+
+            // Mouse drag (optional)
+            let isDown=false;
+            slider.addEventListener('mousedown', (e)=>{ isDown=true; startX=e.clientX; deltaX=0; clearInterval(timer); });
+            window.addEventListener('mousemove', (e)=>{ if(!isDown) return; deltaX = e.clientX - startX; });
+            window.addEventListener('mouseup', ()=>{ if(!isDown) return; isDown=false; if(Math.abs(deltaX)>50){ deltaX<0?nextSlide():prevSlide(); } restart(); });
+
+            // Init
+            update(true);
+        })();
+    </script>
 </body>
 </html> 
