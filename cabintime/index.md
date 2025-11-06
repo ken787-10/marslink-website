@@ -247,7 +247,9 @@ additional_css: |
             </div>
             <!-- Optional: Add product preview image -->
             <div class="mt-12 flex justify-center">
-                <img src="{{ '/assets/images/product2.png' | relative_url }}" alt="CabinTime App Preview" class="rounded-xl shadow-2xl max-w-[300px] sm:max-w-[400px] lg:max-w-[500px] w-full h-auto transform hover:scale-105 transition-transform duration-300">
+                <a href="{{ '/cabintime-demo/' | relative_url }}" class="block">
+                    <img src="{{ '/assets/images/product2.png' | relative_url }}" alt="CabinTime App Preview" class="rounded-xl shadow-2xl max-w-[300px] sm:max-w-[400px] lg:max-w-[500px] w-full h-auto transform hover:scale-105 transition-transform duration-300 cursor-pointer">
+                </a>
             </div>
         </div>
     </div>
