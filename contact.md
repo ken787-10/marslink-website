@@ -101,7 +101,12 @@ changefreq: monthly
                 <h2 class="font-orbitron text-2xl font-bold text-white mb-4">お問い合わせフォーム</h2>
                 <p class="text-gray-300">下記フォームにご記入いただき、送信ボタンをクリックしてください。</p>
             </div>
-            <form id="contactForm" class="space-y-6" method="POST" action="/api/contact">
+            <form id="contactForm" class="space-y-6" method="POST" action="https://formsubmit.co/info@marslink.co.jp">
+                <input type="hidden" name="_subject" value="【MarsLink】お問い合わせ" />
+                <input type="hidden" name="_next" value="{{ '/contact/?sent=1' | relative_url }}" />
+                <input type="hidden" name="_template" value="table" />
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="text" name="_honey" style="display:none">
                 <!-- 氏名 -->
                 <div>
                     <label for="name" class="form-label block text-sm font-medium mb-2">
@@ -228,7 +233,7 @@ changefreq: monthly
 </div>
 
 <script>
-// バリデーション + 非同期送信（/api/contact）
+// バリデーション（有効なら通常送信） + 送信後の成功表示（?sent=1）
 document.getElementById('contactForm').addEventListener('submit', function(e) {
     const form = this;
     const submitBtn = form.querySelector('button[type="submit"]');
@@ -249,32 +254,9 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
         alert('正しいメールアドレスを入力してください。');
         return;
     }
-    e.preventDefault();
     submitBtn.textContent = '送信中...';
     submitBtn.disabled = true;
     submitBtn.classList.add('opacity-50');
-    const formData = new FormData(form);
-    fetch(form.action, {
-        method: 'POST',
-        body: formData
-    }).then(async (res) => {
-        const data = await res.json().catch(() => ({}));
-        if (res.ok && data && data.success) {
-            showMessage('success');
-            form.reset();
-        } else {
-            showMessage('error');
-            if (data && data.message) {
-                alert(data.message);
-            }
-        }
-    }).catch(() => {
-        showMessage('error');
-    }).finally(() => {
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-        submitBtn.classList.remove('opacity-50');
-    });
 });
 
 function showMessage(type) {
@@ -292,8 +274,19 @@ function showMessage(type) {
     setTimeout(() => { messageContainer.classList.add('hidden'); }, 5000);
 }
 
-// 初期化（特に処理なし）
-document.addEventListener('DOMContentLoaded', function() {});
+// リダイレクト戻り（?sent=1）で成功メッセージを表示
+document.addEventListener('DOMContentLoaded', function() {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('sent') === '1') {
+        showMessage('success');
+        const submitBtn = document.querySelector('#contactForm button[type="submit"]');
+        if (submitBtn) {
+            submitBtn.textContent = '送信する';
+            submitBtn.disabled = false;
+            submitBtn.classList.remove('opacity-50');
+        }
+    }
+});
 </script>
 
 
