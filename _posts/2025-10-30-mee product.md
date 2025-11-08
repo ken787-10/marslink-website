@@ -17,13 +17,7 @@ excerpt: 他者比較や承認に依存しない“自己メディア”を実�
 MEEは、写真・音楽・位置情報・テキストなどを個人のタイムラインとして記録し、他者との比較ではなく“自分の資産”として扱う新しいWebメディアです。  
 なお本プロダクトは、地図タイムライン「CabinTime FlightMap」の研究開発から派生したスピンオフとして誕生しましたが、目的と体験設計が異なる独立プロダクトです。
 
-<figure class="video-half" style="width:30%; margin:0 auto;">
-<video controls playsinline preload="metadata" poster="/assets/images/program01.jpg" style="width:100%; height:auto;">
-<source src="/assets/images/mee1.mp4" type="video/mp4">
-お使いのブラウザは動画に対応していません。
-</video>
-<figcaption>MEE β版 デモ</figcaption>
-</figure>
+![meeのTop Page](assets/images/mee-01.png)
 
 ### 背景：SNS構造の限界と新たな発信形態の必要性
 
@@ -57,8 +51,9 @@ MEEは、MarsLinkが展開する観光DXサービス「CabinTime」ともデー�
 
 ### MarsLink 代表コメント（市位謙太）
 
-SNSが成熟した今、私たちは“誰かに見せるため”の発信から、“自分のため”の発信へと進化する段階に来ています。  
+SNSが成熟した今、私たちは“誰かに見せるため”の発信から、“自分のため”の発信へと進化する段階に来ています。<br>
 MEEは、自分の行動・感情・経験を可視化し、それを「自己資産」として残せる、新しいWebメディアです。情報の発信が“自己成長のツール”に変わる社会を目指します。
+
 
 
 ### サービス概要
