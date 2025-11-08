@@ -3,44 +3,89 @@ layout: default
 ---
 
 <article class="bg-gray-900 text-white min-h-screen">
+    <style>
+        /* Post typography fallback (Tailwind Typography未使用時の最小スタイル) */
+        .prose h1 { font-size: 2rem; line-height: 2.5rem; font-weight: 800; margin: 1rem 0; }
+		.prose h2 { font-size: 1.5rem; line-height: 2rem; font-weight: 700; margin: 2rem 0 1rem; padding: 0.75rem 0; }
+		.prose h3 { font-size: 1.25rem; line-height: 1.75rem; font-weight: 700; margin: 1.5rem 0 0.75rem; padding: 0.25rem 0; }
+        .prose p { margin: 0.75rem 0; }
+        .prose ul { list-style: disc; padding-left: 1.25rem; margin: 0.5rem 0 1rem; }
+		.prose img { width: 650px; max-width: 100%; height: auto; display: block; margin: 0.75rem auto; border-radius: 0.5rem; }
+        .prose a { color: #22d3ee; text-decoration: underline; }
+    </style>
     <div class="container mx-auto px-6 pt-32 pb-16">
         <div class="max-w-4xl mx-auto">
-            <header class="mb-8">
-                <h1 class="text-4xl font-bold font-orbitron mb-4">{{ page.title }}</h1>
-                <div class="flex items-center text-gray-400 text-sm">
+            <!-- Body内にメタ情報（タイトル・日付・タグ・カテゴリ） -->
+            <div class="mb-10">
+                <h1 class="text-3xl sm:text-4xl font-bold font-orbitron mb-3">{{ page.title }}</h1>
+                <div class="flex flex-wrap items-center gap-x-3 gap-y-2 text-gray-400 text-sm">
                     <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y年%m月%d日" }}</time>
-                    {% if page.author %}
-                    <span class="mx-2">•</span>
-                    <span>{{ page.author }}</span>
-                    {% endif %}
                     {% if page.category %}
-                    <span class="mx-2">•</span>
-                    <span class="bg-cyan-600 px-2 py-1 rounded">{{ page.category }}</span>
+                    <span class="inline-flex items-center gap-2 bg-gray-800 text-gray-200 px-2.5 py-1 rounded">カテゴリ: {{ page.category }}</span>
+                    {% endif %}
+                    {% if page.tags and page.tags.size > 0 %}
+                    <span class="inline-flex items-center gap-2">
+                        <span class="text-gray-500">タグ:</span>
+                        <span class="flex flex-wrap gap-2">
+                            {% for tag in page.tags %}
+                            <span class="bg-gray-800 text-cyan-400 px-2 py-0.5 rounded-full">#{{ tag }}</span>
+                            {% endfor %}
+                        </span>
+                    </span>
                     {% endif %}
                 </div>
-            </header>
+            </div>
 
             <div class="prose prose-lg prose-invert max-w-none">
                 {{ content }}
             </div>
 
             {% if page.tags.size > 0 %}
-            <footer class="mt-8 pt-6 border-t border-gray-700">
-                <h3 class="text-sm font-semibold text-gray-400 mb-2">タグ:</h3>
-                <div class="flex flex-wrap gap-2">
-                    {% for tag in page.tags %}
-                    <span class="bg-gray-700 text-cyan-400 px-3 py-1 rounded-full text-sm">#{{ tag }}</span>
-                    {% endfor %}
-                </div>
-            </footer>
             {% endif %}
 
+            <!-- 関連記事（最新から3件、当該記事を除く） -->
+            <section class="mt-14">
+                <h2 class="text-xl font-semibold mb-6">関連記事</h2>
+                {% assign related = site.posts | where_exp: 'p', 'p.url != page.url and p.draft != true and p.published != false' | slice: 0, 3 %}
+                {% if related and related.size > 0 %}
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {% for post in related %}
+                    {% assign thumb = post.image | default: post.thumbnail | default: '/assets/images/hero1.jpg' %}
+                    {% assign img_src = thumb %}
+                    {% if thumb contains '://' %}
+                        {% assign img_src = thumb %}
+                    {% else %}
+                        {% assign img_src = thumb | relative_url %}
+                    {% endif %}
+                    <a href="{{ post.url | relative_url }}" class="group relative bg-gray-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-cyan-500/50 transition-all duration-300 flex flex-col" style="min-height: 360px;">
+                        <div class="relative overflow-hidden" style="height: 0; padding-top: 75%;">
+                            <img src="{{ img_src }}" alt="{{ post.title }}" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent"></div>
+                        </div>
+                        <div class="relative p-5 flex-1 flex flex-col">
+                            <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                            <div class="relative flex flex-col h-full">
+                                <time datetime="{{ post.date | date_to_xmlschema }}" class="text-xs text-gray-400 mb-2">{{ post.date | date: "%Y.%m.%d" }}</time>
+                                <h3 class="text-base font-bold text-white mb-2 whitespace-normal break-words">{{ post.title }}</h3>
+                                {% if post.excerpt %}
+                                <p class="text-gray-400 leading-relaxed text-sm flex-1 whitespace-normal break-words">{{ post.excerpt | strip_html | truncate: 60 }}</p>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </a>
+                    {% endfor %}
+                </div>
+                {% else %}
+                <p class="text-gray-400">関連記事はありません。</p>
+                {% endif %}
+            </section>
+
             <nav class="mt-12 pt-8 border-t border-gray-700">
-                <a href="{{ '/news/' | relative_url }}" class="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">
+                <a href="{{ '/updates/' | relative_url }}" class="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">
                     <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
                     </svg>
-                    新着情報一覧へ戻る
+                    更新情報一覧へ戻る
                 </a>
             </nav>
         </div>

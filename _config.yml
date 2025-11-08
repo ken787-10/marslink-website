@@ -7,6 +7,9 @@ keywords: "MarsLink, CabinTime, 移動空間, 観光DX, 機内エンタメ, オ�
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://marslink.co.jp" # the base hostname & protocol for your site
 
+# Timezone
+timezone: Asia/Tokyo
+
 # Social media handles
 twitter_username: marslink_japan
 github_username: marslink
@@ -15,6 +18,11 @@ github_username: marslink
 markdown: kramdown
 highlighter: rouge
 theme: 
+
+# Markdown engine options
+kramdown:
+  input: GFM
+  hard_wrap: true
 
 # Include and exclude files
 include:
@@ -72,6 +80,7 @@ defaults:
     values:
       layout: "post"
       author: "MarsLink"
+      permalink: "/post/:title.html"
   - scope:
       path: ""
       type: "pages"
