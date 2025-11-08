@@ -1,8 +1,20 @@
 {% assign dir_name = page.date | date: '%Y-%m-%d' | append: '-' | append: page.slug %}
-{% assign base_path = include.base | default: '/assets/images/posts/' | append: dir_name | append: '/' %}
-{% assign src_path = base_path | append: include.src %}
+{% assign preferred_base = include.base | default: '/posts/images/' %}
+{% assign preferred_dir = preferred_base | append: dir_name | append: '/' %}
+{% assign preferred_src = preferred_dir | append: include.src %}
+{% assign legacy_dir = '/assets/images/posts/' | append: dir_name | append: '/' %}
+{% assign legacy_src = legacy_dir | append: include.src %}
+{% assign preferred_list = site.static_files | where: 'relative_path', preferred_src %}
+{% assign legacy_list = site.static_files | where: 'relative_path', legacy_src %}
+{% if preferred_list and preferred_list.size > 0 %}
+  {% assign final_src = preferred_src %}
+{% elsif legacy_list and legacy_list.size > 0 %}
+  {% assign final_src = legacy_src %}
+{% else %}
+  {% assign final_src = preferred_src %}
+{% endif %}
 <img
-  src="{{ src_path | relative_url }}"
+  src="{{ final_src | relative_url }}"
   alt="{{ include.alt | default: '' }}"
   {% if include.width %}width="{{ include.width }}"{% endif %}
   {% if include.height %}height="{{ include.height }}"{% endif %}
