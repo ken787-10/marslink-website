@@ -46,10 +46,10 @@ layout: default
             <!-- 関連記事（最新から3件、当該記事を除く） -->
             <section class="mt-14">
                 <h2 class="text-xl font-semibold mb-6">関連記事</h2>
-                {% assign related = site.posts | where_exp: 'p', 'p.url != page.url and p.draft != true and p.published != false' | slice: 0, 3 %}
+                {% assign related = site.posts | where_exp: 'p', 'p.url != page.url' %}
                 {% if related and related.size > 0 %}
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {% for post in related %}
+                    {% for post in related limit:3 %}
                     {% assign thumb = post.image | default: post.thumbnail | default: '/assets/images/hero1.jpg' %}
                     {% assign img_src = thumb %}
                     {% if thumb contains '://' %}
