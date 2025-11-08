@@ -55,7 +55,7 @@ if (!empty($errors)) {
 }
 
 // メール設定
-$to = 'info@marslink.jp'; // 受信用メールアドレス
+$to = 'info@marslink.co.jp'; // 受信用メールアドレス
 $subject = '【MarsLink】お問い合わせ - ' . $name . '様';
 
 // メール本文
@@ -118,7 +118,7 @@ $message
 
 株式会社MarsLink
 電話：03-1234-5678
-Email：info@marslink.jp
+Email：info@marslink.co.jp
 
 今後ともよろしくお願いいたします。
 
@@ -130,8 +130,8 @@ TEL: 03-1234-5678 / Email: info@marslink.jp
 ";
 
     $auto_reply_headers = [
-        'From: info@marslink.jp',
-        'Reply-To: info@marslink.jp',
+        'From: info@marslink.co.jp',
+        'Reply-To: info@marslink.co.jp',
         'X-Mailer: PHP/' . phpversion(),
         'Content-Type: text/plain; charset=UTF-8'
     ];

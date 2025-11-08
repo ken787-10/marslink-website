@@ -41,3 +41,4 @@ gem "csv", "~> 3.3"
 
 gem "base64", "~> 0.3.0"
 gem "bigdecimal", "~> 3.2"
+gem "sass-embedded", ">= 1.75.0"

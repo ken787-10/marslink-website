@@ -125,3 +125,9 @@ unpublished: false
 
 # Cache settings
 cache_dir: .jekyll-cache 
+
+# Form settings
+formspree_id: "" # 例: abcd1234
+emailjs_public_key: ""
+emailjs_service_id: ""
+emailjs_template_id: ""

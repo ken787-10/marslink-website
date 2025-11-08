@@ -488,8 +488,7 @@
                 <h2 class="font-orbitron text-2xl font-bold text-white mb-4">お問い合わせフォーム</h2>
                 <p class="text-gray-300">下記フォームにご記入いただき、送信ボタンをクリックしてください。</p>
             </div>
-
-            <form id="contactForm" class="space-y-6" method="POST" action="https://formspree.io/f/YOUR_FORMSPREE_ID">
+            <form id="contactForm" class="space-y-6" method="POST" action="/api/contact">
                 <!-- 氏名 -->
                 <div>
                     <label for="name" class="form-label block text-sm font-medium mb-2">
@@ -553,71 +552,13 @@
                     </p>
                 </div>
             </form>
-
-            <!-- EmailJS Alternative Form (Hidden by default) -->
-            <form id="emailjsForm" class="space-y-6 hidden" onsubmit="sendEmailJS(event)">
-                <!-- Same form fields but with EmailJS handling -->
-                <div>
-                    <label for="emailjs_name" class="form-label block text-sm font-medium mb-2">
-                        氏名 <span class="form-required">*</span>
-                    </label>
-                    <input type="text" id="emailjs_name" name="from_name" required="" class="form-input w-full rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-cyan-500/50" placeholder="山田太郎" />
-                </div>
-
-                <div>
-                    <label for="emailjs_company" class="form-label block text-sm font-medium mb-2">
-                        会社名 <span class="form-required">*</span>
-                    </label>
-                    <input type="text" id="emailjs_company" name="company" required="" class="form-input w-full rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-cyan-500/50" placeholder="株式会社○○○" />
-                </div>
-
-                <div>
-                    <label for="emailjs_email" class="form-label block text-sm font-medium mb-2">
-                        Email <span class="form-required">*</span>
-                    </label>
-                    <input type="email" id="emailjs_email" name="reply_to" required="" class="form-input w-full rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-cyan-500/50" placeholder="example@company.com" />
-                </div>
-
-                <div>
-                    <label for="emailjs_phone" class="form-label block text-sm font-medium mb-2">
-                        電話番号 <span class="form-required">*</span>
-                    </label>
-                    <input type="tel" id="emailjs_phone" name="phone" required="" class="form-input w-full rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-cyan-500/50" placeholder="03-1234-5678" />
-                </div>
-
-                <div>
-                    <label for="emailjs_message" class="form-label block text-sm font-medium mb-2">
-                        メッセージ <span class="form-required">*</span>
-                    </label>
-                    <textarea id="emailjs_message" name="message" required="" rows="6" class="form-input w-full rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-cyan-500/50 resize-vertical" placeholder="CabinTimeの導入について詳しく知りたいです。具体的な費用や導入期間について教えてください。"></textarea>
-                </div>
-
-                <div class="pt-6">
-                    <button type="submit" id="emailjsSubmitBtn" class="w-full bg-cyan-500 hover:bg-cyan-600 text-white font-orbitron font-semibold py-4 px-8 rounded-lg transition duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-cyan-500/50">
-                        送信する
-                    </button>
-                </div>
-            </form>
-
-            <!-- Method Selection -->
-            <div class="mt-8 text-center">
-                <p class="text-sm text-gray-400 mb-4">フォーム送信方法を選択：</p>
-                <div class="flex justify-center space-x-4">
-                    <button onclick="switchToFormspree()" id="formspreeBtn" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
-                        Formspree
-                    </button>
-                    <button onclick="switchToEmailJS()" id="emailjsBtn" class="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors">
-                        EmailJS
-                    </button>
-                </div>
-            </div>
         </div>
     </div>
 </div>
 
 <!-- Success/Error Messages -->
 <div id="formMessage" class="fixed top-20 right-4 z-50 hidden">
-    <div class="bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg" id="successMessage">
+    <div class="bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg hidden" id="successMessage">
         <div class="flex items-center">
             <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
@@ -625,7 +566,7 @@
             お問い合わせが正常に送信されました。
         </div>
     </div>
-    <div class="bg-red-500 text-white px-6 py-3 rounded-lg shadow-lg" id="errorMessage">
+    <div class="bg-red-500 text-white px-6 py-3 rounded-lg shadow-lg hidden" id="errorMessage">
         <div class="flex items-center">
             <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
@@ -635,73 +576,61 @@
     </div>
 </div>
 
-<!-- EmailJS SDK -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
 <script>
-// EmailJS initialization
-(function(){
-    // Replace with your EmailJS public key
-    emailjs.init("YOUR_EMAILJS_PUBLIC_KEY");
-})();
-
-// Form switching functions
-function switchToFormspree() {
-    document.getElementById('contactForm').classList.remove('hidden');
-    document.getElementById('emailjsForm').classList.add('hidden');
-    document.getElementById('formspreeBtn').classList.add('bg-blue-600');
-    document.getElementById('formspreeBtn').classList.remove('bg-gray-600');
-    document.getElementById('emailjsBtn').classList.add('bg-gray-600');
-    document.getElementById('emailjsBtn').classList.remove('bg-blue-600');
-}
-
-function switchToEmailJS() {
-    document.getElementById('contactForm').classList.add('hidden');
-    document.getElementById('emailjsForm').classList.remove('hidden');
-    document.getElementById('emailjsBtn').classList.add('bg-blue-600');
-    document.getElementById('emailjsBtn').classList.remove('bg-gray-600');
-    document.getElementById('formspreeBtn').classList.add('bg-gray-600');
-    document.getElementById('formspreeBtn').classList.remove('bg-blue-600');
-}
-
-// EmailJS form submission
-function sendEmailJS(event) {
-    event.preventDefault();
-    
-    const submitBtn = document.getElementById('emailjsSubmitBtn');
+// バリデーション + 非同期送信（/api/contact）
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    const form = this;
+    const submitBtn = form.querySelector('button[type="submit"]');
     const originalText = submitBtn.textContent;
-    
-    // Change button state
+    const name = form.querySelector('#name').value.trim();
+    const company = form.querySelector('#company').value.trim();
+    const email = form.querySelector('#email').value.trim();
+    const phone = form.querySelector('#phone').value.trim();
+    const message = form.querySelector('#message').value.trim();
+    if (!name || !company || !email || !phone || !message) {
+        e.preventDefault();
+        alert('すべての必須項目を入力してください。');
+        return;
+    }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        e.preventDefault();
+        alert('正しいメールアドレスを入力してください。');
+        return;
+    }
+    e.preventDefault();
     submitBtn.textContent = '送信中...';
     submitBtn.disabled = true;
     submitBtn.classList.add('opacity-50');
-    
-    // Send email using EmailJS
-    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', '#emailjsForm')
-        .then(function(response) {
-            console.log('SUCCESS!', response.status, response.text);
+    const formData = new FormData(form);
+    fetch(form.action, {
+        method: 'POST',
+        body: formData
+    }).then(async (res) => {
+        const data = await res.json().catch(() => ({}));
+        if (res.ok && data && data.success) {
             showMessage('success');
-            document.getElementById('emailjsForm').reset();
-        }, function(error) {
-            console.log('FAILED...', error);
+            form.reset();
+        } else {
             showMessage('error');
-        })
-        .finally(function() {
-            // Reset button state
-            submitBtn.textContent = originalText;
-            submitBtn.disabled = false;
-            submitBtn.classList.remove('opacity-50');
-        });
-}
+            if (data && data.message) {
+                alert(data.message);
+            }
+        }
+    }).catch(() => {
+        showMessage('error');
+    }).finally(() => {
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+        submitBtn.classList.remove('opacity-50');
+    });
+});
 
-// Show success/error messages
 function showMessage(type) {
     const messageContainer = document.getElementById('formMessage');
     const successMessage = document.getElementById('successMessage');
     const errorMessage = document.getElementById('errorMessage');
-    
     messageContainer.classList.remove('hidden');
-    
     if (type === 'success') {
         successMessage.classList.remove('hidden');
         errorMessage.classList.add('hidden');
@@ -709,58 +638,11 @@ function showMessage(type) {
         errorMessage.classList.remove('hidden');
         successMessage.classList.add('hidden');
     }
-    
-    // Hide message after 5 seconds
-    setTimeout(() => {
-        messageContainer.classList.add('hidden');
-    }, 5000);
+    setTimeout(() => { messageContainer.classList.add('hidden'); }, 5000);
 }
 
-// Enhanced form validation for Formspree
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-    const form = this;
-    const submitBtn = form.querySelector('button[type="submit"]');
-    const originalText = submitBtn.textContent;
-    
-    // Basic validation
-    const name = form.querySelector('#name').value.trim();
-    const company = form.querySelector('#company').value.trim();
-    const email = form.querySelector('#email').value.trim();
-    const phone = form.querySelector('#phone').value.trim();
-    const message = form.querySelector('#message').value.trim();
-    
-    if (!name || !company || !email || !phone || !message) {
-        e.preventDefault();
-        alert('すべての必須項目を入力してください。');
-        return;
-    }
-    
-    // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-        e.preventDefault();
-        alert('正しいメールアドレスを入力してください。');
-        return;
-    }
-    
-    // Change button state
-    submitBtn.textContent = '送信中...';
-    submitBtn.disabled = true;
-    submitBtn.classList.add('opacity-50');
-    
-    // Note: For Formspree, the actual submission handling is done by their service
-    // This is just for UI feedback
-    setTimeout(() => {
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-        submitBtn.classList.remove('opacity-50');
-    }, 2000);
-});
-
-// Initialize with Formspree as default
-document.addEventListener('DOMContentLoaded', function() {
-    switchToFormspree();
-});
+// 初期化（特に処理なし）
+document.addEventListener('DOMContentLoaded', function() {});
 </script>
 
  

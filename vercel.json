@@ -1,0 +1,7 @@
+{
+  "installCommand": "bundle update sass-embedded && bundle install",
+  "buildCommand": "bundle exec jekyll build -d public",
+  "outputDirectory": "public",
+  "framework": null
+}
+

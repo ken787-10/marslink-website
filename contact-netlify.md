@@ -35,6 +35,7 @@ permalink: /contact-netlify/
                     netlify-honeypot="bot-field"
                     class="space-y-6"
                 >
+                    <input type="hidden" name="form-name" value="contact" />
                     <!-- Hidden field for bots -->
                     <p class="hidden">
                         <label>Don't fill this out if you're human: <input name="bot-field" /></label>
