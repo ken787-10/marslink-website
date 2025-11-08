@@ -75,6 +75,15 @@ changefreq: monthly
     background: #1f2937;
     color: #fff;
 }
+
+/* disabled 表示 */
+.form-input[disabled],
+.form-textarea[disabled],
+.form-select[disabled] {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background: rgba(31, 41, 55, 0.5);
+}
 </style>
 
 <!-- Contact Hero Section -->
@@ -101,6 +110,15 @@ changefreq: monthly
                 <h2 class="font-orbitron text-2xl font-bold text-white mb-4">お問い合わせフォーム</h2>
                 <p class="text-gray-300">下記フォームにご記入いただき、送信ボタンをクリックしてください。</p>
             </div>
+            <!-- フォーム一時停止のお知らせ -->
+            <div class="mb-8 rounded-lg border border-yellow-400/30 bg-yellow-500/10 p-4 text-yellow-200">
+                <p class="font-semibold">現在、フォーム送信を一時停止しています。</p>
+                <p class="mt-1">
+                    お手数ですが、メール
+                    <a href="mailto:info@marslink.co.jp?subject=%E3%80%90%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E3%80%91" class="underline hover:text-yellow-100">info@marslink.co.jp</a>
+                    までご連絡ください。
+                </p>
+            </div>
             <form id="contactForm" class="space-y-6" method="POST" action="https://formsubmit.co/info@marslink.co.jp">
                 <input type="hidden" name="_subject" value="【MarsLink】お問い合わせ" />
                 <input type="hidden" name="_next" value="{{ '/contact/?sent=1' | relative_url }}" />
@@ -117,6 +135,7 @@ changefreq: monthly
                         id="name" 
                         name="name" 
                         required 
+                        disabled
                         class="form-input w-full rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-cyan-500/50"
                         placeholder="山田太郎"
                     />
@@ -132,6 +151,7 @@ changefreq: monthly
                         id="company" 
                         name="company" 
                         required 
+                        disabled
                         class="form-input w-full rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-cyan-500/50"
                         placeholder="株式会社○○○"
                     />
@@ -147,6 +167,7 @@ changefreq: monthly
                         id="email" 
                         name="email" 
                         required 
+                        disabled
                         class="form-input w-full rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-cyan-500/50"
                         placeholder="example@company.com"
                     />
@@ -162,6 +183,7 @@ changefreq: monthly
                         id="phone" 
                         name="phone" 
                         required 
+                        disabled
                         class="form-input w-full rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-cyan-500/50"
                         placeholder="03-1234-5678"
                     />
@@ -176,6 +198,7 @@ changefreq: monthly
                         id="message" 
                         name="message" 
                         required 
+                        disabled
                         rows="6" 
                         class="form-input w-full rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-cyan-500/50 resize-vertical"
                         placeholder="CabinTimeの導入について詳しく知りたいです。具体的な費用や導入期間について教えてください。"
@@ -186,7 +209,8 @@ changefreq: monthly
                 <div class="pt-6">
                     <button 
                         type="submit" 
-                        class="w-full bg-cyan-500 hover:bg-cyan-600 text-white font-orbitron font-semibold py-4 px-8 rounded-lg transition duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-cyan-500/50"
+                        disabled
+                        class="w-full bg-cyan-500 hover:bg-cyan-600 text-white font-orbitron font-semibold py-4 px-8 rounded-lg transition duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-cyan-500/50 opacity-50 cursor-not-allowed"
                     >
                         送信する
                     </button>
@@ -233,30 +257,10 @@ changefreq: monthly
 </div>
 
 <script>
-// バリデーション（有効なら通常送信） + 送信後の成功表示（?sent=1）
+// 現在フォーム送信を停止中：送信イベントを抑止してメール案内を表示
 document.getElementById('contactForm').addEventListener('submit', function(e) {
-    const form = this;
-    const submitBtn = form.querySelector('button[type="submit"]');
-    const originalText = submitBtn.textContent;
-    const name = form.querySelector('#name').value.trim();
-    const company = form.querySelector('#company').value.trim();
-    const email = form.querySelector('#email').value.trim();
-    const phone = form.querySelector('#phone').value.trim();
-    const message = form.querySelector('#message').value.trim();
-    if (!name || !company || !email || !phone || !message) {
-        e.preventDefault();
-        alert('すべての必須項目を入力してください。');
-        return;
-    }
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-        e.preventDefault();
-        alert('正しいメールアドレスを入力してください。');
-        return;
-    }
-    submitBtn.textContent = '送信中...';
-    submitBtn.disabled = true;
-    submitBtn.classList.add('opacity-50');
+    e.preventDefault();
+    alert('現在、フォーム送信は停止中です。メール（info@marslink.co.jp）にてご連絡ください。');
 });
 
 function showMessage(type) {
