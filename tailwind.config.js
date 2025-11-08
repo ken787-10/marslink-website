@@ -13,7 +13,7 @@ module.exports = {
     theme: {
       extend: {
         fontFamily: {
-          'orbitron': ['Orbitron', 'monospace'],
+          'orbitron': ['Inter', 'sans-serif'],
           'roboto': ['Roboto', 'sans-serif'],
         },
         animation: {
