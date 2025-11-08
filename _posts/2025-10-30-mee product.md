@@ -19,7 +19,7 @@ MEEは、写真・音楽・位置情報・テキストなどを個人のタイ�
 
 <figure class="video-half" style="width:30%; margin:0 auto;">
 <video controls playsinline preload="metadata" poster="/assets/images/program01.jpg" style="width:100%; height:auto;">
-<source src="/assets/images/mee.mp4" type="video/mp4">
+<source src="/assets/images/mee1.mp4" type="video/mp4">
 お使いのブラウザは動画に対応していません。
 </video>
 <figcaption>MEE β版 デモ</figcaption>
