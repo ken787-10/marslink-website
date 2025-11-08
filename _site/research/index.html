@@ -129,8 +129,8 @@
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "MarsLink-マーズリンク-",
-      "url": "https://marslink.co.jp",
-      "logo": "https://marslink.co.jp/assets/images/logo.png",
+      "url": "http://localhost:4000",
+      "logo": "http://localhost:4000/assets/images/logo.png",
       "description": "MarsLink（マーズリンク）は、主力サービス「CabinTime」で移動空間をメディアに変革するスタートアップです。飛行機から宇宙船まで、すべての移動時間を価値ある体験空間に変えます。",
       "address": {
         "@type": "PostalAddress",
@@ -279,23 +279,23 @@
     <meta name="author" content="MarsLink">
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://marslink.co.jp/research/">
+    <link rel="canonical" href="http://localhost:4000/research/">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://marslink.co.jp/research/">
+    <meta property="og:url" content="http://localhost:4000/research/">
     <meta property="og:title" content="京都大学との共同研究 | MarsLink - MarsLink-マーズリンク-">
     <meta property="og:description" content="MarsLinkと京都大学の共同研究プロジェクト。観光DXにおけるインフルエンサーマーケティングとデジタルアバターの活用に関する研究成果">
-    <meta property="og:image" content="https://marslink.co.jp/assets/images/hero-bg-1.jpg">
+    <meta property="og:image" content="http://localhost:4000/assets/images/hero-bg-1.jpg">
     <meta property="og:site_name" content="MarsLink-マーズリンク-">
     <meta property="og:locale" content="ja_JP">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://marslink.co.jp/research/">
+    <meta property="twitter:url" content="http://localhost:4000/research/">
     <meta property="twitter:title" content="京都大学との共同研究 | MarsLink - MarsLink-マーズリンク-">
     <meta property="twitter:description" content="MarsLinkと京都大学の共同研究プロジェクト。観光DXにおけるインフルエンサーマーケティングとデジタルアバターの活用に関する研究成果">
-    <meta property="twitter:image" content="https://marslink.co.jp/assets/images/hero-bg-1.jpg">
+    <meta property="twitter:image" content="http://localhost:4000/assets/images/hero-bg-1.jpg">
     <meta name="twitter:site" content="@marslink_japan">
     
     
@@ -327,30 +327,33 @@
     <div class="content-wrapper">
         <div class="bg-gray-900">
             <header class="absolute inset-x-0 top-0 z-[100]">
-    <nav class="flex items-center px-8 lg:px-16 w-full h-[100px] bg-gray-900/80 backdrop-blur-sm" aria-label="Global">
-        <div class="flex items-center">
-            <a href="/" class="-m-1.5 p-1.5 mr-16 flex items-center gap-3">
-                <img src="/assets/images/logo.png" alt="MarsLink Logo" class="h-8 w-auto">
-                <span class="sr-only">MarsLink</span>
-                <span class="font-orbitron text-xl font-black text-white tracking-wider">MarsLink</span>
-            </a>
-        </div>
-        <div class="flex lg:hidden ml-auto">
-            <button type="button" class="mobile-menu-btn -m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-400 hover:text-white transition-colors">
-                <span class="sr-only">メニューを開く</span>
-                <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                </svg>
-            </button>
-        </div>
-        <div class="hidden lg:flex lg:gap-x-12">
-            <a href="/cabintime/" class="text-sm/6 font-semibold text-white hover:text-cyan-400 transition-colors">キャビンタイム</a>
-            <a href="/profile/" class="text-sm/6 font-semibold text-white hover:text-cyan-400 transition-colors">会社概要</a>
-            <a href="/ceo/" class="text-sm/6 font-semibold text-white hover:text-cyan-400 transition-colors">代表紹介</a>
-            <a href="/research/" class="text-sm/6 font-semibold text-white hover:text-cyan-400 transition-colors">共同研究</a>
-        </div>
-        <div class="hidden lg:flex lg:ml-auto">
-            <a href="/contact/" class="text-white bg-purple-700 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm px-5 py-2.5 text-center dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">お問い合わせ</a>
+    <nav class="w-full h-[100px] bg-gray-900/80 backdrop-blur-sm" aria-label="Global">
+        <div class="mx-auto max-w-7xl w-full h-full flex items-center px-6 lg:px-8">
+            <div class="flex items-center">
+                <a href="/" class="-m-1.5 p-1.5 mr-16 flex items-center gap-3">
+                    <img src="/assets/images/logo.png" alt="MarsLink Logo" class="h-8 w-auto">
+                    <span class="sr-only">MarsLink</span>
+                    <span class="font-orbitron text-xl font-black text-white tracking-wider">MarsLink</span>
+                </a>
+            </div>
+            <div class="flex lg:hidden ml-auto">
+                <button type="button" class="mobile-menu-btn -m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-400 hover:text-white transition-colors">
+                    <span class="sr-only">メニューを開く</span>
+                    <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+            </div>
+            <div class="hidden lg:flex lg:gap-x-12">
+                <a href="/updates/" class="text-sm/6 font-semibold text-white hover:text-cyan-400 transition-colors">更新情報</a>
+                <a href="/cabintime/" class="text-sm/6 font-semibold text-white hover:text-cyan-400 transition-colors">キャビンタイム</a>
+                <a href="/profile/" class="text-sm/6 font-semibold text-white hover:text-cyan-400 transition-colors">会社概要</a>
+                <a href="/ceo/" class="text-sm/6 font-semibold text-white hover:text-cyan-400 transition-colors">代表紹介</a>
+                <a href="/research/" class="text-sm/6 font-semibold text-white hover:text-cyan-400 transition-colors">共同研究</a>
+            </div>
+            <div class="hidden lg:flex lg:ml-auto">
+                <a href="/contact/" class="text-white bg-purple-700 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm px-5 py-2.5 text-center dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">お問い合わせ</a>
+            </div>
         </div>
     </nav>
 </header> 
@@ -380,6 +383,7 @@
                                 <a href="/profile/" class="mobile-menu-link -mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-gray-800">会社概要</a>
                                 <a href="/ceo/" class="mobile-menu-link -mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-gray-800">代表紹介</a>
                                 <a href="/research/" class="mobile-menu-link -mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-gray-800">共同研究</a>
+                                <a href="/updates/" class="mobile-menu-link -mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-gray-800">更新情報</a>
                             </div>
                             <div class="py-6">
                                 <a href="/contact/" class="mobile-menu-link -mx-3 block rounded-full px-3 py-2.5 text-base/7 font-semibold text-white bg-purple-700 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 text-center dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">お問い合わせ</a>
@@ -701,7 +705,7 @@
                             <a href="/ceo/" class="text-sm/6 text-gray-400 hover:text-cyan-400 transition-colors">代表紹介</a>
                         </li>
                         <li>
-                            <a href="/news/" class="text-sm/6 text-gray-400 hover:text-cyan-400 transition-colors">新着情報</a>
+                            <a href="/updates/" class="text-sm/6 text-gray-400 hover:text-cyan-400 transition-colors">更新情報</a>
                         </li>
                         <li>
                             <a href="/privacy/" class="text-sm/6 text-gray-400 hover:text-cyan-400 transition-colors">プライバシーポリシー</a>

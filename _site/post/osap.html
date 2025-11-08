@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="google-site-verification" content="A7Ao6K_9KyyD2MJWgymaOyTS-hsEZyYXIKGvJO1L0nw" />
+    
+    <!-- DNS prefetch for external resources -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="dns-prefetch" href="//cdn.tailwindcss.com">
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+    
+    <!-- Preconnect for critical resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Critical CSS - インライン化でFOUC防止 -->
+    <style>
+        /* Reset and critical styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, "system-ui", "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+            line-height: 1.6;
+            color: #333;
+            background: #000;
+        }
+        
+        
+        body {
+            padding-top: 100px;
+        }
+        
+        
+        /* ヘッダー基本スタイル */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(10px);
+        }
+        
+        /* ローディング時の基本表示防止 */
+        .content-wrapper {
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        
+        .content-loaded {
+            opacity: 1;
+        }
+        
+        /* Hero基本スタイル（ホームページ用） */
+        #hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* フォント読み込み完了まで基本フォント使用 */
+        .font-orbitron {
+            font-family: 'Orbitron', monospace, fallback;
+        }
+        
+        .font-roboto {
+            font-family: 'Roboto', sans-serif, fallback;
+        }
+    </style>
+    
+    <!-- TailwindCSS - 同期読み込みでFOUC防止 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'orbitron': ['Orbitron', 'monospace'],
+                        'roboto': ['Roboto', 'sans-serif'],
+                    },
+                    animation: {
+                        'reverse-spin': 'reverse-spin 15s linear infinite',
+                        'pulse-slow': 'pulse 3s ease-in-out infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'glow': 'glow 2s ease-in-out infinite alternate',
+                    },
+                    keyframes: {
+                        'reverse-spin': {
+                            '0%': { transform: 'rotate(360deg)' },
+                            '100%': { transform: 'rotate(0deg)' },
+                        },
+                        'float': {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        'glow': {
+                            '0%': { boxShadow: '0 0 5px rgba(78, 195, 255, 0.2)' },
+                            '100%': { boxShadow: '0 0 20px rgba(78, 195, 255, 0.8)' },
+                        },
+                    },
+                    transitionDuration: {
+                        '2000': '2000ms',
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <!-- Preload fonts with fallback -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap"></noscript>
+    
+    <!-- Preload critical images -->
+    
+    
+    <!-- JSON-LD 構造化データ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "MarsLink-マーズリンク-",
+      "url": "http://localhost:4000",
+      "logo": "http://localhost:4000/assets/images/logo.png",
+      "description": "MarsLink（マーズリンク）は、主力サービス「CabinTime」で移動空間をメディアに変革するスタートアップです。飛行機から宇宙船まで、すべての移動時間を価値ある体験空間に変えます。",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "JP"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "info@marslink.co.jp",
+        "contactType": "customer service"
+      },
+      "sameAs": [
+        "https://twitter.com/marslink_japan"
+      ]
+    }
+    </script>
+    
+    <!-- Favicon and icons -->
+    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+    
+
+    
+    <!-- CSS Files - 非同期読み込み（クリティカルCSS後） -->
+    <link rel="preload" href="/css/reset.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/css/animations.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/css/responsive.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="/css/reset.css">
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/animations.css">
+        <link rel="stylesheet" href="/css/responsive.css">
+    </noscript>
+
+    <!-- EmailJS -->
+    
+    
+    <!-- Mobile Menu Custom CSS -->
+    <style>
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 9999 !important;
+        }
+        
+        .mobile-menu > div:last-child {
+            z-index: 10000 !important;
+        }
+        
+        .mobile-menu-btn:hover svg {
+            transform: scale(1.1);
+            transition: transform 0.2s ease;
+        }
+        
+        .mobile-menu-link {
+            transition: all 0.2s ease;
+        }
+        
+        .mobile-menu-link:hover {
+            transform: translateX(8px);
+        }
+        
+        
+        
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .dropdown {
+            position: relative;
+        }
+        
+        .dropdown-content {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 200px;
+            background-color: rgba(17, 24, 39, 0.95);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 50;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .dropdown-content a {
+            display: block;
+            padding: 12px 16px;
+            color: #d1d5db;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #22d3ee;
+        }
+        
+        .dropdown-content a:first-child {
+            border-radius: 8px 8px 0 0;
+        }
+        
+        .dropdown-content a:last-child {
+            border-radius: 0 0 8px 8px;
+        }
+        
+        .dropdown-arrow {
+            transition: transform 0.3s ease;
+        }
+        
+        .dropdown:hover .dropdown-arrow {
+            transform: rotate(180deg);
+        }
+        
+        
+    </style>
+    
+    <!-- Page Title -->
+    <title>OSAP第19期に採択されました — MarsLink「CabinTime」 - MarsLink-マーズリンク-</title>
+    
+    <!-- Meta Tags -->
+    <meta name="description" content="MarsLink（マーズリンク）は、主力サービス「CabinTime」で移動空間をメディアに変革するスタートアップです。飛行機から宇宙船まで、すべての移動時間を価値ある体験空間に変えます。">
+    <meta name="keywords" content="MarsLink, CabinTime, 移動空間, 観光DX, 機内エンタメ, オフライン観光情報, 観光テック, 観光SaaS, 航空会社DX, テックスタートアップ">
+    <meta name="author" content="MarsLink">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="http://localhost:4000/post/osap.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://localhost:4000/post/osap.html">
+    <meta property="og:title" content="OSAP第19期に採択されました — MarsLink「CabinTime」 - MarsLink-マーズリンク-">
+    <meta property="og:description" content="MarsLink（マーズリンク）は、主力サービス「CabinTime」で移動空間をメディアに変革するスタートアップです。飛行機から宇宙船まで、すべての移動時間を価値ある体験空間に変えます。">
+    <meta property="og:image" content="http://localhost:4000/assets/images/hero-bg-1.jpg">
+    <meta property="og:site_name" content="MarsLink-マーズリンク-">
+    <meta property="og:locale" content="ja_JP">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="http://localhost:4000/post/osap.html">
+    <meta property="twitter:title" content="OSAP第19期に採択されました — MarsLink「CabinTime」 - MarsLink-マーズリンク-">
+    <meta property="twitter:description" content="MarsLink（マーズリンク）は、主力サービス「CabinTime」で移動空間をメディアに変革するスタートアップです。飛行機から宇宙船まで、すべての移動時間を価値ある体験空間に変えます。">
+    <meta property="twitter:image" content="http://localhost:4000/assets/images/hero-bg-1.jpg">
+    <meta name="twitter:site" content="@marslink_japan">
+    
+    
+    <meta name="google-site-verification" content="A7Ao6K_9KyyD2MJWgymaOyTS-hsEZyYXIKGvJO1L0nw" />
+    
+    
+    <!-- Analytics -->
+    <!-- Google Analytics (GA4) -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4GB470X3SK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-4GB470X3SK');
+</script>
+
+
+<!-- Google Search Console Verification -->
+
+<meta name="google-site-verification" content="A7Ao6K_9KyyD2MJWgymaOyTS-hsEZyYXIKGvJO1L0nw" />
+
+
+<!-- Microsoft Bing Webmaster Tools -->
+ 
+</head>
+<body>
+    <!-- コンテンツラッパー - 初期非表示でFOUC防止 -->
+    <div class="content-wrapper">
+        <div class="bg-gray-900">
+            <header class="absolute inset-x-0 top-0 z-[100]">
+    <nav class="w-full h-[100px] bg-gray-900/80 backdrop-blur-sm" aria-label="Global">
+        <div class="mx-auto max-w-7xl w-full h-full flex items-center px-6 lg:px-8">
+            <div class="flex items-center">
+                <a href="/" class="-m-1.5 p-1.5 mr-16 flex items-center gap-3">
+                    <img src="/assets/images/logo.png" alt="MarsLink Logo" class="h-8 w-auto">
+                    <span class="sr-only">MarsLink</span>
+                    <span class="font-orbitron text-xl font-black text-white tracking-wider">MarsLink</span>
+                </a>
+            </div>
+            <div class="flex lg:hidden ml-auto">
+                <button type="button" class="mobile-menu-btn -m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-400 hover:text-white transition-colors">
+                    <span class="sr-only">メニューを開く</span>
+                    <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+            </div>
+            <div class="hidden lg:flex lg:gap-x-12">
+                <a href="/updates/" class="text-sm/6 font-semibold text-white hover:text-cyan-400 transition-colors">更新情報</a>
+                <a href="/cabintime/" class="text-sm/6 font-semibold text-white hover:text-cyan-400 transition-colors">キャビンタイム</a>
+                <a href="/profile/" class="text-sm/6 font-semibold text-white hover:text-cyan-400 transition-colors">会社概要</a>
+                <a href="/ceo/" class="text-sm/6 font-semibold text-white hover:text-cyan-400 transition-colors">代表紹介</a>
+                <a href="/research/" class="text-sm/6 font-semibold text-white hover:text-cyan-400 transition-colors">共同研究</a>
+            </div>
+            <div class="hidden lg:flex lg:ml-auto">
+                <a href="/contact/" class="text-white bg-purple-700 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm px-5 py-2.5 text-center dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">お問い合わせ</a>
+            </div>
+        </div>
+    </nav>
+</header> 
+
+            <!-- Mobile menu - independent from header -->
+            <div class="lg:hidden mobile-menu hidden" role="dialog" aria-modal="true" style="position: fixed; inset: 0; z-index: 9999;">
+                <!-- Background backdrop -->
+                <div class="fixed inset-0 bg-black/50" aria-hidden="true"></div>
+                <div class="fixed inset-y-0 right-0 w-full overflow-y-auto bg-gray-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10" style="z-index: 10000;">
+                    <div class="flex items-center justify-between">
+                        <a href="/" class="-m-1.5 p-1.5 flex items-center gap-3">
+                            <img src="/assets/images/logo.png" alt="MarsLink Logo" class="h-6 w-auto">
+                            <span class="sr-only">MarsLink</span>
+                            <span class="font-orbitron text-lg font-black text-white tracking-wider">MarsLink</span>
+                        </a>
+                        <button type="button" class="mobile-menu-close -m-2.5 rounded-md p-2.5 text-gray-400 hover:text-white">
+                            <span class="sr-only">メニューを閉じる</span>
+                            <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="mt-6 flow-root">
+                        <div class="-my-6 divide-y divide-gray-500/25">
+                            <div class="space-y-2 py-6">
+                                <a href="/cabintime/" class="mobile-menu-link -mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-gray-800">キャビンタイム</a>
+                                <a href="/profile/" class="mobile-menu-link -mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-gray-800">会社概要</a>
+                                <a href="/ceo/" class="mobile-menu-link -mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-gray-800">代表紹介</a>
+                                <a href="/research/" class="mobile-menu-link -mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-gray-800">共同研究</a>
+                                <a href="/updates/" class="mobile-menu-link -mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-gray-800">更新情報</a>
+                            </div>
+                            <div class="py-6">
+                                <a href="/contact/" class="mobile-menu-link -mx-3 block rounded-full px-3 py-2.5 text-base/7 font-semibold text-white bg-purple-700 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 text-center dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">お問い合わせ</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content Area -->
+            <main class="relative">
+                <article class="bg-gray-900 text-white min-h-screen">
+    <style>
+        /* Post typography fallback (Tailwind Typography未使用時の最小スタイル) */
+        .prose h1 { font-size: 2rem; line-height: 2.5rem; font-weight: 800; margin: 1rem 0; }
+		.prose h2 { font-size: 1.5rem; line-height: 2rem; font-weight: 700; margin: 2rem 0 1rem; padding: 0.75rem 0; }
+		.prose h3 { font-size: 1.25rem; line-height: 1.75rem; font-weight: 700; margin: 2rem 0 1rem; padding: 0.5rem 0; }
+        .prose p { margin: 0.75rem 0; }
+        .prose ul { list-style: disc; padding-left: 1.25rem; margin: 0.5rem 0 1rem; }
+		.prose img { width: 650px; max-width: 100%; height: auto; display: block; margin: 0.75rem auto; border-radius: 0.5rem; }
+        .prose a { color: #22d3ee; text-decoration: underline; }
+    </style>
+    <div class="container mx-auto px-6 pt-32 pb-16">
+        <div class="max-w-4xl mx-auto">
+            <!-- Body内にメタ情報（タイトル・日付・タグ・カテゴリ） -->
+            <div class="mb-10">
+                <h1 class="text-3xl sm:text-4xl font-bold font-orbitron mb-3">OSAP第19期に採択されました — MarsLink「CabinTime」</h1>
+                <div class="flex flex-wrap items-center gap-x-3 gap-y-2 text-gray-400 text-sm">
+                    <time datetime="2025-07-30T10:00:00+09:00">2025年07月30日</time>
+                    
+                    <span class="inline-flex items-center gap-2 bg-gray-800 text-gray-200 px-2.5 py-1 rounded">カテゴリ: お知らせ</span>
+                    
+                    
+                    <span class="inline-flex items-center gap-2">
+                        <span class="text-gray-500">タグ:</span>
+                        <span class="flex flex-wrap gap-2">
+                            
+                            <span class="bg-gray-800 text-cyan-400 px-2 py-0.5 rounded-full">#リリース</span>
+                            
+                            <span class="bg-gray-800 text-cyan-400 px-2 py-0.5 rounded-full">#OSAP</span>
+                            
+                            <span class="bg-gray-800 text-cyan-400 px-2 py-0.5 rounded-full">#受賞・採択</span>
+                            
+                        </span>
+                    </span>
+                    
+                </div>
+            </div>
+
+            <div class="prose prose-lg prose-invert max-w-none">
+                <p>株式会社MarsLink（MarsLink, Inc.）は、大阪市が推進するスタートアップ支援プログラム「OIHスタートアップアクセラレーションプログラム（OSAP）」第19期に、当社プロダクト「CabinTime（キャビンタイム）」が採択されたことをお知らせします。</p>
+
+<p><img src="/assets/images/osap1.png" alt="OSAP紹介" /></p>
+
+<h3 id="osapoih-startup-acceleration-programについて">OSAP（OIH Startup Acceleration Program）について</h3>
+<p>OSAPは、アーリー期スタートアップの事業成長を加速するために、起業経験者・大企業・ベンチャーキャピタル等との連携を通じて伴走支援を行う大阪市のアクセラレーションプログラムです。第19期は令和7年（2025年）7月下旬から11月中旬までの約4か月間にわたり実施され、事業戦略の磨き上げ、資金調達、事業提携の機会創出など、集中的な支援を受けることができます。</p>
+
+<h3 id="採択プロダクトcabintime">採択プロダクト「CabinTime」</h3>
+<p>CabinTimeは、移動・滞在・体験を横断して「時間価値」を最大化するためのプラットフォームです。地域・交通・宿泊・観光事業者との共創により、利用者一人ひとりの行動文脈に即した滞在体験を設計し、地域の回遊促進と収益向上を同時に実現することを目指しています。</p>
+
+<h3 id="取り組むテーマ抜粋">取り組むテーマ（抜粋）</h3>
+<ul>
+  <li>顧客セグメント別の提供価値（Value Proposition）の再設計と検証</li>
+  <li>交通・宿泊・観光データの連携による体験設計の高度化</li>
+  <li>事業提携・PoCの推進と拠点形成に向けた実証</li>
+</ul>
+
+<h3 id="今後の予定">今後の予定</h3>
+<p>プログラム期間中（2025年7月下旬〜11月中旬）に、事業仮説の検証、パートナーとの共同実証、資金調達準備を進めます。成果はデモデイ等の場で報告予定です。</p>
+
+<p><a href="/assets/images/osap2.png" target="_blank">
+  <img src="/assets/images/osap2.png" alt="大阪市記事" style="max-width:100%; height:auto; cursor: zoom-in;" />
+</a><br />
+<a href="/assets/images/osap3.png" target="_blank">
+  <img src="/assets/images/osap3.png" alt="大阪市記事" style="max-width:100%; height:auto; cursor: zoom-in;" />
+</a></p>
+
+<h3 id="お問い合わせ">お問い合わせ</h3>
+<p>本件に関するお問い合わせは、当サイトのお問い合わせページよりご連絡ください。</p>
+
+<p><a href="/contact/">お問い合わせ</a></p>
+
+            </div>
+
+            
+
+            <!-- 関連記事（最新から3件、当該記事を除く） -->
+            <section class="mt-14">
+                <h2 class="text-xl font-semibold mb-6">関連記事</h2>
+                
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    
+                    
+                    
+                    
+                    <a href="/post/partnership-gov01.html" class="group relative bg-gray-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-cyan-500/50 transition-all duration-300 flex flex-col" style="min-height: 360px;">
+                        <div class="relative overflow-hidden" style="height: 0; padding-top: 75%;">
+                            <img src="/assets/images/kumatori.JPG" alt="株式会社MarsLink,熊取町と連携協定を締結" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent"></div>
+                        </div>
+                        <div class="relative p-5 flex-1 flex flex-col">
+                            <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                            <div class="relative flex flex-col h-full">
+                                <time datetime="2025-10-31T14:00:00+09:00" class="text-xs text-gray-400 mb-2">2025.10.31</time>
+                                <h3 class="text-base font-bold text-white mb-2 whitespace-normal break-words">株式会社MarsLink,熊取町と連携協定を締結</h3>
+                                
+                                <p class="text-gray-400 leading-relaxed text-sm flex-1 whitespace-normal break-words">2025年10月31日、熊取町（大阪府泉南郡）と株式会社MarsLink（本社：大阪市北区、代表取締役：市位 謙太...</p>
+                                
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div>
+                
+            </section>
+
+            <nav class="mt-12 pt-8 border-t border-gray-700">
+                <a href="/updates/" class="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">
+                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                    </svg>
+                    更新情報一覧へ戻る
+                </a>
+            </nav>
+        </div>
+    </div>
+</article> 
+            </main>
+        </div>
+
+        <!-- Footer -->
+<footer style="background-color: rgba(6, 9, 32, 1);">
+    <div class="mx-auto max-w-7xl px-6 pt-16 pb-8 sm:pt-24 lg:px-8 lg:pt-32">
+        <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+            <div class="space-y-8 text-center xl:text-left">
+                <a href="/" class="flex items-center gap-3 justify-center xl:justify-start hover:opacity-80 transition-opacity">
+                    <img src="/assets/images/logo.png" alt="MarsLink Logo" class="h-8 w-auto">
+                    <span class="font-orbitron text-xl font-black text-white tracking-wider">MarsLink</span>
+                </a>
+                <p class="text-sm/6 text-balance text-gray-300">移動空間とデジタルの融合で未来を創る革新的テクノロジーカンパニー。移動を価値ある体験へと変革します。</p>
+            </div>
+            <div class="mt-16 grid grid-cols-1 gap-8 xl:col-span-2 xl:mt-0 xl:grid-cols-3">
+                <div class="text-center xl:text-left">
+                    <h3 class="text-sm/6 font-semibold text-white">プロダクト</h3>
+                    <ul role="list" class="mt-6 space-y-4">
+                        <li>
+                            <a href="/cabintime/" class="text-sm/6 text-gray-400 hover:text-cyan-400 transition-colors">キャビンタイム</a>
+                        </li>
+                        <li>
+                            <a href="/social-media/" class="text-sm/6 text-gray-400 hover:text-cyan-400 transition-colors">ソーシャルメディア</a>
+                        </li>
+                        <li>
+                            <a href="/map-video/" class="text-sm/6 text-gray-400 hover:text-cyan-400 transition-colors">NAVI RADER</a>
+                        </li>
+                        <li>
+                            <a href="/geobuzz/" class="text-sm/6 text-gray-400 hover:text-cyan-400 transition-colors">GeoBuzz</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mt-10 xl:mt-0 text-center xl:text-left">
+                    <h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+                    <ul role="list" class="mt-6 space-y-4">
+                        <li>
+                            <a href="/profile/" class="text-sm/6 text-gray-400 hover:text-cyan-400 transition-colors">会社概要</a>
+                        </li>
+                        <li>
+                            <a href="/ceo/" class="text-sm/6 text-gray-400 hover:text-cyan-400 transition-colors">代表紹介</a>
+                        </li>
+                        <li>
+                            <a href="/updates/" class="text-sm/6 text-gray-400 hover:text-cyan-400 transition-colors">更新情報</a>
+                        </li>
+                        <li>
+                            <a href="/privacy/" class="text-sm/6 text-gray-400 hover:text-cyan-400 transition-colors">プライバシーポリシー</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mt-10 xl:mt-0 text-center xl:text-left">
+                    <h3 class="text-sm/6 font-semibold text-white">お問い合わせ</h3>
+                    <ul role="list" class="mt-6 space-y-4">
+                        <li>
+                            <a href="/contact/" class="text-sm/6 text-gray-400 hover:text-cyan-400 transition-colors">お問い合わせ</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24 text-center">
+            <p class="text-sm/6 text-gray-400">
+                &copy; 2025
+                <a href="https://marslink.co.jp" class="hover:text-cyan-400">株式会社MarsLink</a>
+            </p>
+        </div>
+    </div>
+</footer> 
+
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="/js/main.js"></script>
+    
+    <script>
+        // FOUC防止 - コンテンツの表示制御
+        document.addEventListener('DOMContentLoaded', function() {
+            // DOM読み込み完了後に徐々に表示
+            const contentWrapper = document.querySelector('.content-wrapper');
+            if (contentWrapper) {
+                contentWrapper.classList.add('content-loaded');
+            }
+        });
+        
+        // 年号を自動的に更新
+        const currentYearElement = document.getElementById('current-year');
+        if (currentYearElement) {
+            currentYearElement.textContent = new Date().getFullYear();
+        }
+        
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const mobileMenuClose = document.querySelector('.mobile-menu-close');
+            const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+            const mobileMenuBackdrop = mobileMenu ? mobileMenu.querySelector('.fixed.inset-0') : null;
+            
+            function openMobileMenu() {
+                if (mobileMenu) {
+                    mobileMenu.classList.remove('hidden');
+                    document.body.style.overflow = 'hidden';
+                }
+            }
+            
+            function closeMobileMenu() {
+                if (mobileMenu) {
+                    mobileMenu.classList.add('hidden');
+                    document.body.style.overflow = '';
+                }
+            }
+            
+            if (mobileMenuBtn) {
+                mobileMenuBtn.addEventListener('click', openMobileMenu);
+            }
+            
+            if (mobileMenuClose) {
+                mobileMenuClose.addEventListener('click', closeMobileMenu);
+            }
+            
+            if (mobileMenuBackdrop) {
+                mobileMenuBackdrop.addEventListener('click', closeMobileMenu);
+            }
+            
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', closeMobileMenu);
+            });
+            
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                    closeMobileMenu();
+                }
+            });
+        });
+    </script>
+</body>
+</html> 
