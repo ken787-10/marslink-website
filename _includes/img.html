@@ -1,0 +1,11 @@
+{% assign dir_name = page.date | date: '%Y-%m-%d' | append: '-' | append: page.slug %}
+{% assign base_path = include.base | default: '/assets/images/posts/' | append: dir_name | append: '/' %}
+{% assign src_path = base_path | append: include.src %}
+<img
+  src="{{ src_path | relative_url }}"
+  alt="{{ include.alt | default: '' }}"
+  {% if include.width %}width="{{ include.width }}"{% endif %}
+  {% if include.height %}height="{{ include.height }}"{% endif %}
+  class="mx-auto my-4 rounded-lg {% if include.class %}{{ include.class }}{% endif %}"
+/> 
+
