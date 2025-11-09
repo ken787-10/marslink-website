@@ -1,7 +1,7 @@
 ---
 title: SNSの次は「自己メディア」。株式会社MarsLink、個人の情報発信を再定義するWebサービス「MEE」β版を公開
 published: true
-date: 2025-10-30 10:00 +0900
+date: 2025-08-30 10:00 +0900
 image: /assets/images/program01.jpg
 tags: [リリース, MEE, プロダクト]
 category: お知らせ
@@ -17,7 +17,7 @@ excerpt: 他者比較や承認に依存しない“自己メディア”を実�
 MEEは、写真・音楽・位置情報・テキストなどを個人のタイムラインとして記録し、他者との比較ではなく“自分の資産”として扱う新しいWebメディアです。  
 なお本プロダクトは、地図タイムライン「CabinTime FlightMap」の研究開発から派生したスピンオフとして誕生しましたが、目的と体験設計が異なる独立プロダクトです。
 
-![meeのTop Page](/assets/images/mee-01.png)
+![meeのTop Page](/assets/images/mee02.png)
 
 <!-- パスの先頭にスラッシュを追加して、画像が正しく表示されるよう修正しました -->
 
