@@ -10,6 +10,6 @@ echo "[2/3] Removing _site directory..."
 rm -rf _site
 
 echo "[3/3] Starting Jekyll server (http://127.0.0.1:4000)..."
-bundle exec jekyll serve
+bundle exec jekyll serve --host 0.0.0.0 --livereload --config _config.yml,_config.dev.yml
 
 

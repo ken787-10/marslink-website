@@ -1,0 +1,15 @@
+url: "http://127.0.0.1:4000"
+baseurl: ""
+
+# Dev preview settings
+future: true          # 未来日付の投稿も表示
+unpublished: true     # published: false の記事も表示
+incremental: false    # フルビルドでキャッシュ起因の不整合を回避
+profile: false
+
+# 一覧制限を解除（多い場合でもすべて見えるように大きめに設定）
+limit_posts: 9999
+
+# livereload はデフォルトのまま（serve 時のオプションで有効化）
+
+
