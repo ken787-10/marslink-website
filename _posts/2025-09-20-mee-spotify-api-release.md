@@ -2,7 +2,7 @@
 title: Mee、Spotify API連携機能を正式リリース — 音楽とPodcastで“感情と声”を共有する共感型パーソナルメディアへ
 published: true
 date: 2025-09-20 10:00 +0900
-image: /assets/images/mee-spotify02.jpg
+image: /assets/images/mee-spotify01.jpg
 tags: [リリース, MEE, Spotify, API, プロダクト]
 category: お知らせ
 excerpt: Spotify Web APIを活用した音楽・Podcast連携機能をMeeに正式搭載。再生中の楽曲やエピソードを投稿・プロフィールに埋め込み、音声を通じて感情と思想を共有する新しいSNS体験を提供。
