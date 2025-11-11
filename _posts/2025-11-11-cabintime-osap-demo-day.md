@@ -15,7 +15,40 @@ excerpt: 11月11日開催のOSAP DEMO DAYにて、移動型オフライン情報
 
 ### ピッチ動画
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/r4lKKeEKres?si=A4Q04q5jL-81Bb-D" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<style>
+.ct-video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  /* 16:9 aspect ratio for desktop and tablets */
+  aspect-ratio: 16 / 9;
+}
+.ct-video-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0; left: 0;
+  border: 0;
+}
+@media (max-width: 480px) {
+  .ct-video-wrapper {
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+}
+</style>
+<div class="ct-video-wrapper">
+  <iframe src="https://www.youtube.com/embed/r4lKKeEKres?si=A4Q04q5jL-81Bb-D"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen>
+  </iframe>
+</div>
+
+
 
 
 
